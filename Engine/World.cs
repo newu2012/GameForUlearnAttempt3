@@ -68,12 +68,15 @@ namespace Engine
             var rat = new Monster(MONSTER_ID_RAT, "Rat", 5, 3, 10, 3, 3);
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RAT_TAIL), 75, false));
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_PIECE_OF_FUR), 75, true));
+            
             var snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3);
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, true));
+            
             var giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant spider", 20, 5, 40, 10, 10);
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
             giantSpider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
+            
             Monsters.Add(rat);
             Monsters.Add(snake);
             Monsters.Add(giantSpider);
@@ -86,11 +89,13 @@ namespace Engine
                 20, 10);
             clearAlchemistGarden.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RAT_TAIL), 3));
             clearAlchemistGarden.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            
             var clearFarmersField = new Quest(QUEST_ID_CLEAR_FARMERS_FIELD, "Clear the farmer's field",
                 "Kill snakes in the farmer's field and bring back 3 snake fangs. You will receive an adventurer's pass and 20 gold pieces.",
                 20, 20);
             clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
+            
             Quests.Add(clearAlchemistGarden);
             Quests.Add(clearFarmersField);
         }
@@ -100,22 +105,30 @@ namespace Engine
             // Create each location
             var home = new Location(LOCATION_ID_HOME, "Home",
                 "Your house. You really need to clean up the place.");
+            
             var townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.");
+            
             var alchemistHut = new Location(LOCATION_ID_ALCHEMIST_HUT, "Alchemist's hut",
                 "There are many strange plants on the shelves.");
             alchemistHut.QuestAvailableHere = QuestByID(QUEST_ID_CLEAR_ALCHEMIST_GARDEN);
+            
             var alchemistsGarden = new Location(LOCATION_ID_ALCHEMISTS_GARDEN, "Alchemist's garden",
                 "Many plants are growing here.");
             alchemistsGarden.MonsterLivingHere = MonsterByID(MONSTER_ID_RAT);
+            
             var farmhouse = new Location(LOCATION_ID_FARMHOUSE, "Farmhouse",
                 "There is a small farmhouse, with a farmer in front.");
             farmhouse.QuestAvailableHere = QuestByID(QUEST_ID_CLEAR_FARMERS_FIELD);
+            
             var farmersField = new Location(LOCATION_ID_FARM_FIELD, "Farmer's field",
                 "You see rows of vegetables growing here.");
             farmersField.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE);
+            
             var guardPost = new Location(LOCATION_ID_GUARD_POST, "Guard post",
                 "There is a large, tough-looking guard here.", ItemByID(ITEM_ID_ADVENTURER_PASS));
+            
             var bridge = new Location(LOCATION_ID_BRIDGE, "Bridge", "A stone bridge crosses a wide river.");
+            
             var spiderField = new Location(LOCATION_ID_SPIDER_FIELD, "Forest",
                 "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);

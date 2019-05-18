@@ -13,14 +13,11 @@ namespace GameForUlearnAttempt3
         {
             InitializeComponent();
             
-            player = new Player(10, 10, 20, 0, 1);
+            player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
-            
-            lblHitPoints.Text = player.CurrentHitPoints.ToString();
-            lblGold.Text = player.Gold.ToString();
-            lblExperience.Text = player.ExperiencePoints.ToString();
-            lblLevel.Text = player.Level.ToString();
+
+            UpdatePlayerStats();
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -41,6 +38,17 @@ namespace GameForUlearnAttempt3
         private void btnWest_Click(object sender, EventArgs e)
         {
             MoveTo(player.CurrentLocation.LocationToWest);
+        }
+        
+        private void rtbMessages_TextChanged(object sender, EventArgs e)
+        {
+            ScrollToBottomOfMessages();
+        }
+        
+        private void ScrollToBottomOfMessages()
+        {
+            rtbMessages.SelectionStart = rtbMessages.Text.Length;
+            rtbMessages.ScrollToCaret();
         }
 
         private void MoveTo(Location newLocation)
@@ -175,6 +183,15 @@ namespace GameForUlearnAttempt3
 
             // Refresh player's potions combobox
             UpdatePotionListInUI();
+        }
+        
+        private void UpdatePlayerStats()
+        {
+            // Refresh player information and inventory controls
+            lblHitPoints.Text = player.CurrentHitPoints.ToString();
+            lblGold.Text = player.Gold.ToString();
+            lblExperience.Text = player.ExperiencePoints.ToString();
+            lblLevel.Text = player.Level.ToString();
         }
 
         private void UpdateInventoryListInUI()
@@ -408,5 +425,7 @@ namespace GameForUlearnAttempt3
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }
+
+        
     }
 }
