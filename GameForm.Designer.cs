@@ -301,6 +301,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GameForm";
             this.Text = "GameForUlearn";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize) (this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvQuests)).EndInit();
             this.ResumeLayout(false);
