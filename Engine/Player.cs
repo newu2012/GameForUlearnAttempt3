@@ -66,9 +66,7 @@ namespace Engine
                     var quantity = Convert.ToInt32(node.Attributes["Quantity"].Value);
  
                     for(var i = 0; i < quantity; i++)
-                    {
                         player.AddItemToInventory(World.ItemByID(id));
-                    }
                 }
  
                 foreach(XmlNode node in playerData.SelectNodes("/Player/PlayerQuests/PlayerQuest"))
@@ -87,7 +85,7 @@ namespace Engine
             catch
             {
                 // If there was an error with the XML data, return a default player object
-                return Player.CreateDefaultPlayer();
+                return CreateDefaultPlayer();
             }
         }
 

@@ -66,10 +66,10 @@ namespace GameForUlearnAttempt3
             player.CurrentLocation = newLocation;
 
             // Show/hide available movement buttons
-            btnNorth.Visible = newLocation.LocationToNorth != null;
-            btnEast.Visible = newLocation.LocationToEast != null;
-            btnSouth.Visible = newLocation.LocationToSouth != null;
-            btnWest.Visible = newLocation.LocationToWest != null;
+            btnNorth.Enabled = newLocation.LocationToNorth != null;
+            btnEast.Enabled = newLocation.LocationToEast != null;
+            btnSouth.Enabled = newLocation.LocationToSouth != null;
+            btnWest.Enabled = newLocation.LocationToWest != null;
 
             // Display current location name and description
             rtbLocation.Text = newLocation.Name + Environment.NewLine;
@@ -159,19 +159,19 @@ namespace GameForUlearnAttempt3
                 foreach (var lootItem in standardMonster.LootTable)
                     currentMonster.LootTable.Add(lootItem);
 
-                cboWeapons.Visible = true;
-                cboPotions.Visible = true;
-                btnUseWeapon.Visible = true;
-                btnUsePotion.Visible = true;
+                cboWeapons.Enabled = true;
+                cboPotions.Enabled = true;
+                btnUseWeapon.Enabled = true;
+                btnUsePotion.Enabled = true;
             }
             else
             {
                 currentMonster = null;
 
-                cboWeapons.Visible = false;
-                cboPotions.Visible = false;
-                btnUseWeapon.Visible = false;
-                btnUsePotion.Visible = false;
+                cboWeapons.Enabled = false;
+                cboPotions.Enabled = false;
+                btnUseWeapon.Enabled = false;
+                btnUsePotion.Enabled = false;
             }
 
             // Refresh player's inventory list
@@ -269,8 +269,8 @@ namespace GameForUlearnAttempt3
             if (healingPotions.Count == 0)
             {
                 // The player doesn't have any potions, so hide the potion combobox and "Use" button
-                cboPotions.Visible = false;
-                btnUsePotion.Visible = false;
+                cboPotions.Enabled = false;
+                btnUsePotion.Enabled = false;
             }
             else
             {
@@ -403,7 +403,7 @@ namespace GameForUlearnAttempt3
                     ii.Quantity--;
                     break;
                 }
-
+            
             // Display message
             rtbMessages.Text += "You drink a " + potion.Name + Environment.NewLine;
 
