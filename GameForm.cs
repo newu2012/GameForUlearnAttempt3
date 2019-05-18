@@ -244,11 +244,16 @@ namespace GameForUlearnAttempt3
             }
             else
             {
+                cboWeapons.SelectedIndexChanged -= cboWeapons_SelectedIndexChanged;
                 cboWeapons.DataSource = weapons;
+                cboWeapons.SelectedIndexChanged += cboWeapons_SelectedIndexChanged;
                 cboWeapons.DisplayMember = "Name";
                 cboWeapons.ValueMember = "ID";
-
-                cboWeapons.SelectedIndex = 0;
+ 
+                if (player.CurrentWeapon != null)
+                    cboWeapons.SelectedItem = player.CurrentWeapon;
+                else
+                    cboWeapons.SelectedIndex = 0;
             }
         }
 
@@ -427,7 +432,11 @@ namespace GameForUlearnAttempt3
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }
-
+        
+        private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
+        }
 
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
         {
