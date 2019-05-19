@@ -390,7 +390,7 @@ namespace GameForUlearnAttempt3
             var potion = (HealingPotion)cboPotions.SelectedItem;
 
             // Add healing amount to the player's current hit points
-            player.CurrentHitPoints = (player.CurrentHitPoints + potion.AmountToHeal);
+            player.CurrentHitPoints += potion.AmountToHeal;
 
             // CurrentHitPoints cannot exceed player's MaximumHitPoints
             if (player.CurrentHitPoints > player.MaximumHitPoints)
@@ -413,7 +413,7 @@ namespace GameForUlearnAttempt3
             var damageToPlayer = RandomNumberGenerator.NumberBetween(0, currentMonster.MaximumDamage);
 
             // Display message
-            rtbMessages.Text += "The " + currentMonster.Name + " did " + damageToPlayer.ToString() + " points of damage." + Environment.NewLine;
+            rtbMessages.Text += "The " + currentMonster.Name + " did " + damageToPlayer + " points of damage." + Environment.NewLine;
 
             // Subtract damage from player
             player.CurrentHitPoints -= damageToPlayer;
