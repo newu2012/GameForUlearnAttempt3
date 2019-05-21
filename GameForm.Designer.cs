@@ -277,6 +277,7 @@
             // lblSelectedWeapon
             // 
             this.lblSelectedWeapon.Location = new System.Drawing.Point(384, 558);
+            this.lblSelectedWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedWeapon.Name = "lblSelectedWeapon";
             this.lblSelectedWeapon.Size = new System.Drawing.Size(100, 23);
             this.lblSelectedWeapon.TabIndex = 21;
@@ -285,6 +286,7 @@
             // lblSelectedPotion
             // 
             this.lblSelectedPotion.Location = new System.Drawing.Point(384, 593);
+            this.lblSelectedPotion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedPotion.Name = "lblSelectedPotion";
             this.lblSelectedPotion.Size = new System.Drawing.Size(100, 23);
             this.lblSelectedPotion.TabIndex = 22;
