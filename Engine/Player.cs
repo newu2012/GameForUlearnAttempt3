@@ -34,10 +34,18 @@ namespace Engine
             }
         }
 
-
         public int Level => ExperiencePoints / 100 + 1;
         public Location CurrentLocation { get; set; }
         public BindingList<InventoryItem> Inventory { get; set; }
+        public List<Weapon> Weapons
+        {
+            get { return Inventory.Where(x => x.Details is Weapon).Select(x => x.Details as Weapon).ToList(); }
+        }
+
+        public List<HealingPotion> Potions
+        {
+            get { return Inventory.Where(x => x.Details is HealingPotion).Select(x => x.Details as HealingPotion).ToList(); }
+        }
         public Weapon CurrentWeapon { get; set; }
         public BindingList<PlayerQuest> Quests { get; set; }
 
@@ -47,6 +55,40 @@ namespace Engine
             ExperiencePoints = experiencePoints;
             Inventory = new BindingList<InventoryItem>();
             Quests = new BindingList<PlayerQuest>();
+        }
+        
+        private void RaiseInventoryChangedEvent(Item item)
+        {
+            switch (item)
+            {
+                case Weapon _:
+                    OnPropertyChanged("Weapons");
+                    break;
+                case HealingPotion _:
+                    OnPropertyChanged("Potions");
+                    break;
+            }
+        }
+        
+        public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
+        {
+            var item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToRemove.ID);
+
+            if(item == null) {}
+            else
+            {
+                // They have the item in their inventory, so decrease the quantity
+                item.Quantity -= quantity;
+                // Don't allow negative quantities.
+                // We might want to raise an error for this situation
+                if(item.Quantity < 0)
+                    item.Quantity = 0;
+                // If the quantity is zero, remove the item from the list
+                if(item.Quantity == 0)
+                    Inventory.Remove(item);
+                    // Notify the UI that the inventory has changed
+                RaiseInventoryChangedEvent(itemToRemove);
+            }
         }
         
         public void AddExperiencePoints(int experiencePointsToAdd)
@@ -120,7 +162,6 @@ namespace Engine
         public bool HasRequiredItemToEnterThisLocation(Location location)
         {
             return location.ItemRequiredToEnter == null || Inventory.Any(ii => ii.Details.ID == location.ItemRequiredToEnter.ID);
-            // See if the player has the required item in their inventory
         }
 
         public bool HasThisQuest(Quest quest)
@@ -146,24 +187,25 @@ namespace Engine
 
         public void RemoveQuestCompletionItems(Quest quest)
         {
-            foreach (var qci in quest.QuestCompletionItems)
+            foreach(var qci in quest.QuestCompletionItems)
             {
+                // Subtract the quantity from the player's inventory that was needed to complete the quest
                 var item = Inventory.SingleOrDefault(ii => ii.Details.ID == qci.Details.ID);
-                if (item != null)
-                    // Subtract the quantity from the player's inventory that was needed to complete the quest
-                    item.Quantity -= qci.Quantity;
+                if(item != null)
+                    RemoveItemFromInventory(item.Details, qci.Quantity);
             }
         }
 
-        public void AddItemToInventory(Item itemToAdd)
+        public void AddItemToInventory(Item itemToAdd, int quantity = 1)
         {
             var item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);
-            if (item == null)
-                // They didn't have the item, so add it to their inventory, with a quantity of 1
-                Inventory.Add(new InventoryItem(itemToAdd, 1));
+            if(item == null)
+                // They didn't have the item, so add it to their inventory
+                Inventory.Add(new InventoryItem(itemToAdd, quantity));
             else
-                // They have the item in their inventory, so increase the quantity by one
-                item.Quantity++;
+                // They have the item in their inventory, so increase the quantity
+                item.Quantity += quantity;
+            RaiseInventoryChangedEvent(itemToAdd);
         }
 
         public void MarkQuestCompleted(Quest quest)
