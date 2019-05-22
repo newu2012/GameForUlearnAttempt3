@@ -38,6 +38,19 @@
       <e p="GameForm.resx" t="Include" />
       <e p="GameForUlearnAttempt3.csproj" t="IncludeRecursive" />
       <e p="GameForUlearnAttempt3.sln" t="IncludeFlat" />
+      <e p="MapImages" t="Include">
+        <e p="Bridge.png" t="Include" />
+        <e p="FarmFields.png" t="Include" />
+        <e p="Farmhouse.png" t="Include" />
+        <e p="FogLocation.png" t="Include" />
+        <e p="HerbalistsGarden.png" t="Include" />
+        <e p="HerbalistsHut.png" t="Include" />
+        <e p="Home.png" t="Include" />
+        <e p="SpiderForest.png" t="Include" />
+        <e p="TownGate.png" t="Include" />
+        <e p="TownSquare.png" t="Include" />
+        <e p="Trader.png" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
@@ -53,6 +66,9 @@
       <e p="TradingScreen.cs" t="Include" />
       <e p="TradingScreen.Designer.cs" t="Include" />
       <e p="TradingScreen.resx" t="Include" />
+      <e p="WorldMap.cs" t="Include" />
+      <e p="WorldMap.Designer.cs" t="Include" />
+      <e p="WorldMap.resx" t="Include" />
     </e>
   </component>
 </project>

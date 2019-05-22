@@ -195,5 +195,12 @@ namespace GameForUlearnAttempt3
             tradingScreen.StartPosition = FormStartPosition.CenterParent;
             tradingScreen.ShowDialog(this);
         }
+
+        private void btnMap_Click(object sender, EventArgs e)
+        {
+            var mapScreen = new WorldMap(_player);
+            mapScreen.StartPosition = FormStartPosition.CenterParent;
+            mapScreen.ShowDialog(this);
+        }
     }
 }

@@ -53,6 +53,7 @@
             this.lblSelectedWeapon = new System.Windows.Forms.Label();
             this.lblSelectedPotion = new System.Windows.Forms.Label();
             this.btnTrade = new System.Windows.Forms.Button();
+            this.btnMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -276,7 +277,7 @@
             // 
             // lblSelectedWeapon
             // 
-            this.lblSelectedWeapon.Location = new System.Drawing.Point(375, 558);
+            this.lblSelectedWeapon.Location = new System.Drawing.Point(374, 558);
             this.lblSelectedWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedWeapon.Name = "lblSelectedWeapon";
             this.lblSelectedWeapon.Size = new System.Drawing.Size(115, 23);
@@ -285,7 +286,7 @@
             // 
             // lblSelectedPotion
             // 
-            this.lblSelectedPotion.Location = new System.Drawing.Point(375, 593);
+            this.lblSelectedPotion.Location = new System.Drawing.Point(374, 593);
             this.lblSelectedPotion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedPotion.Name = "lblSelectedPotion";
             this.lblSelectedPotion.Size = new System.Drawing.Size(115, 23);
@@ -303,11 +304,23 @@
             this.btnTrade.UseVisualStyleBackColor = true;
             this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
             // 
+            // btnMap
+            // 
+            this.btnMap.Location = new System.Drawing.Point(415, 460);
+            this.btnMap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnMap.Name = "btnMap";
+            this.btnMap.Size = new System.Drawing.Size(75, 40);
+            this.btnMap.TabIndex = 23;
+            this.btnMap.Text = "Map";
+            this.btnMap.UseVisualStyleBackColor = true;
+            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 651);
+            this.Controls.Add(this.btnMap);
             this.Controls.Add(this.btnTrade);
             this.Controls.Add(this.lblSelectedPotion);
             this.Controls.Add(this.lblSelectedWeapon);
@@ -366,6 +379,7 @@
         private System.Windows.Forms.Label lblSelectedWeapon;
         private System.Windows.Forms.Label lblSelectedPotion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMap;
         private System.Windows.Forms.Button btnTrade;
     }
 }
