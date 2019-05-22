@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dee4364-67c6-47d8-a05b-2852ac224c28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Engine/MessageEventArgs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Engine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Engine.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/HealingPotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/HealingPotion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/World.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameForm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="289">
+              <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
               <folding>
                 <marker date="1558519643841" expanded="false" signature="6:154" ph="..." />
                 <marker date="1558519643841" expanded="true" signature="187:6552" ph="{...}" />
@@ -128,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Engine/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
+            <state relative-caret-position="493">
               <caret line="242" column="44" selection-start-line="242" selection-start-column="44" selection-end-line="242" selection-end-column="44" />
               <folding>
                 <marker date="1558519321213" expanded="false" signature="6:162" ph="..." />
@@ -198,24 +184,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Engine/World.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2754">
-              <caret line="174" column="9" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+            <state relative-caret-position="544">
+              <caret line="62" column="102" lean-forward="true" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
               <folding>
-                <marker date="1558183679755" expanded="true" signature="6:115" ph="..." />
-                <marker date="1558183679755" expanded="true" signature="133:8992" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="165:8990" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="1769:1913" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="1958:2843" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="2891:3844" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="3890:4958" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="5007:8144" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="8189:8342" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="8393:8558" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="8605:8762" ph="{...}" />
-                <marker date="1558183679755" expanded="true" signature="8815:8984" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="6:115" ph="..." />
+                <marker date="1558529458286" expanded="true" signature="133:9029" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="165:9027" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="1769:1913" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="1958:2880" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="2928:3881" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="3927:4995" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="5044:8181" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="8226:8379" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="8430:8595" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="8642:8799" ph="{...}" />
+                <marker date="1558529458286" expanded="true" signature="8852:9021" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -224,7 +210,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameForm.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
+            <state relative-caret-position="3995">
               <caret line="238" selection-start-line="238" selection-end-line="238" />
               <folding>
                 <marker date="1558519661473" expanded="true" signature="31:17369" ph="{...}" />
@@ -320,15 +306,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Engine/Class1.cs" />
-        <option value="$PROJECT_DIR$/Engine/HealingPotion.cs" />
-        <option value="$PROJECT_DIR$/Engine/Item.cs" />
-        <option value="$PROJECT_DIR$/Engine/Weapon.cs" />
         <option value="$PROJECT_DIR$/Engine/Location.cs" />
         <option value="$PROJECT_DIR$/Engine/LootItem.cs" />
         <option value="$PROJECT_DIR$/Engine/QuestCompletionItem.cs" />
         <option value="$PROJECT_DIR$/Engine/Monster.cs" />
         <option value="$PROJECT_DIR$/Engine/RandomNumberGenerator.cs" />
-        <option value="$PROJECT_DIR$/Engine/World.cs" />
         <option value="$PROJECT_DIR$/Tests.cs" />
         <option value="$PROJECT_DIR$/Engine/LivingCreature.cs" />
         <option value="$PROJECT_DIR$/Engine/Quest.cs" />
@@ -338,6 +320,10 @@
         <option value="$PROJECT_DIR$/Engine/Player.cs" />
         <option value="$PROJECT_DIR$/GameForm.cs" />
         <option value="$PROJECT_DIR$/GameForm.Designer.cs" />
+        <option value="$PROJECT_DIR$/Engine/Item.cs" />
+        <option value="$PROJECT_DIR$/Engine/HealingPotion.cs" />
+        <option value="$PROJECT_DIR$/Engine/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Engine/World.cs" />
       </list>
     </option>
   </component>
@@ -360,7 +346,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -384,6 +369,7 @@
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,7 +434,8 @@
       <workItem from="1558195208733" duration="2995000" />
       <workItem from="1558255747023" duration="1595000" />
       <workItem from="1558268024434" duration="1044000" />
-      <workItem from="1558515681270" duration="3867000" />
+      <workItem from="1558515681270" duration="4769000" />
+      <workItem from="1558528832321" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="Basic LINQ refactoring">
       <created>1558184672318</created>
@@ -485,11 +472,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558468799211</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed near everything&#10;Big refactoring. &#10;Now the program is more suitable under the terms of project.&#10;Much more like MVC, but some troubles still exist.&#10;I could not figure out how to implement past ideas.">
+      <created>1558522171362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558522171362</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53957000" />
+    <option name="totallyTimeSpent" value="55503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,6 +498,35 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12793177" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.1673774" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32942432" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32942432" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32942432" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32942432" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.32942432" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4989339" weight="0.31449893" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5010661" side_tool="true" weight="0.2260128" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32942432" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Designer Toolbox" order="3" side_tool="true" weight="0.15138593" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" weight="0.32995737" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -531,35 +554,6 @@
       <window_info anchor="right" id="Errors In Solution" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Unit Tests Coverage" order="6" weight="0.32995737" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12793177" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.1673774" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32942432" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32942432" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32942432" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32942432" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.32942432" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.4989339" visible="true" weight="0.31449893" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5010661" side_tool="true" weight="0.2260128" />
-      <window_info anchor="bottom" id="Build" order="16" weight="0.32942432" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Designer Toolbox" order="3" side_tool="true" weight="0.15138593" />
-      <window_info anchor="right" id="Errors In Solution" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="6" weight="0.32995737" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +567,8 @@
     <MESSAGE value="Changed button visible state" />
     <MESSAGE value="Refactoring based on &quot;INotifyPropertyChanged&quot;" />
     <MESSAGE value="Started moving game logic to Engine, some problems but OK&#10;WE NEED TO BUILD A WALL!&#10;//TODO&#10;1)Code keyboard input;&#10;2)Fix GUI bugs (IDK how it works, rly)&#10;3)Complete refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started moving game logic to Engine, some problems but OK&#10;WE NEED TO BUILD A WALL!&#10;//TODO&#10;1)Code keyboard input;&#10;2)Fix GUI bugs (IDK how it works, rly)&#10;3)Complete refactoring." />
+    <MESSAGE value="Changed near everything&#10;Big refactoring. &#10;Now the program is more suitable under the terms of project.&#10;Much more like MVC, but some troubles still exist.&#10;I could not figure out how to implement past ideas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed near everything&#10;Big refactoring. &#10;Now the program is more suitable under the terms of project.&#10;Much more like MVC, but some troubles still exist.&#10;I could not figure out how to implement past ideas." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -588,19 +583,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GameForm.resx">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/Item.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <marker date="1558078582306" expanded="true" signature="6:115" ph="..." />
-            <marker date="1558078582306" expanded="true" signature="133:459" ph="{...}" />
-            <marker date="1558078582306" expanded="true" signature="157:457" ph="{...}" />
-            <marker date="1558078582306" expanded="true" signature="348:451" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Engine/Class1.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -619,32 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/Weapon.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <marker date="1558074188000" expanded="false" signature="6:115" ph="..." />
-            <marker date="1558074188000" expanded="true" signature="133:510" ph="{...}" />
-            <marker date="1558074188000" expanded="true" signature="166:508" ph="{...}" />
-            <marker date="1558074188000" expanded="true" signature="396:502" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/HealingPotion.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <marker date="1558074184000" expanded="false" signature="6:115" ph="..." />
-            <marker date="1558074184000" expanded="true" signature="133:411" ph="{...}" />
-            <marker date="1558074184000" expanded="true" signature="173:409" ph="{...}" />
-            <marker date="1558074184000" expanded="true" signature="342:403" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,6 +696,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/MessageEventArgs.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1558518735447" expanded="true" signature="31:372" ph="{...}" />
+            <marker date="1558518735447" expanded="true" signature="79:370" ph="{...}" />
+            <marker date="1558518735447" expanded="true" signature="266:364" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Engine/PlayerQuest.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -792,42 +760,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/World.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="174" column="9" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
-          <folding>
-            <marker date="1558183679755" expanded="true" signature="6:115" ph="..." />
-            <marker date="1558183679755" expanded="true" signature="133:8992" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="165:8990" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="1769:1913" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="1958:2843" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="2891:3844" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="3890:4958" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="5007:8144" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="8189:8342" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="8393:8558" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="8605:8762" ph="{...}" />
-            <marker date="1558183679755" expanded="true" signature="8815:8984" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/MessageEventArgs.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <marker date="1558518735447" expanded="true" signature="31:372" ph="{...}" />
-            <marker date="1558518735447" expanded="true" signature="79:370" ph="{...}" />
-            <marker date="1558518735447" expanded="true" signature="266:364" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Engine/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
+        <state relative-caret-position="493">
           <caret line="242" column="44" selection-start-line="242" selection-start-column="44" selection-end-line="242" selection-end-column="44" />
           <folding>
             <marker date="1558519321213" expanded="false" signature="6:162" ph="..." />
@@ -898,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameForm.Designer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="3995">
           <caret line="238" selection-start-line="238" selection-end-line="238" />
           <folding>
             <marker date="1558519661473" expanded="true" signature="31:17369" ph="{...}" />
@@ -938,10 +873,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/Item.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <marker date="1558529319398" expanded="false" signature="6:115" ph="..." />
+            <marker date="1558529319398" expanded="true" signature="133:536" ph="{...}" />
+            <marker date="1558529319398" expanded="true" signature="157:534" ph="{...}" />
+            <marker date="1558529319398" expanded="true" signature="398:528" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/HealingPotion.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <marker date="1558529355113" expanded="false" signature="6:115" ph="..." />
+            <marker date="1558529355113" expanded="true" signature="133:429" ph="{...}" />
+            <marker date="1558529355113" expanded="true" signature="173:427" ph="{...}" />
+            <marker date="1558529355113" expanded="true" signature="360:421" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/Weapon.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <marker date="1558529379546" expanded="false" signature="6:115" ph="..." />
+            <marker date="1558529379546" expanded="true" signature="133:528" ph="{...}" />
+            <marker date="1558529379546" expanded="true" signature="166:526" ph="{...}" />
+            <marker date="1558529379546" expanded="true" signature="414:520" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GameForm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="289">
+          <caret line="105" column="9" lean-forward="true" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
           <folding>
             <marker date="1558519643841" expanded="false" signature="6:154" ph="..." />
             <marker date="1558519643841" expanded="true" signature="187:6552" ph="{...}" />
@@ -972,6 +946,27 @@
         </state>
       </provider>
       <provider editor-type-id="WinFormsEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/World.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="62" column="102" lean-forward="true" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
+          <folding>
+            <marker date="1558529458286" expanded="true" signature="6:115" ph="..." />
+            <marker date="1558529458286" expanded="true" signature="133:9029" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="165:9027" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="1769:1913" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="1958:2880" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="2928:3881" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="3927:4995" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="5044:8181" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="8226:8379" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="8430:8595" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="8642:8799" ph="{...}" />
+            <marker date="1558529458286" expanded="true" signature="8852:9021" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
