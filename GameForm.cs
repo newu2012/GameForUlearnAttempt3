@@ -127,7 +127,7 @@ namespace GameForUlearnAttempt3
 
         private void btnTrade_Click(object sender, EventArgs e)
         {
-            var tradingScreen = new TradingScreen();
+            var tradingScreen = new TradingScreen(_player);
             tradingScreen.StartPosition = FormStartPosition.CenterParent;
             tradingScreen.ShowDialog(this);
         }
