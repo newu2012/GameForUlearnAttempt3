@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\newu2012\.Rider2019.1\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\newu2012\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\newu2012\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_GameForUlearnAttempt3.-834794192.00" t="ExcludeRecursive" />
-    <e p="C:\Users\newu2012\Documents\GitHub\GameForUlearnAttempt3" t="IncludeRecursive">
+    <e p="C:\Users\newu2012\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_GameForUlearnAttempt3.134528217.00" t="ExcludeRecursive" />
+    <e p="C:\Users\newu2012\RiderProjects\GameForUlearnAttempt3" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Engine" t="IncludeRecursive">
@@ -16,6 +17,7 @@
         <e p="LivingCreature.cs" t="Include" />
         <e p="Location.cs" t="Include" />
         <e p="LootItem.cs" t="Include" />
+        <e p="MessageEventArgs.cs" t="Include" />
         <e p="Monster.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
