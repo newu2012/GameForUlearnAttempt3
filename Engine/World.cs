@@ -135,6 +135,12 @@ namespace Engine
                 "You see spider webs covering covering the trees in this forest.");
             spiderField.MonsterLivingHere = MonsterByID(MONSTER_ID_GIANT_SPIDER);
 
+            // Vendors, working in locations
+            var bobTheRatCatcher = new Vendor("Bob the Rat-Catcher");
+            bobTheRatCatcher.AddItemToInventory(ItemByID(ITEM_ID_PIECE_OF_FUR), 5);
+            bobTheRatCatcher.AddItemToInventory(ItemByID(ITEM_ID_RAT_TAIL), 3);
+            townSquare.VendorWorkingHere = bobTheRatCatcher;
+            
             // Link the locations together
             home.LocationToNorth = townSquare;
             townSquare.LocationToNorth = alchemistHut;
@@ -152,7 +158,7 @@ namespace Engine
             bridge.LocationToWest = guardPost;
             bridge.LocationToEast = spiderField;
             spiderField.LocationToWest = bridge;
-
+            
             // Add the locations to the static list
             Locations.Add(home);
             Locations.Add(townSquare);
