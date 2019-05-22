@@ -17,7 +17,9 @@ namespace GameForUlearnAttempt3
         {
             InitializeComponent();
 
-            _player = File.Exists(PlayerDataFileName) ? Player.CreatePlayerFromXmlString(File.ReadAllText(PlayerDataFileName)) : Player.CreateDefaultPlayer();
+            _player = File.Exists(PlayerDataFileName) 
+                ? Player.CreatePlayerFromXmlString(File.ReadAllText(PlayerDataFileName)) 
+                : Player.CreateDefaultPlayer();
 
             lblHitPoints.DataBindings.Add("Text", _player, "CurrentHitPoints");
             lblGold.DataBindings.Add("Text", _player, "Gold");
@@ -41,6 +43,8 @@ namespace GameForUlearnAttempt3
                 HeaderText = "Quantity",
                 DataPropertyName = "Quantity"
             });
+
+            dgvInventory.ScrollBars = ScrollBars.Vertical;
 
             dgvQuests.RowHeadersVisible = false;
             dgvQuests.AutoGenerateColumns = false;
@@ -89,7 +93,60 @@ namespace GameForUlearnAttempt3
             rtbMessages.SelectionStart = rtbMessages.Text.Length;
             rtbMessages.ScrollToCaret();
         }
-        
+
+        private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
+        {
+            if (propertyChangedEventArgs.PropertyName == "Weapons")
+            {
+                cboWeapons.DataSource = _player.Weapons;
+                if (!_player.Weapons.Any())
+                {
+                    cboWeapons.Enabled = false;
+                    btnUseWeapon.Enabled = false;
+                }
+            }
+
+            if (propertyChangedEventArgs.PropertyName == "Potions")
+            {
+                cboPotions.DataSource = _player.Potions;
+                if (!_player.Potions.Any())
+                {
+                    cboPotions.Enabled = false;
+                    btnUsePotion.Enabled = false;
+                }
+            }
+
+            if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
+            {
+                // Show/hide available movement buttons
+                btnNorth.Enabled = (_player.CurrentLocation.LocationToNorth != null);
+                btnEast.Enabled = (_player.CurrentLocation.LocationToEast != null);
+                btnSouth.Enabled = (_player.CurrentLocation.LocationToSouth != null);
+                btnWest.Enabled = (_player.CurrentLocation.LocationToWest != null);
+
+                btnTrade.Enabled = (_player.CurrentLocation.VendorWorkingHere != null);
+
+                // Display current location name and description
+                rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
+                rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
+
+                if (!_player.CurrentLocation.HasAMonster)
+                {
+                    cboWeapons.Enabled = false;
+                    cboPotions.Enabled = false;
+                    btnUseWeapon.Enabled = false;
+                    btnUsePotion.Enabled = false;
+                }
+                else
+                {
+                    cboWeapons.Enabled = _player.Weapons.Any();
+                    cboPotions.Enabled = _player.Potions.Any();
+                    btnUseWeapon.Enabled = _player.Weapons.Any();
+                    btnUsePotion.Enabled = _player.Potions.Any();
+                }
+            }
+        }
+
         private void btnNorth_Click(object sender, EventArgs e)
         {
             _player.MoveNorth();
@@ -112,17 +169,24 @@ namespace GameForUlearnAttempt3
 
         private void btnUseWeapon_Click(object sender, EventArgs e)
         {
-            // Get the currently selected weapon from the cboWeapons ComboBox
             var currentWeapon = (Weapon)cboWeapons.SelectedItem;
-
             _player.UseWeapon(currentWeapon);
         }
 
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
-            // Get the currently selected potion from the combobox
             var potion = (HealingPotion)cboPotions.SelectedItem;
             _player.UsePotion(potion);
+        }
+
+        private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            File.WriteAllText(PlayerDataFileName, _player.ToXmlString());
+        }
+
+        private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
         }
 
         private void btnTrade_Click(object sender, EventArgs e)
@@ -130,69 +194,6 @@ namespace GameForUlearnAttempt3
             var tradingScreen = new TradingScreen(_player);
             tradingScreen.StartPosition = FormStartPosition.CenterParent;
             tradingScreen.ShowDialog(this);
-        }
-
-        private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
-        {
-            if (propertyChangedEventArgs.PropertyName == "Weapons")
-            {
-                cboWeapons.DataSource = _player.Weapons;
-
-                if (!_player.Weapons.Any())
-                {
-                    cboWeapons.Enabled = false;
-                    btnUseWeapon.Enabled = false;
-                }
-            }
-
-            if (propertyChangedEventArgs.PropertyName == "Potions")
-            {
-                cboPotions.DataSource = _player.Potions;
-
-                if (!_player.Potions.Any())
-                {
-                    cboPotions.Enabled = false;
-                    btnUsePotion.Enabled = false;
-                }
-            }
-
-            if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
-            {
-                // Show/hide available movement buttons
-                btnNorth.Enabled = _player.CurrentLocation.LocationToNorth != null;
-                btnEast.Enabled = _player.CurrentLocation.LocationToEast != null;
-                btnSouth.Enabled = _player.CurrentLocation.LocationToSouth != null;
-                btnWest.Enabled = _player.CurrentLocation.LocationToWest != null;
-
-                // Display current location name and description
-                rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
-                rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
-
-                if (_player.CurrentLocation.MonsterLivingHere == null)
-                {
-                    cboWeapons.Enabled = false;
-                    cboPotions.Enabled = false;
-                    btnUseWeapon.Enabled = false;
-                    btnUsePotion.Enabled = false;
-                }
-                else
-                {
-                    cboWeapons.Enabled = _player.Weapons.Any();
-                    cboPotions.Enabled = _player.Potions.Any();
-                    btnUseWeapon.Enabled = _player.Weapons.Any();
-                    btnUsePotion.Enabled = _player.Potions.Any();
-                }
-            }
-        }
-
-        private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _player.CurrentWeapon = (Weapon) cboWeapons.SelectedItem;
-        }
-
-        private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            File.WriteAllText(PlayerDataFileName, _player.ToXmlString());
         }
     }
 }

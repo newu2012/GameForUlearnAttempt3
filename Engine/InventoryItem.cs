@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Engine
 {
@@ -32,11 +27,12 @@ namespace Engine
                 OnPropertyChanged("Description");
             }
         }
-        
+
         public int ItemID => Details.ID;
-        public int Price => Details.Price;
 
         public string Description => Quantity > 1 ? Details.NamePlural : Details.Name;
+
+        public int Price => Details.Price;
 
         public InventoryItem(Item details, int quantity)
         {
