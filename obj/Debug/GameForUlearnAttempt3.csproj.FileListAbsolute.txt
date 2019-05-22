@@ -30,3 +30,4 @@ C:\Users\newu2012\Documents\GitHub\GameForUlearnAttempt3\obj\Debug\GameForUlearn
 C:\Users\newu2012\Documents\GitHub\GameForUlearnAttempt3\obj\Debug\GameForUlearnAttempt3.csproj.CopyComplete
 C:\Users\newu2012\Documents\GitHub\GameForUlearnAttempt3\obj\Debug\GameForUlearnAttempt3.exe
 C:\Users\newu2012\Documents\GitHub\GameForUlearnAttempt3\obj\Debug\GameForUlearnAttempt3.pdb
+C:\Users\newu2012\RiderProjects\GameForUlearnAttempt3\obj\Debug\GameForUlearnAttempt3.TradingScreen.resources

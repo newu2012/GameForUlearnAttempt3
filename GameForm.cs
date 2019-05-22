@@ -124,9 +124,12 @@ namespace GameForUlearnAttempt3
             var potion = (HealingPotion)cboPotions.SelectedItem;
             _player.UsePotion(potion);
         }
-        
+
         private void btnTrade_Click(object sender, EventArgs e)
         {
+            var tradingScreen = new TradingScreen();
+            tradingScreen.StartPosition = FormStartPosition.CenterParent;
+            tradingScreen.ShowDialog(this);
         }
 
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)

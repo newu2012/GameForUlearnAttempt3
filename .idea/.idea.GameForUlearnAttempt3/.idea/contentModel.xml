@@ -50,6 +50,9 @@
         <e p="Settings.settings" t="Include" />
       </e>
       <e p="Tests.cs" t="Include" />
+      <e p="TradingScreen.cs" t="Include" />
+      <e p="TradingScreen.Designer.cs" t="Include" />
+      <e p="TradingScreen.resx" t="Include" />
     </e>
   </component>
 </project>
