@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Engine;
 using System.IO;
 using System.Linq;
+using System.Windows.Input;
 
 namespace GameForUlearnAttempt3
 {
@@ -15,8 +16,9 @@ namespace GameForUlearnAttempt3
 
         public GameForm()
         {
+            this.KeyPreview = true;
             InitializeComponent();
-
+            KeyDown+= OnKeyPressed;
             _player = File.Exists(PlayerDataFileName) 
                 ? Player.CreatePlayerFromXmlString(File.ReadAllText(PlayerDataFileName)) 
                 : Player.CreateDefaultPlayer();
@@ -81,6 +83,57 @@ namespace GameForUlearnAttempt3
             _player.OnMessage += DisplayMessage;
 
             _player.MoveTo(_player.CurrentLocation);
+        }
+
+        private void OnKeyPressed(object sender, KeyEventArgs e)
+        {
+            //base.OnKeyDown(e);
+            MessageBox.Show("key pressed");
+            switch (e.KeyCode)
+            {
+                case Keys.Up:
+                case Keys.W:
+                    _player.MoveNorth();
+                    MessageBox.Show(e.KeyCode.ToString());
+                    break;
+                case Keys.Right:
+                case Keys.D:
+                    _player.MoveEast();
+                    break;
+                case Keys.Down:
+                case Keys.S:
+                    _player.MoveSouth();
+                    break;
+                case Keys.Left:
+                case Keys.A:
+                    _player.MoveWest();
+                    break;
+            }
+        }
+
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+            switch (e.KeyCode)
+            {
+                case Keys.Up:
+                case Keys.W:
+                    _player.MoveNorth();
+                    MessageBox.Show(e.KeyCode.ToString());
+                    break;
+                case Keys.Right:
+                case Keys.D:
+                    _player.MoveEast();
+                    break;
+                case Keys.Down:
+                case Keys.S:
+                    _player.MoveSouth();
+                    break;
+                case Keys.Left:
+                case Keys.A:
+                    _player.MoveWest();
+                    break;
+            }
         }
 
         private void DisplayMessage(object sender, MessageEventArgs messageEventArgs)

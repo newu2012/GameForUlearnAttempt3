@@ -65,7 +65,7 @@ namespace GameForUlearnAttempt3
             this.dgvMyItems.Location = new System.Drawing.Point(15, 45);
             this.dgvMyItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvMyItems.Name = "dgvMyItems";
-            this.dgvMyItems.Size = new System.Drawing.Size(240, 216);
+            this.dgvMyItems.Size = new System.Drawing.Size(257, 216);
             this.dgvMyItems.TabIndex = 2;
             // 
             // dgvVendorItems
@@ -81,6 +81,7 @@ namespace GameForUlearnAttempt3
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(440, 275);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
