@@ -1,24 +1,38 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 using Engine;
 using NUnit.Framework;
-// using NUnit.Framework.Interface;
 
 namespace GameForUlearnAttempt3.Tests
 {
     [TestFixture]
-    public class Tests
+    public class PLayerTests
     {
-        private GameForm game;
+        private Player player;
+        
+        [SetUp]
+        public void Setup()
+        {
+            player = Player.CreateDefaultPlayer();
+        }
+        
+        [Test]
+        public void ShouldHeal_WhenUsePotion()
+        {
+            
+            // Arrange
+            var healingPotion = CreatePotion(10);
+            
+            // Act
+            player.UsePotion(healingPotion);
+            
+            // Assert
+            Assert.AreEqual(10, player.CurrentHitPoints);
+        }
 
-        //public void MakeTest( )
+        private HealingPotion CreatePotion(int amountToHeal)
+        {
+            return new HealingPotion(1, "", "", amountToHeal, 0);
+        }
         
     }
 }

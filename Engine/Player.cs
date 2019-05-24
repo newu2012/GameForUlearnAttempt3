@@ -239,8 +239,6 @@ namespace Engine
             HealPlayer(potion.AmountToHeal);
 
             RemoveItemFromInventory(potion);
-
-            LetTheMonsterAttack();
         }
 
         public void AddItemToInventory(Item itemToAdd, int quantity = 1)
