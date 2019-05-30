@@ -156,12 +156,16 @@ namespace Engine
             CompletelyHeal();
 
             if (location.HasAQuest)
+            {
                 if (PlayerDoesNotHaveThisQuest(location.QuestAvailableHere))
-                    GiveQuestToPlayer(location.QuestAvailableHere);
-                else
-                    if (PlayerHasNotCompletedQuest(location.QuestAvailableHere) &&
-                        PlayerHasAllQuestCompletionItemsFor(location.QuestAvailableHere))
-                        GivePlayerQuestRewards(location.QuestAvailableHere);
+                {
+                    if (PlayerCompletedPreviousQuest(location.QuestAvailableHere))
+                        GiveQuestToPlayer(location.QuestAvailableHere);
+                }
+                else if (PlayerHasNotCompletedQuest(location.QuestAvailableHere) &&
+                         PlayerHasAllQuestCompletionItemsFor(location.QuestAvailableHere))
+                    GivePlayerQuestRewards(location.QuestAvailableHere);
+            }
 
             SetTheCurrentMonsterForTheCurrentLocation(location);
         }
@@ -348,6 +352,18 @@ namespace Engine
             return Quests.Any(pq => pq.Details.ID == quest.ID && !pq.IsCompleted);
         }
 
+        private bool PlayerCompletedPreviousQuest(Quest quest)
+        {
+            //return Quests.All(pq => pq.Details.ID == quest.PreviousQuest && pq.IsCompleted);
+            if (quest.PreviousQuest == null)
+                return true;
+            if (Quests.Count != 0 && Quests.All(pq => pq.Details == quest.PreviousQuest && pq.IsCompleted)) return true;
+            
+            RaiseMessage("Before you take the quest in this location you need to do the quest named :\"" +
+                         quest.PreviousQuest.Name + "\"");
+            return false;
+        }
+        
         private void GiveQuestToPlayer(Quest quest)
         {
             RaiseMessage("You receive the " + quest.Name + " quest.");
@@ -355,10 +371,8 @@ namespace Engine
             RaiseMessage("To complete it, return with:");
 
             foreach (var qci in quest.QuestCompletionItems)
-            {
                 RaiseMessage(string.Format("{0} {1}", qci.Quantity,
-                                           qci.Quantity == 1 ? qci.Details.Name : qci.Details.NamePlural));
-            }
+                    qci.Quantity == 1 ? qci.Details.Name : qci.Details.NamePlural));
 
             RaiseMessage("");
             Quests.Add(new PlayerQuest(quest));

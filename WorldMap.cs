@@ -14,7 +14,7 @@ namespace GameForUlearnAttempt3
         {
             InitializeComponent();
             
-            //TODO Rework Map Images Initializing 
+            // TODO Rework Map Images Initializing 
             /*var pic = new PictureBox[4,6];
             for (var i = 0; i < 4; i++)
             for (var j = 0; j < 6; j++)
