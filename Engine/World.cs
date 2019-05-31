@@ -142,8 +142,8 @@ namespace Engine
             var helpWithSnakes = new Quest(QUEST_ID_HELP_WITH_SNAKES, "Принести пастуху клыки змей.",
                 "Саш, спасибо за лопату. Деревня всё никак не присылает стражников для помощи с полем. Мне уже надоело, что каждый раз приходя домой с поля я выдёргиваю по 10 змей из ног, я хоть и с иммунитетом к их яду, но это всё равно надоедает. \n Так что давай, уменьшишь их поголовье и дам тебе за это какую-нибудь причуду из запасов.", bringAShovel, 
                 25, 50);
-            bringAShovel.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 10));
-            bringAShovel.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            helpWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 10));
+            helpWithSnakes.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
             
             var purgeTheWolves = new Quest(QUEST_ID_PURGE_THE_WOLVES, "Вежливо попросить у волков шкуры.",
                 "Здравствуй путник, надеюсь ты не боишься опасностей. Немедленно отправляйся в предлесок и принеси мне шкуры 5 волков. Мне нужно разобраться в том, что их заразило.", null,
@@ -154,14 +154,14 @@ namespace Engine
             var purgeTheBears = new Quest(QUEST_ID_PURGE_THE_BEARS, "Очистить порчу с медведей.",
                 "Мне кажется я знаю что это, похоже это порча и она пронизывает всё что стоит на её пути. Срочно займись очисткой порчи с медвейдей. В доказательство принесёшь 5 их шшкур.", purgeTheWolves,
                 50, 100);
-            purgeTheWolves.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BEAR_SKIN), 5));
-            purgeTheWolves.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            purgeTheBears.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BEAR_SKIN), 5));
+            purgeTheBears.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
             
             var purgeTheDangerOfTheAncientForest = new Quest(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST, "Очистить порчу с древнего леса.",
                 "Я понял причину заражения леса. Похоже какая-то магия засеяла порчу в одном из наших древних трентов. Ты должен помочь ему очиститься от скверны. Тебе стоит подготовиться получше, но я верю, что ты справишься.", purgeTheBears,
                 100, 250);
-            purgeTheWolves.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
-            purgeTheWolves.RewardItem = ItemByID(ITEM_ID_BIG_HEALING_POTION);
+            purgeTheDangerOfTheAncientForest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
+            purgeTheDangerOfTheAncientForest.RewardItem = ItemByID(ITEM_ID_BIG_HEALING_POTION);
             
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
@@ -177,8 +177,9 @@ namespace Engine
 
             var shepherdsHouse = new Location(LOCATION_ID_SHEPHERDS_HOUSE, "Лачуга пастуха",
                 "Вы видите пастуха. У него беспокойный вид.");
-            shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_BRING_A_SHOVEL);
-            shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_HELP_WITH_SNAKES);
+            var currentQuest = QuestByID(QUEST_ID_BRING_A_SHOVEL);
+            shepherdsHouse.QuestsAvailableHere.Add(currentQuest);
+            shepherdsHouse.QuestsAvailableHere.Add(QuestByID(QUEST_ID_HELP_WITH_SNAKES));
 
             var skiff = new Location(LOCATION_ID_SKIFF, "Предлесок",
                 "Страшный вой пронизывает вас насквозь. Кровь застывает в жилах. Вы чувствуете, что вы попали в окружение волков.");
@@ -187,9 +188,9 @@ namespace Engine
 
             var forestersHut = new Location(LOCATION_ID_FORESTERS_HUT, "Хата лесника",
                 "Вы видите необычного лесника. У вас складывается ощущение, что он сыграет важную роль в вашем приключегнии.");
-            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_WOLVES);
-            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_BEARS);
-            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST);
+            forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_WOLVES));
+            forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_BEARS));
+            forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST));
 
             var village = new Location(LOCATION_ID_VILLAGE, "Деревня",
                 "Вы приходите в деревню. Лица жители максимально отстранены. Кажется вам есть чем тут заняться.");

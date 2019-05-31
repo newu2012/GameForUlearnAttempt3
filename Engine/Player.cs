@@ -157,14 +157,17 @@ namespace Engine
 
             if (location.HasAQuest)
             {
-                if (PlayerDoesNotHaveThisQuest(location.QuestAvailableHere))
+                foreach (var e in location.QuestsAvailableHere)
                 {
-                    if (PlayerCompletedPreviousQuest(location.QuestAvailableHere))
-                        GiveQuestToPlayer(location.QuestAvailableHere);
+                    if (PlayerDoesNotHaveThisQuest(e))
+                    {
+                        if (PlayerCompletedPreviousQuest(e))
+                            GiveQuestToPlayer(e);
+                    }
+                    else if (PlayerHasNotCompletedQuest(e) &&
+                             PlayerHasAllQuestCompletionItemsFor(e))
+                        GivePlayerQuestRewards(e);
                 }
-                else if (PlayerHasNotCompletedQuest(location.QuestAvailableHere) &&
-                         PlayerHasAllQuestCompletionItemsFor(location.QuestAvailableHere))
-                    GivePlayerQuestRewards(location.QuestAvailableHere);
             }
 
             SetTheCurrentMonsterForTheCurrentLocation(location);

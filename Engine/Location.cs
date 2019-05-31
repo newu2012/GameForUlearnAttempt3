@@ -14,7 +14,7 @@ namespace Engine
         public string Name { get; set; }
         public string Description { get; set; }
         public Item ItemRequiredToEnter { get; set; }
-        public Quest QuestAvailableHere { get; set; }
+        public List<Quest> QuestsAvailableHere { get; set; }
         public Vendor VendorWorkingHere { get; set; }
         public Location LocationToNorth { get; set; }
         public Location LocationToEast { get; set; }
@@ -22,17 +22,17 @@ namespace Engine
         public Location LocationToWest { get; set; }
 
         public bool HasAMonster => _monstersAtLocation.Count > 0;
-        public bool HasAQuest => QuestAvailableHere != null;
+        public bool HasAQuest => QuestsAvailableHere != null;
         public bool DoesNotHaveAnItemRequiredToEnter => ItemRequiredToEnter == null;
 
         public Location(int id, string name, string description,
-            Item itemRequiredToEnter = null, Quest questAvailableHere = null)
+            Item itemRequiredToEnter = null, List<Quest> questsAvailableHere = null)
         {
             ID = id;
             Name = name;
             Description = description;
             ItemRequiredToEnter = itemRequiredToEnter;
-            QuestAvailableHere = questAvailableHere;
+            QuestsAvailableHere = questsAvailableHere ?? new List<Quest>();
         }
 
         public void AddMonster(int monsterID, int percentageOfAppearance)
