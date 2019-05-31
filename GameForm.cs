@@ -158,15 +158,11 @@ namespace GameForUlearnAttempt3
 
                 if (!_player.CurrentLocation.HasAMonster)
                 {
-                    cboWeapons.Enabled = false;
-                    cboPotions.Enabled = false;
                     btnUseWeapon.Enabled = false;
                     btnUsePotion.Enabled = false;
                 }
                 else
                 {
-                    cboWeapons.Enabled = _player.Weapons.Any();
-                    cboPotions.Enabled = _player.Potions.Any();
                     btnUseWeapon.Enabled = _player.Weapons.Any();
                     btnUsePotion.Enabled = _player.Potions.Any();
                 }
