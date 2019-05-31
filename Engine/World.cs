@@ -173,94 +173,94 @@ namespace Engine
         private static void PopulateLocations()
         {
             // Create each location
-            var home = new Location(LOCATION_ID_HOME, "Дом", "Ваш дом. Вы сожалеете, что оказались здесь.");
+            var home = new Location(LOCATION_ID_HOME, "Дом", "Ваш дом. Вы сожалеете, что снова оказались здесь.");
 
-            var shepherdsHouse = new Location(LOCATION_ID_SHEPHERDS_HOUSE, "Shepherd's house",
+            var shepherdsHouse = new Location(LOCATION_ID_SHEPHERDS_HOUSE, "Лачуга пастуха",
                 "Вы видите пастуха. У него беспокойный вид.");
             shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_BRING_A_SHOVEL);
             shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_HELP_WITH_SNAKES);
 
-            var skiff = new Location(LOCATION_ID_SKIFF, "Skiff",
+            var skiff = new Location(LOCATION_ID_SKIFF, "Предлесок",
                 "Страшный вой пронизывает вас насквозь. Кровь застывает в жилах. Вы чувствуете, что вы попали в окружение волков.");
             skiff.AddMonster(MONSTER_ID_WOLF, 85);
             skiff.AddMonster(MONSTER_ID_BEAR, 15);
 
-            var forestersHut = new Location(LOCATION_ID_FORESTERS_HUT, "Forester's hut",
+            var forestersHut = new Location(LOCATION_ID_FORESTERS_HUT, "Хата лесника",
                 "Вы видите необычного лесника. У вас складывается ощущение, что он сыграет важную роль в вашем приключегнии.");
-            shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_WOLVES);
-            shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_BEARS);
-            shepherdsHouse.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST);
+            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_WOLVES);
+            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_BEARS);
+            forestersHut.QuestAvailableHere = QuestByID(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST);
 
-            var village = new Location(LOCATION_ID_VILLAGE, "Village",
+            var village = new Location(LOCATION_ID_VILLAGE, "Деревня",
                 "Вы приходите в деревню. Лица жители максимально отстранены. Кажется вам есть чем тут заняться.");
 
 
-            var field = new Location(LOCATION_ID_FIELD, "Field",
+            var field = new Location(LOCATION_ID_FIELD, "Поле",
                 "Вы пришли на заросшее поле, похоже этот год тоже будет голодным...");
 
-            var forest = new Location(LOCATION_ID_FOREST, "Forest",
+            var forest = new Location(LOCATION_ID_FOREST, "Лес",
                 "Пока вы шли сюда, количество ягод и пчелиных ульев увеличивалось. Вы уже поняли кого вы здесь встретите.");
             forest.AddMonster(MONSTER_ID_WOLF, 10);
             forest.AddMonster(MONSTER_ID_BEAR, 85);
             forest.AddMonster(MONSTER_ID_TRENT, 5);
             
-            var ancientForest = new Location(LOCATION_ID_ANCIENT_FOREST, "Ancient forest",
+            var ancientForest = new Location(LOCATION_ID_ANCIENT_FOREST, "Древний лес",
                 "Вы входите в глубокий лес, деревья здесь совершенно необычайной формы. Похоже, что именно здесь и случилось заражение леса. Пора остановить порчу.");
             ancientForest.AddMonster(MONSTER_ID_WOLF, 5);
             ancientForest.AddMonster(MONSTER_ID_BEAR, 10);
             ancientForest.AddMonster(MONSTER_ID_TRENT, 85);
 
-            var roadToTheCity = new Location(LOCATION_ID_ROAD_TO_THE_CITY, "Road to the city",
+            var roadToTheCity = new Location(LOCATION_ID_ROAD_TO_THE_CITY, "Дорога в город",
                 "Сельские стражники согласны пускать селян в город только по письменному заверению старосты.");
 
 
             var swarmOfPoisonousSnakes = new Location(LOCATION_ID_SWARM_OF_POISONOUS_SNAKES,
-                "Swarm of poisonous snakes", "Шипение множествав змей застилает ужасом ваш разум.");
-            forest.AddMonster(MONSTER_ID_SNAKE, 95);
-            forest.AddMonster(MONSTER_ID_GIANT_SNAKE, 5);
+                "Рой ядовитых змей", "Шипение множествав змей застилает ужасом ваш разум.");
+            swarmOfPoisonousSnakes.AddMonster(MONSTER_ID_SNAKE, 95);
+            swarmOfPoisonousSnakes.AddMonster(MONSTER_ID_GIANT_SNAKE, 5);
             
-            var scaryCave = new Location(LOCATION_ID_SCARY_CAVE, "Scary cave",
+            var scaryCave = new Location(LOCATION_ID_SCARY_CAVE, "Страшная пещера",
                 "Вы чувствуете, что что-то смотрит на Вас.\"Движение - смерть\" - слышите Вы в своей голове");
-            forest.AddMonster(MONSTER_ID_SNAKE, 30);
-            forest.AddMonster(MONSTER_ID_GIANT_SNAKE, 70);
+            scaryCave.AddMonster(MONSTER_ID_SNAKE, 30);
+            scaryCave.AddMonster(MONSTER_ID_GIANT_SNAKE, 70);
             
-            var hydrasLair = new Location(LOCATION_ID_HYDRAS_LAIR, "Hydra's lair",
+            var hydrasLair = new Location(LOCATION_ID_HYDRAS_LAIR, "Логово гидры",
                 "Отсюда можно выйти либо победителем, либо фаршем.");
 
-            var outskirts = new Location(LOCATION_ID_OUTSKIRTS, "Outskirts",
+            var outskirts = new Location(LOCATION_ID_OUTSKIRTS, "Окраины города",
                 "Бедное население бродит вдоль улочек. Незнакомцы поздываю к себе.", ItemByID(ITEM_ID_ADVENTURER_PASS));
 
-            var prison = new Location(LOCATION_ID_PRISON, "Prison",
+            var prison = new Location(LOCATION_ID_PRISON, "Тюрьма",
                 "Вы проходите в тюрьму. Здесь стоит всего несколько стражников на бесконечные залы клеток с заключёнными. Похоже здесь действительно безопасно гулять.");
 
-            var sewage = new Location(LOCATION_ID_SEWAGE, "Sewage", "Миф Голливуда стоит перед вами.");
+            var sewage = new Location(LOCATION_ID_SEWAGE, "Канализационные стоки", "Миф Голливуда стоит перед вами.");
 
-            var ogreCave = new Location(LOCATION_ID_OGRE_CAVE, "Ogre cave",
+            var ogreCave = new Location(LOCATION_ID_OGRE_CAVE, "Пещера огров",
                 "Куча разбросанных ботинок привела вас в пещеру трёх огров. Их зовут ОГГ, ПОГГ И РОГГ.");
 
 
-            var townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square",
+            var townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Городская площадь",
                 "На площади достаточно людно. Сложно представить почему центр настолько разительно отличается от закоулок, в которых Вы недавно были.");
 
-            var gate = new Location(LOCATION_ID_GATE, "Gate",
+            var gate = new Location(LOCATION_ID_GATE, "Ворота",
                 "Похоже здесь стоит почти вся стража города. Стражники отчётливо дают вам понять, что для того чтобы пройти дальше, вам нужно личное разрешение Короля Давида Сказачного.");
 
-            var hordeOfZombies = new Location(LOCATION_ID_HORDE_OF_ZOMBIES, "Horde of Zombies",
+            var hordeOfZombies = new Location(LOCATION_ID_HORDE_OF_ZOMBIES, "Орда зомби",
                 "Похоже, что всё былое население мира предстало здесь перед вами в виде оживших мертвецов, пройти куда-то дальше получится только смекалкой.");
 
-            var graveyardOfBones = new Location(LOCATION_ID_GRAVEYARD_OF_BONES, "Graveyard of bones",
+            var graveyardOfBones = new Location(LOCATION_ID_GRAVEYARD_OF_BONES, "Кладбище костей",
                 "Вам в детстве говорили, что живых драконов не бывает. Это оказалось правдой лишь отчасти. Находящийся здесь дракон жив, хотя и состоит лишь из костей.");
 
-            var kingsPalace = new Location(LOCATION_ID_KINGS_PALACE, "King's palace",
+            var kingsPalace = new Location(LOCATION_ID_KINGS_PALACE, "Дворец короля",
                 "Двроец Давида Сказачного. Он с гордостью смотрит на Вас, рыцаря света, пришедшего спасать его Королевство. Хорошо что он не знает, что ещё вчера вам приходилось копать ямы для постройки нового туалета в деревне.");
 
-            var familyCrypt = new Location(LOCATION_ID_FAMILY_CRYPT, "Family crypt",
+            var familyCrypt = new Location(LOCATION_ID_FAMILY_CRYPT, "Семейный склеп",
                 "Семейный склеп Давида Сказачного. Пора успокоить взбунтовавшихся призраков.");
 
-            var moundOfDeath = new Location(LOCATION_ID_MOUND_OF_DEATH, "Mound of Death",
+            var moundOfDeath = new Location(LOCATION_ID_MOUND_OF_DEATH, "Курган смерти",
                 "Пора остановить производство зомби. Проблему с существующими это хоть и не решит, но новым лучше всё-таки не появляться.");
 
-            var scaryNecromancerCastle = new Location(LOCATION_ID_SCARY_NECROMANCER_CASTLE, "Scary Necromance Castle",
+            var scaryNecromancerCastle = new Location(LOCATION_ID_SCARY_NECROMANCER_CASTLE, "Замок страшного некроманта",
                 "Все Ваши десткие и студенческие страхи воплотились перед Вами. \n ПОБЕДА ИЛИ СМЕРТЬ! \n ЛОК'ТАР ОГАР, ДРУГ!");
             
 
@@ -307,7 +307,7 @@ namespace Engine
             roadToTheCity.LocationToWest = village;
 
             swarmOfPoisonousSnakes.LocationToSouth = scaryCave;
-            swarmOfPoisonousSnakes.LocationToEast = field;
+            swarmOfPoisonousSnakes.LocationToWest = field;
 
             scaryCave.LocationToNorth = swarmOfPoisonousSnakes;
             scaryCave.LocationToSouth = hydrasLair;
