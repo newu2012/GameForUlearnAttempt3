@@ -354,7 +354,6 @@ namespace Engine
 
         private bool PlayerCompletedPreviousQuest(Quest quest)
         {
-            //return Quests.All(pq => pq.Details.ID == quest.PreviousQuest && pq.IsCompleted);
             if (quest.PreviousQuest == null)
                 return true;
             if (Quests.Count != 0 && Quests.All(pq => pq.Details == quest.PreviousQuest && pq.IsCompleted)) return true;

@@ -146,7 +146,6 @@ namespace GameForUlearnAttempt3
 
             if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
             {
-                // Show/hide available movement buttons
                 btnNorth.Enabled = _player.CurrentLocation.LocationToNorth != null;
                 btnEast.Enabled = _player.CurrentLocation.LocationToEast != null;
                 btnSouth.Enabled = _player.CurrentLocation.LocationToSouth != null;
@@ -154,7 +153,6 @@ namespace GameForUlearnAttempt3
 
                 btnTrade.Enabled = _player.CurrentLocation.VendorWorkingHere != null;
 
-                // Display current location name and description
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
 

@@ -34,12 +34,30 @@ namespace Engine
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
         
         public const int LOCATION_ID_HOME = 1;
-        public const int LOCATION_ID_TOWN_SQUARE = 2;
-        public const int LOCATION_ID_GUARD_POST = 3;
-        public const int LOCATION_ID_ALCHEMIST_HUT = 4;
-        public const int LOCATION_ID_ALCHEMISTS_GARDEN = 5;
-        public const int LOCATION_ID_FARMHOUSE = 6;
-        public const int LOCATION_ID_FARM_FIELD = 7;
+        public const int LOCATION_ID_SHEPHERDS_HOUSE = 2;
+        public const int LOCATION_ID_VILLAGE = 3;
+        public const int LOCATION_ID_SKIFF = 4;
+        public const int LOCATION_ID_FORESTERS_HUT = 5;
+        public const int LOCATION_ID_FOREST = 6;
+        public const int LOCATION_ID_ANCIENT_FOREST = 7;
+        public const int LOCATION_ID_FIELD = 8;
+        public const int LOCATION_ID_ROAD_TO_THE_CITY = 9;
+        public const int LOCATION_ID_SWARM_OF_POISONOUS_SNAKES = 10;
+        public const int LOCATION_ID_SCARY_CAVE = 11;
+        public const int LOCATION_ID_HYDRAS_LAIR = 12;
+        public const int LOCATION_ID_OUTSKIRTS = 13;
+        public const int LOCATION_ID_PRISON = 14;
+        public const int LOCATION_ID_SEWAGE = 15;
+        public const int LOCATION_ID_OGRE_CAVE = 16;
+        public const int LOCATION_ID_TOWN_SQUARE = 17;   
+        public const int LOCATION_ID_GATE = 18;
+        public const int LOCATION_ID_HORDE_OF_ZOMBIES = 19;
+        public const int LOCATION_ID_GRAVEYARD_OF_BONES = 20;
+        public const int LOCATION_ID_KINGS_PALACE = 21;
+        public const int LOCATION_ID_FAMILY_CRYPT = 22;
+        public const int LOCATION_ID_MOUND_OF_DEATH = 23;
+        public const int LOCATION_ID_SCARY_NECROMANCER_CASTLE = 24;
+        
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
 
