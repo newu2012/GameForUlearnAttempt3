@@ -270,7 +270,7 @@ namespace Engine
             bigBob.AddItemToInventory(ItemByID(ITEM_ID_SHOVEL), 5);
             bigBob.AddItemToInventory(ItemByID(ITEM_ID_SIMPLE_HEALING_POTION), 50);
             bigBob.AddItemToInventory(ItemByID(ITEM_ID_HEALING_POTION), 10);
-            townSquare.VendorWorkingHere = bigBob;
+            village.VendorWorkingHere = bigBob;
             
             
             

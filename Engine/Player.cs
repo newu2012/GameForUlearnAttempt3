@@ -164,8 +164,9 @@ namespace Engine
                         if (PlayerCompletedPreviousQuest(e))
                             GiveQuestToPlayer(e);
                     }
-                    else if (PlayerHasNotCompletedQuest(e) &&
-                             PlayerHasAllQuestCompletionItemsFor(e))
+
+                    if (PlayerHasNotCompletedQuest(e) &&
+                        PlayerHasAllQuestCompletionItemsFor(e))
                         GivePlayerQuestRewards(e);
                 }
             }
@@ -359,7 +360,7 @@ namespace Engine
         {
             if (quest.PreviousQuest == null)
                 return true;
-            if (Quests.Count != 0 && Quests.All(pq => pq.Details == quest.PreviousQuest && pq.IsCompleted)) return true;
+            if (Quests.Count != 0 && Quests.Any(pq => pq.Details == quest.PreviousQuest && pq.IsCompleted)) return true;
             
             RaiseMessage("Before you take the quest in this location you need to do the quest named :\"" +
                          quest.PreviousQuest.Name + "\"");
