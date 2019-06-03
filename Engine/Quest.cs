@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Engine
 {
@@ -11,7 +12,19 @@ namespace Engine
         public int RewardExperiencePoints { get; set; }
         public int RewardGold { get; set; }
         public List<QuestCompletionItem> QuestCompletionItems { get; set; }
-        public Item RewardItem { get; set; }
+
+        private List<Item> reward = new List<Item>();
+        public List<Item> RewardItems
+        {
+            get
+            {
+                if (reward != null)
+                    return reward;
+
+                return new List<Item>();
+            }
+            set => reward = value;
+        }
 
         public Quest(int id, string name, string description, Quest previousQuest, int rewardExperiencePoints, int rewardGold)
         {

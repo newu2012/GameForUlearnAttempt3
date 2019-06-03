@@ -27,11 +27,12 @@ namespace Engine
         public const int ITEM_ID_GREAT_HEALING_POTION = 10;
         public const int ITEM_ID_SPIDER_FANG = 11;
         public const int ITEM_ID_SPIDER_SILK = 12;
-        public const int ITEM_ID_ADVENTURER_PASS = 13;
+        public const int ITEM_ID_HEADMAN_PERMISSION_PASS = 13;
         public const int ITEM_ID_BARK_OF_TRENT = 14;
         public const int ITEM_ID_QUINTESSENCE_OF_PURITY = 15;
         public const int ITEM_ID_GIANT_SNAKE_FANG = 16;
         public const int ITEM_ID_POISON_DAGGER = 17;
+        public const int ITEM_ID_BATTERED_PERMIT = 18;
         
         public const int MONSTER_ID_SNAKE = 1;
         public const int MONSTER_ID_WOLF = 2;
@@ -90,7 +91,7 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_BEAR_SKIN, "Медвежья шкура", "Медвежьи шкуры", 10));
             _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 25));
             _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
-            _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Club", "Clubs", 10, 15, 250));
+            _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Дубина", "Дубины", 10, 15, 250));
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
             _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 5, 10));
             _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 10, 25));
@@ -98,7 +99,8 @@ namespace Engine
             _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 40, 200));
             _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 15));
             _items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 25));
-            _items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes", UNSELLABLE_ITEM_PRICE));
+            _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
+            _items.Add(new Item(ITEM_ID_BATTERED_PERMIT, "Потрёпанное разрешение", "Потрёпанные разрешения", UNSELLABLE_ITEM_PRICE));
         }
 
         private static void PopulateMonsters()
@@ -123,6 +125,7 @@ namespace Engine
             var giantSnake = new Monster(MONSTER_ID_GIANT_SNAKE, "Гигантская змея", 15, 10, 0, 25, 25);
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GIANT_SNAKE_FANG), 75, true));
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_POISON_DAGGER), 15, false));
+            giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BATTERED_PERMIT), 1, false));
             
             _monsters.Add(snake);
             _monsters.Add(wolf);
@@ -134,34 +137,35 @@ namespace Engine
         private static void PopulateQuests()
         {
             var bringAShovel = new Quest(QUEST_ID_BRING_A_SHOVEL, "Принести пастуху лопату из деревни.",
-                "Привет Саша, не знаешь, случаем, куда я лопату с последней гулянки дел? Я вроде бы тебе её давал. Отдай мне её. Если потерял то иди и купи новую мне в деревне.", null, 
+                " Привет Саша, не знаешь, случаем, куда я лопату с последней гулянки дел? Я вроде бы тебе её давал. Отдай мне её. Если потерял то иди и купи новую мне в деревне.", null, 
                 20, 25);
             bringAShovel.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SHOVEL), 1));
-            bringAShovel.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            bringAShovel.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
             
             var helpWithSnakes = new Quest(QUEST_ID_HELP_WITH_SNAKES, "Принести пастуху клыки змей.",
-                "Саш, спасибо за лопату. Деревня всё никак не присылает стражников для помощи с полем. Мне уже надоело, что каждый раз приходя домой с поля я выдёргиваю по 10 змей из ног, я хоть и с иммунитетом к их яду, но это всё равно надоедает. \n Так что давай, уменьшишь их поголовье и дам тебе за это какую-нибудь причуду из запасов.", bringAShovel, 
+                " Саш, спасибо за лопату. Деревня всё никак не присылает стражников для помощи с полем. Мне уже надоело, что каждый раз приходя домой с поля я выдёргиваю по 10 змей из ног, я хоть и с иммунитетом к их яду, но это всё равно надоедает. \n Так что давай, уменьшишь их поголовье и дам тебе за это какую-нибудь причуду из запасов.", bringAShovel, 
                 25, 50);
             helpWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 10));
-            helpWithSnakes.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            helpWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
             
             var purgeTheWolves = new Quest(QUEST_ID_PURGE_THE_WOLVES, "Вежливо попросить у волков шкуры.",
-                "Здравствуй путник, надеюсь ты не боишься опасностей. Немедленно отправляйся в предлесок и принеси мне шкуры 5 волков. Мне нужно разобраться в том, что их заразило.", null,
+                " Здравствуй путник, надеюсь ты не боишься опасностей. Немедленно отправляйся в предлесок и принеси мне шкуры 5 волков. Мне нужно разобраться в том, что их заразило.", null,
                 25, 50);
             purgeTheWolves.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_WOLF_SKIN), 5));
-            purgeTheWolves.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            purgeTheWolves.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
             
             var purgeTheBears = new Quest(QUEST_ID_PURGE_THE_BEARS, "Очистить порчу с медведей.",
-                "Мне кажется я знаю что это, похоже это порча и она пронизывает всё что стоит на её пути. Срочно займись очисткой порчи с медвейдей. В доказательство принесёшь 5 их шшкур.", purgeTheWolves,
+                " Мне кажется я знаю что это, похоже это порча и она пронизывает всё что стоит на её пути. Срочно займись очисткой порчи с медвейдей. В доказательство принесёшь 5 их шшкур.", purgeTheWolves,
                 50, 100);
             purgeTheBears.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BEAR_SKIN), 5));
-            purgeTheBears.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            purgeTheBears.RewardItems.Add( ItemByID(ITEM_ID_HEALING_POTION));
             
             var purgeTheDangerOfTheAncientForest = new Quest(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST, "Очистить порчу с древнего леса.",
-                "Я понял причину заражения леса. Похоже какая-то магия засеяла порчу в одном из наших древних трентов. Ты должен помочь ему очиститься от скверны. Тебе стоит подготовиться получше, но я верю, что ты справишься.", purgeTheBears,
+                " Я понял причину заражения леса. Похоже какая-то магия засеяла порчу в одном из наших древних трентов. Ты должен помочь ему очиститься от скверны. Тебе стоит подготовиться получше, но я верю, что ты справишься.", purgeTheBears,
                 100, 250);
             purgeTheDangerOfTheAncientForest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
-            purgeTheDangerOfTheAncientForest.RewardItem = ItemByID(ITEM_ID_BIG_HEALING_POTION);
+            purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
+            purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
             
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
@@ -229,7 +233,7 @@ namespace Engine
                 "Отсюда можно выйти либо победителем, либо фаршем.");
 
             var outskirts = new Location(LOCATION_ID_OUTSKIRTS, "Окраины города",
-                "Бедное население бродит вдоль улочек. Незнакомцы поздываю к себе.", ItemByID(ITEM_ID_ADVENTURER_PASS));
+                "Бедное население бродит вдоль улочек. Незнакомцы поздываю к себе.", ItemByID(ITEM_ID_HEADMAN_PERMISSION_PASS));
 
             var prison = new Location(LOCATION_ID_PRISON, "Тюрьма",
                 "Вы проходите в тюрьму. Здесь стоит всего несколько стражников на бесконечные залы клеток с заключёнными. Похоже здесь действительно безопасно гулять.");

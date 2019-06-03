@@ -412,13 +412,19 @@ namespace Engine
             RaiseMessage("You receive: ");
             RaiseMessage(quest.RewardExperiencePoints + " experience points");
             RaiseMessage(quest.RewardGold + " gold");
-            RaiseMessage(quest.RewardItem.Name, true);
+            foreach (var e in quest.RewardItems)
+            {
+                RaiseMessage(e.Name, true);
+            }
 
             AddExperiencePoints(quest.RewardExperiencePoints);
             Gold += quest.RewardGold;
 
             RemoveQuestCompletionItems(quest);
-            AddItemToInventory(quest.RewardItem);
+            foreach (var e in quest.RewardItems)
+            {
+                AddItemToInventory(e);
+            }
 
             MarkPlayerQuestCompleted(quest);
         }
