@@ -38,21 +38,15 @@ namespace Engine
         public void AddMonster(int monsterID, int percentageOfAppearance)
         {
             if (_monstersAtLocation.ContainsKey(monsterID))
-            {
                 _monstersAtLocation[monsterID] = percentageOfAppearance;
-            }
             else
-            {
                 _monstersAtLocation.Add(monsterID, percentageOfAppearance);
-            }
         }
 
         public Monster NewInstanceOfMonsterLivingHere()
         {
             if (!HasAMonster)
-            {
                 return null;
-            }
 
             var totalPercentages = _monstersAtLocation.Values.Sum();
 

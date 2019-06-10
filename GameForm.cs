@@ -197,7 +197,7 @@ namespace GameForUlearnAttempt3
 
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
-            var potion = (HealingPotion)cboPotions.SelectedItem;
+            var potion = (Potion)cboPotions.SelectedItem;
             _player.UsePotion(potion);
         }
 

@@ -28,17 +28,22 @@ namespace Engine
         public const int ITEM_ID_SPIDER_FANG = 11;
         public const int ITEM_ID_SPIDER_SILK = 12;
         public const int ITEM_ID_HEADMAN_PERMISSION_PASS = 13;
+        public const int ITEM_ID_BATTERED_PERMIT = 13;
         public const int ITEM_ID_BARK_OF_TRENT = 14;
         public const int ITEM_ID_QUINTESSENCE_OF_PURITY = 15;
         public const int ITEM_ID_GIANT_SNAKE_FANG = 16;
         public const int ITEM_ID_POISON_DAGGER = 17;
-        public const int ITEM_ID_BATTERED_PERMIT = 18;
+        public const int ITEM_ID_HYDRA_RAPIER = 18;
+        public const int ITEM_ID_HYDRA_FANG = 19;
+        public const int ITEM_ID_POTION_OF_ETERNAL_LIFE = 20;
+        
         
         public const int MONSTER_ID_SNAKE = 1;
         public const int MONSTER_ID_WOLF = 2;
         public const int MONSTER_ID_BEAR = 3;
         public const int MONSTER_ID_TRENT = 4;
         public const int MONSTER_ID_GIANT_SNAKE = 5;
+        public const int MONSTER_ID_HYDRA = 6;
         
         
         
@@ -87,16 +92,19 @@ namespace Engine
             _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
             _items.Add(new Item(ITEM_ID_SNAKE_FANG, "Змеиный клык", "Змеиные клыки", 3));
             _items.Add(new Item(ITEM_ID_GIANT_SNAKE_FANG, "Большой змеиный клык", "Большие змеиные клыки", 15));
+            _items.Add(new Item(ITEM_ID_HYDRA_FANG, "Клык гидры", "Клыки гидры", 50));
             _items.Add(new Item(ITEM_ID_WOLF_SKIN, "Волчья шкура", "Волчьи шкуры" , 5));
             _items.Add(new Item(ITEM_ID_BEAR_SKIN, "Медвежья шкура", "Медвежьи шкуры", 10));
             _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 25));
             _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Дубина", "Дубины", 10, 15, 250));
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
-            _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 5, 10));
-            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 10, 25));
-            _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 20, 75));
-            _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 40, 200));
+            _items.Add(new Weapon(ITEM_ID_HYDRA_RAPIER, "Рапира из гидры", "Рапиры из гидры", 25, 35, 1000));
+            _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 10, 5));
+            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 25, 10));
+            _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 75, 20));
+            _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 200, 40));
+            _items.Add(new ExperiencePotion(ITEM_ID_POTION_OF_ETERNAL_LIFE, "Зелье вечной жизни", "Зелья вечной жизни", 5000, 500));
             _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 15));
             _items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 25));
             _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
@@ -125,13 +133,18 @@ namespace Engine
             var giantSnake = new Monster(MONSTER_ID_GIANT_SNAKE, "Гигантская змея", 15, 10, 0, 25, 25);
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GIANT_SNAKE_FANG), 75, true));
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_POISON_DAGGER), 15, false));
-            giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BATTERED_PERMIT), 1, false));
+            giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BATTERED_PERMIT), 5, false));
+            
+            var hydra = new Monster(MONSTER_ID_HYDRA, "Гидра", 50, 50, 0, 250, 250);
+            hydra.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HYDRA_FANG), 75, true));
+            hydra.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HYDRA_RAPIER), 15, false));
             
             _monsters.Add(snake);
             _monsters.Add(wolf);
             _monsters.Add(bear);
             _monsters.Add(trent);
             _monsters.Add(giantSnake);
+            _monsters.Add(hydra);
         }
 
         private static void PopulateQuests()
@@ -231,7 +244,9 @@ namespace Engine
             
             var hydrasLair = new Location(LOCATION_ID_HYDRAS_LAIR, "Логово гидры",
                 "Отсюда можно выйти либо победителем, либо фаршем.");
-
+            hydrasLair.AddMonster(MONSTER_ID_HYDRA, 90);
+            hydrasLair.AddMonster(MONSTER_ID_GIANT_SNAKE, 10);
+            
             var outskirts = new Location(LOCATION_ID_OUTSKIRTS, "Окраины города",
                 "Бедное население бродит вдоль улочек. Незнакомцы поздываю к себе.", ItemByID(ITEM_ID_HEADMAN_PERMISSION_PASS));
 

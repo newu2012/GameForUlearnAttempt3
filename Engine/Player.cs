@@ -56,9 +56,9 @@ namespace Engine
             get { return Inventory.Where(x => x.Details is Weapon).Select(x => x.Details as Weapon).ToList(); }
         }
 
-        public List<HealingPotion> Potions
+        public List<Potion> Potions
         {
-            get { return Inventory.Where(x => x.Details is HealingPotion).Select(x => x.Details as HealingPotion).ToList(); }
+            get { return Inventory.Where(x => x.Details is Potion).Select(x => x.Details as Potion).ToList(); }
         }
 
         public BindingList<PlayerQuest> Quests { get; set; }
@@ -240,11 +240,12 @@ namespace Engine
             RaiseMessage("");
         }
 
-        public void UsePotion(HealingPotion potion)
+        public void UsePotion(Potion potion)
         {
-            RaiseMessage("You drink a " + potion.Name);
-
-            HealPlayer(potion.AmountToHeal);
+            RaiseMessage("You drink a " + potion);
+            if (potion is HealingPotion)
+            HealPlayer(((HealingPotion) potion).AmountToHeal);
+            else AddExperiencePoints(((ExperiencePotion) potion).AmountToAdd);
 
             RemoveItemFromInventory(potion);
         }
