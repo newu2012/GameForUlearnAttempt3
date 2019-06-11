@@ -126,7 +126,10 @@ namespace GameForUlearnAttempt3
         {
             if (propertyChangedEventArgs.PropertyName == "Weapons")
             {
+                var currentWeapon = cboWeapons.SelectedItem;
                 cboWeapons.DataSource = _player.Weapons;
+                if (_player.Weapons.Contains(currentWeapon))
+                    cboWeapons.SelectedItem = currentWeapon;
                 if (!_player.Weapons.Any())
                 {
                     cboWeapons.Enabled = false;
@@ -159,7 +162,6 @@ namespace GameForUlearnAttempt3
                 if (!_player.CurrentLocation.HasAMonster)
                 {
                     btnUseWeapon.Enabled = false;
-                    btnUsePotion.Enabled = false;
                 }
                 else
                 {
