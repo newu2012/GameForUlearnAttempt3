@@ -59,6 +59,7 @@ namespace Engine
         public const int QUEST_ID_PURGE_THE_BEARS = 4;
         public const int QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST = 5;
         public const int QUEST_ID_SEARCH_FOR_A_BEST_FRIEND = 6;
+        public const int QUEST_ID_HELP_SHEPHERD_WITH_SNAKES = 6;
         
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_SHEPHERDS_HOUSE = 2;
@@ -202,6 +203,13 @@ namespace Engine
             purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
             purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
             
+            var helpShepherdWithSnakes = new Quest(QUEST_ID_HELP_SHEPHERD_WITH_SNAKES, "Помочь пастуху со змеями.",
+                " Что ни год, то напасть. Третий год подряд змеи нам докучают, работать в поле нормально не дают. Поди да разберись с причиной. Наверняка это из-за тех больших змей. Принесёшь несколько клыков?", purgeTheBears,
+                100, 250);
+            helpShepherdWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
+            helpShepherdWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
+            helpShepherdWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
+            
             var searchForABestFriend = new Quest(QUEST_ID_SEARCH_FOR_A_BEST_FRIEND, "Найти лучшего друга.",
                 " Тссс! Подойди сюда. Не узнаёшь меня? Вырос, забыл уже, ну ладно, я тебя не виню. Найди на окраинах главаря разбойников и забери у него ключ от спуска в канализацию. Потом иди от тюрьмы на юг. Там ты найдёшь моего лучшего друга. Освободи его от оков порчи. Пожалуйста", null,
                 100, 250);
@@ -213,6 +221,7 @@ namespace Engine
             _quests.Add(purgeTheWolves);
             _quests.Add(purgeTheBears);
             _quests.Add(purgeTheDangerOfTheAncientForest);
+            _quests.Add(helpShepherdWithSnakes);
             _quests.Add(searchForABestFriend);
         }
 
@@ -223,8 +232,7 @@ namespace Engine
 
             var shepherdsHouse = new Location(LOCATION_ID_SHEPHERDS_HOUSE, "Лачуга пастуха",
                 "Вы видите пастуха. У него беспокойный вид.");
-            var currentQuest = QuestByID(QUEST_ID_BRING_A_SHOVEL);
-            shepherdsHouse.QuestsAvailableHere.Add(currentQuest);
+            shepherdsHouse.QuestsAvailableHere.Add(QuestByID(QUEST_ID_BRING_A_SHOVEL));
             shepherdsHouse.QuestsAvailableHere.Add(QuestByID(QUEST_ID_HELP_WITH_SNAKES));
 
             var skiff = new Location(LOCATION_ID_SKIFF, "Предлесок",
@@ -240,7 +248,7 @@ namespace Engine
 
             var village = new Location(LOCATION_ID_VILLAGE, "Деревня",
                 "Вы приходите в деревню. Лица жители максимально отстранены. Кажется вам есть чем тут заняться.");
-
+            village.QuestsAvailableHere.Add(QuestByID(QUEST_ID_HELP_SHEPHERD_WITH_SNAKES));
 
             var field = new Location(LOCATION_ID_FIELD, "Поле",
                 "Вы пришли на заросшее поле, похоже этот год тоже будет голодным...");

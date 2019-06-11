@@ -287,7 +287,7 @@
             // 
             // lblSelectedPotion
             // 
-            this.lblSelectedPotion.Location = new System.Drawing.Point(340, 593);
+            this.lblSelectedPotion.Location = new System.Drawing.Point(346, 593);
             this.lblSelectedPotion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedPotion.Name = "lblSelectedPotion";
             this.lblSelectedPotion.Size = new System.Drawing.Size(115, 23);
@@ -320,7 +320,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 651);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(734, 651);
             this.Controls.Add(this.btnMap);
             this.Controls.Add(this.btnTrade);
             this.Controls.Add(this.lblSelectedPotion);
@@ -346,9 +347,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GameForm";
-            this.Text = "GameForUlearn";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize) (this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvQuests)).EndInit();

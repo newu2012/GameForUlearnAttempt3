@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2dee4364-67c6-47d8-a05b-2852ac224c28" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/World.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,8 +147,8 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameForm.cs">
-          <provider editor-type-id="WinFormsEditor" />
-          <provider selected="true" editor-type-id="text-editor">
+          <provider selected="true" editor-type-id="WinFormsEditor" />
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="122" column="9" lean-forward="true" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
               <folding>
@@ -185,21 +189,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Engine/World.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="151" column="12" lean-forward="true" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="12" />
+            <state relative-caret-position="177">
+              <caret line="249" column="80" lean-forward="true" selection-start-line="249" selection-start-column="80" selection-end-line="249" selection-end-column="80" />
               <folding>
-                <marker date="1560243379328" expanded="true" signature="6:115" ph="..." />
-                <marker date="1560243379328" expanded="true" signature="133:25451" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="165:25449" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="3992:4136" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="4181:6511" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="6559:9593" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="9639:13600" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="13649:24599" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="24644:24798" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="24849:25015" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="25062:25220" ph="{...}" />
-                <marker date="1560243379328" expanded="true" signature="25273:25443" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="6:115" ph="..." />
+                <marker date="1560244720938" expanded="true" signature="133:26300" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="165:26298" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="4057:4201" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="4246:6576" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="6624:9658" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="9704:14403" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="14452:25448" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="25493:25647" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="25698:25864" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="25911:26069" ph="{...}" />
+                <marker date="1560244720938" expanded="true" signature="26122:26292" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -312,8 +316,8 @@
         <option value="$PROJECT_DIR$/Engine/Player.cs" />
         <option value="$PROJECT_DIR$/Engine/ExperiencePotion.cs" />
         <option value="$PROJECT_DIR$/Engine/Potion.cs" />
-        <option value="$PROJECT_DIR$/Engine/World.cs" />
         <option value="$PROJECT_DIR$/GameForm.cs" />
+        <option value="$PROJECT_DIR$/Engine/World.cs" />
       </list>
     </option>
   </component>
@@ -450,7 +454,7 @@
       <workItem from="1560097255118" duration="15124000" />
       <workItem from="1560168274052" duration="6454000" />
       <workItem from="1560237808047" duration="1094000" />
-      <workItem from="1560242300127" duration="1959000" />
+      <workItem from="1560242300127" duration="3059000" />
     </task>
     <task id="LOCAL-00001" summary="Basic LINQ refactoring">
       <created>1558184672318</created>
@@ -599,11 +603,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560243622950</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Weapon autochanging on kill bug fixed">
+      <created>1560244308578</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1560244308578</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157076000" />
+    <option name="totallyTimeSpent" value="158176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,7 +627,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1380597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -754,7 +764,8 @@
     <MESSAGE value="Added multiple quest rewards." />
     <MESSAGE value="CHANGED POTION SYSTEM!!!&#10;It looks cool. I'm proud of myself." />
     <MESSAGE value="Added enemies to Outskirts, changed architecture a bit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added enemies to Outskirts, changed architecture a bit." />
+    <MESSAGE value="Weapon autochanging on kill bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Weapon autochanging on kill bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1197,27 +1208,6 @@
     <entry file="file://$PROJECT_DIR$/Engine/Engine.csproj">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/World.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="151" column="12" lean-forward="true" selection-start-line="151" selection-start-column="12" selection-end-line="151" selection-end-column="12" />
-          <folding>
-            <marker date="1560243379328" expanded="true" signature="6:115" ph="..." />
-            <marker date="1560243379328" expanded="true" signature="133:25451" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="165:25449" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="3992:4136" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="4181:6511" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="6559:9593" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="9639:13600" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="13649:24599" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="24644:24798" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="24849:25015" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="25062:25220" ph="{...}" />
-            <marker date="1560243379328" expanded="true" signature="25273:25443" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Engine/LivingCreature.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1308,9 +1298,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameForm.cs">
-      <provider editor-type-id="WinFormsEditor" />
+    <entry file="file://$PROJECT_DIR$/Engine/World.cs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="249" column="80" lean-forward="true" selection-start-line="249" selection-start-column="80" selection-end-line="249" selection-end-column="80" />
+          <folding>
+            <marker date="1560244720938" expanded="true" signature="6:115" ph="..." />
+            <marker date="1560244720938" expanded="true" signature="133:26300" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="165:26298" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="4057:4201" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="4246:6576" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="6624:9658" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="9704:14403" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="14452:25448" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="25493:25647" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="25698:25864" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="25911:26069" ph="{...}" />
+            <marker date="1560244720938" expanded="true" signature="26122:26292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameForm.cs">
+      <provider selected="true" editor-type-id="WinFormsEditor" />
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="122" column="9" lean-forward="true" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
           <folding>
