@@ -36,6 +36,9 @@ namespace Engine
         public const int ITEM_ID_HYDRA_RAPIER = 18;
         public const int ITEM_ID_HYDRA_FANG = 19;
         public const int ITEM_ID_POTION_OF_ETERNAL_LIFE = 20;
+        public const int ITEM_ID_CROCODILE_TAIL = 21;
+        public const int ITEM_ID_SEWAGE_KEY = 22;
+        
         
         
         public const int MONSTER_ID_SNAKE = 1;
@@ -44,6 +47,9 @@ namespace Engine
         public const int MONSTER_ID_TRENT = 4;
         public const int MONSTER_ID_GIANT_SNAKE = 5;
         public const int MONSTER_ID_HYDRA = 6;
+        public const int MONSTER_ID_CROCODILE = 7;
+        public const int MONSTER_ID_ROUGE = 8;
+        public const int MONSTER_ID_ROUGE_LEADER = 9;
         
         
         
@@ -52,6 +58,7 @@ namespace Engine
         public const int QUEST_ID_PURGE_THE_WOLVES = 3;
         public const int QUEST_ID_PURGE_THE_BEARS = 4;
         public const int QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST = 5;
+        public const int QUEST_ID_SEARCH_FOR_A_BEST_FRIEND = 6;
         
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_SHEPHERDS_HOUSE = 2;
@@ -92,10 +99,10 @@ namespace Engine
             _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
             _items.Add(new Item(ITEM_ID_SNAKE_FANG, "Змеиный клык", "Змеиные клыки", 3));
             _items.Add(new Item(ITEM_ID_GIANT_SNAKE_FANG, "Большой змеиный клык", "Большие змеиные клыки", 15));
-            _items.Add(new Item(ITEM_ID_HYDRA_FANG, "Клык гидры", "Клыки гидры", 50));
+            _items.Add(new Item(ITEM_ID_HYDRA_FANG, "Клык гидры", "Клыки гидры", 250));
             _items.Add(new Item(ITEM_ID_WOLF_SKIN, "Волчья шкура", "Волчьи шкуры" , 5));
             _items.Add(new Item(ITEM_ID_BEAR_SKIN, "Медвежья шкура", "Медвежьи шкуры", 10));
-            _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 25));
+            _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 50));
             _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Дубина", "Дубины", 10, 15, 250));
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
@@ -105,10 +112,10 @@ namespace Engine
             _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 75, 20));
             _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 200, 40));
             _items.Add(new ExperiencePotion(ITEM_ID_POTION_OF_ETERNAL_LIFE, "Зелье вечной жизни", "Зелья вечной жизни", 5000, 500));
-            _items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 15));
-            _items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 25));
+            _items.Add(new Item(ITEM_ID_CROCODILE_TAIL, "Хвост крокодила", "Хвост крокодила", 125));
             _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_BATTERED_PERMIT, "Потрёпанное разрешение", "Потрёпанные разрешения", UNSELLABLE_ITEM_PRICE));
+            _items.Add(new Item(ITEM_ID_SEWAGE_KEY, "Грязный ключ", "Грязные ключи", 50));
         }
 
         private static void PopulateMonsters()
@@ -139,12 +146,27 @@ namespace Engine
             hydra.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HYDRA_FANG), 75, true));
             hydra.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HYDRA_RAPIER), 15, false));
             
+            var crocodile = new Monster(MONSTER_ID_CROCODILE, "Крокодил Гена", 40, 25, 25, 150, 150);
+            crocodile.LootTable.Add(new LootItem(ItemByID(ITEM_ID_CROCODILE_TAIL), 75, true));
+            crocodile.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BIG_HEALING_POTION), 35, false));
+            
+            var rouge = new Monster(MONSTER_ID_ROUGE, "Разбойник", 20, 10, 15, 40, 40);
+            rouge.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HEALING_POTION), 50, false));
+            
+            var rougeLeader = new Monster(MONSTER_ID_ROUGE_LEADER, "Главарь разбойников", 30, 20, 50, 75, 75);
+            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SEWAGE_KEY), 75, true));
+            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HEALING_POTION), 75, false));
+            
+            
             _monsters.Add(snake);
             _monsters.Add(wolf);
             _monsters.Add(bear);
             _monsters.Add(trent);
             _monsters.Add(giantSnake);
             _monsters.Add(hydra);
+            _monsters.Add(crocodile);
+            _monsters.Add(rouge);
+            _monsters.Add(rougeLeader);
         }
 
         private static void PopulateQuests()
@@ -180,11 +202,18 @@ namespace Engine
             purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
             purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
             
+            var searchForABestFriend = new Quest(QUEST_ID_SEARCH_FOR_A_BEST_FRIEND, "Найти лучшего друга.",
+                " Тссс! Подойди сюда. Не узнаёшь меня? Вырос, забыл уже, ну ладно, я тебя не виню. Найди на окраинах главаря разбойников и забери у него ключ от спуска в канализацию. Потом иди от тюрьмы на юг. Там ты найдёшь моего лучшего друга. Освободи его от оков порчи. Пожалуйста", null,
+                100, 250);
+            searchForABestFriend.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_CROCODILE_TAIL), 1));
+            searchForABestFriend.RewardItems.Add(ItemByID(ITEM_ID_POTION_OF_ETERNAL_LIFE));
+            
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
             _quests.Add(purgeTheWolves);
             _quests.Add(purgeTheBears);
             _quests.Add(purgeTheDangerOfTheAncientForest);
+            _quests.Add(searchForABestFriend);
         }
 
         private static void PopulateLocations()
@@ -249,11 +278,15 @@ namespace Engine
             
             var outskirts = new Location(LOCATION_ID_OUTSKIRTS, "Окраины города",
                 "Бедное население бродит вдоль улочек. Незнакомцы поздываю к себе.", ItemByID(ITEM_ID_HEADMAN_PERMISSION_PASS));
+            outskirts.AddMonster(MONSTER_ID_ROUGE, 75);
+            outskirts.AddMonster(MONSTER_ID_ROUGE_LEADER, 25);
 
             var prison = new Location(LOCATION_ID_PRISON, "Тюрьма",
                 "Вы проходите в тюрьму. Здесь стоит всего несколько стражников на бесконечные залы клеток с заключёнными. Похоже здесь действительно безопасно гулять.");
-
-            var sewage = new Location(LOCATION_ID_SEWAGE, "Канализационные стоки", "Миф Голливуда стоит перед вами.");
+            prison.QuestsAvailableHere.Add(QuestByID(QUEST_ID_SEARCH_FOR_A_BEST_FRIEND));
+            
+            var sewage = new Location(LOCATION_ID_SEWAGE, "Канализационные стоки", "Миф Голливуда стоит перед вами.", ItemByID(ITEM_ID_SEWAGE_KEY));
+            sewage.AddMonster(MONSTER_ID_CROCODILE, 100);
 
             var ogreCave = new Location(LOCATION_ID_OGRE_CAVE, "Пещера огров",
                 "Куча разбросанных ботинок привела вас в пещеру трёх огров. Их зовут ОГГ, ПОГГ И РОГГ.");
