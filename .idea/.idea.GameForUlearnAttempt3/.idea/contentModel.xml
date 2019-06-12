@@ -29,6 +29,7 @@
         </e>
         <e p="Quest.cs" t="Include" />
         <e p="QuestCompletionItem.cs" t="Include" />
+        <e p="QuestRewardItem.cs" t="Include" />
         <e p="RandomNumberGenerator.cs" t="Include" />
         <e p="Vendor.cs" t="Include" />
         <e p="Weapon.cs" t="Include" />

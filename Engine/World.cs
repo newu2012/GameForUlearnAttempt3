@@ -176,45 +176,45 @@ namespace Engine
                 " Привет Саша, не знаешь, случаем, куда я лопату с последней гулянки дел? Я вроде бы тебе её давал. Отдай мне её. Если потерял то иди и купи новую мне в деревне.", null, 
                 20, 25);
             bringAShovel.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SHOVEL), 1));
-            bringAShovel.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
+            bringAShovel.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_SIMPLE_HEALING_POTION), 1));
             
             var helpWithSnakes = new Quest(QUEST_ID_HELP_WITH_SNAKES, "Принести пастуху клыки змей.",
                 " Саш, спасибо за лопату. Деревня всё никак не присылает стражников для помощи с полем. Мне уже надоело, что каждый раз приходя домой с поля я выдёргиваю по 10 змей из ног, я хоть и с иммунитетом к их яду, но это всё равно надоедает. \n Так что давай, уменьшишь их поголовье и дам тебе за это какую-нибудь причуду из запасов.", bringAShovel, 
                 25, 50);
             helpWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 10));
-            helpWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
+            helpWithSnakes.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_SIMPLE_HEALING_POTION), 3));
             
             var purgeTheWolves = new Quest(QUEST_ID_PURGE_THE_WOLVES, "Вежливо попросить у волков шкуры.",
                 " Здравствуй путник, надеюсь ты не боишься опасностей. Немедленно отправляйся в предлесок и принеси мне шкуры 5 волков. Мне нужно разобраться в том, что их заразило.", null,
                 25, 50);
             purgeTheWolves.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_WOLF_SKIN), 5));
-            purgeTheWolves.RewardItems.Add(ItemByID(ITEM_ID_HEALING_POTION));
+            purgeTheWolves.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_SIMPLE_HEALING_POTION), 3));
             
             var purgeTheBears = new Quest(QUEST_ID_PURGE_THE_BEARS, "Очистить порчу с медведей.",
                 " Мне кажется я знаю что это, похоже это порча и она пронизывает всё что стоит на её пути. Срочно займись очисткой порчи с медвейдей. В доказательство принесёшь 5 их шшкур.", purgeTheWolves,
                 50, 100);
             purgeTheBears.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BEAR_SKIN), 5));
-            purgeTheBears.RewardItems.Add( ItemByID(ITEM_ID_HEALING_POTION));
+            purgeTheBears.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_HEALING_POTION), 3));
             
             var purgeTheDangerOfTheAncientForest = new Quest(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST, "Очистить порчу с древнего леса.",
                 " Я понял причину заражения леса. Похоже какая-то магия засеяла порчу в одном из наших древних трентов. Ты должен помочь ему очиститься от скверны. Тебе стоит подготовиться получше, но я верю, что ты справишься.", purgeTheBears,
                 100, 250);
             purgeTheDangerOfTheAncientForest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
-            purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
-            purgeTheDangerOfTheAncientForest.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
+            purgeTheDangerOfTheAncientForest.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_BIG_HEALING_POTION), 3));
+            purgeTheDangerOfTheAncientForest.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY), 1));
             
             var helpShepherdWithSnakes = new Quest(QUEST_ID_HELP_SHEPHERD_WITH_SNAKES, "Помочь пастуху со змеями.",
-                " Что ни год, то напасть. Третий год подряд змеи нам докучают, работать в поле нормально не дают. Поди да разберись с причиной. Наверняка это из-за тех больших змей. Принесёшь несколько клыков?", purgeTheBears,
+                " Что ни год, то напасть. Третий год подряд змеи нам докучают, работать в поле нормально не дают. Поди да разберись с причиной. Наверняка это из-за тех больших змей. Принесёшь несколько клыков?", bringAShovel,
                 100, 250);
-            helpShepherdWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BARK_OF_TRENT), 1));
-            helpShepherdWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_BIG_HEALING_POTION));
-            helpShepherdWithSnakes.RewardItems.Add(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
+            helpShepherdWithSnakes.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_GIANT_SNAKE_FANG), 5));
+            helpShepherdWithSnakes.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_HEALING_POTION), 3));
+            helpShepherdWithSnakes.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_HEADMAN_PERMISSION_PASS), 1));
             
             var searchForABestFriend = new Quest(QUEST_ID_SEARCH_FOR_A_BEST_FRIEND, "Найти лучшего друга.",
                 " Тссс! Подойди сюда. Не узнаёшь меня? Вырос, забыл уже, ну ладно, я тебя не виню. Найди на окраинах главаря разбойников и забери у него ключ от спуска в канализацию. Потом иди от тюрьмы на юг. Там ты найдёшь моего лучшего друга. Освободи его от оков порчи. Пожалуйста", null,
                 100, 250);
             searchForABestFriend.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_CROCODILE_TAIL), 1));
-            searchForABestFriend.RewardItems.Add(ItemByID(ITEM_ID_POTION_OF_ETERNAL_LIFE));
+            searchForABestFriend.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_POTION_OF_ETERNAL_LIFE), 1));
             
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);

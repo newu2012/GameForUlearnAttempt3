@@ -13,15 +13,15 @@ namespace Engine
         public int RewardGold { get; set; }
         public List<QuestCompletionItem> QuestCompletionItems { get; set; }
 
-        private List<Item> reward = new List<Item>();
-        public List<Item> RewardItems
+        private List<QuestRewardItem> reward = new List<QuestRewardItem>();
+        public List<QuestRewardItem> RewardItems
         {
             get
             {
                 if (reward != null)
                     return reward;
 
-                return new List<Item>();
+                return new List<QuestRewardItem>();
             }
             set => reward = value;
         }
