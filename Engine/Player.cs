@@ -144,7 +144,8 @@ namespace Engine
         {
             if (PlayerDoesNotHaveTheRequiredItemToEnter(location))
             {
-                RaiseMessage("You must have a " + location.ItemRequiredToEnter.Name + " to enter this location.");
+                RaiseMessage("Вам нужно иметь " + location.ItemRequiredToEnter.Name + " чтобы пройти в эту локацию..");
+                RaiseMessage("");
                 return;
             }
 
@@ -203,11 +204,11 @@ namespace Engine
             var damage = RandomNumberGenerator.NumberBetween(weapon.MinimumDamage, weapon.MaximumDamage);
 
             if (damage == 0)
-                RaiseMessage("You missed the " + CurrentMonster.Name);
+                RaiseMessage("Вы промахнулись по " + CurrentMonster.Name);
             else
             {
                 CurrentMonster.CurrentHitPoints -= damage;
-                RaiseMessage("You hit the " + CurrentMonster.Name + " for " + damage + " points.");
+                RaiseMessage("Вы попали " + CurrentMonster.Name + " нанеся " + damage + " урона.");
             }
 
             if (CurrentMonster.IsDead)
@@ -223,9 +224,9 @@ namespace Engine
         private void LootTheCurrentMonster()
         {
             RaiseMessage("");
-            RaiseMessage("You defeated the " + CurrentMonster.Name);
-            RaiseMessage("You receive " + CurrentMonster.RewardExperiencePoints + " experience points");
-            RaiseMessage("You receive " + CurrentMonster.RewardGold + " gold");
+            RaiseMessage("Вы победили " + CurrentMonster.Name);
+            RaiseMessage("Вы получили " + CurrentMonster.RewardExperiencePoints + " опыта");
+            RaiseMessage("Вы получили " + CurrentMonster.RewardGold + " золота");
 
             AddExperiencePoints(CurrentMonster.RewardExperiencePoints);
             Gold += CurrentMonster.RewardGold;
@@ -233,8 +234,7 @@ namespace Engine
             foreach (var inventoryItem in CurrentMonster.LootItems)
             {
                 AddItemToInventory(inventoryItem.Details);
-
-                RaiseMessage(string.Format("You loot {0} {1}", inventoryItem.Quantity, inventoryItem.Description));
+                RaiseMessage(string.Format("Вы получили {0} {1}", inventoryItem.Quantity, inventoryItem.Description));
             }
 
             RaiseMessage("");
@@ -242,9 +242,9 @@ namespace Engine
 
         public void UsePotion(Potion potion)
         {
-            RaiseMessage("You drink a " + potion);
+            RaiseMessage("Вы выпили " + potion);
             if (potion is HealingPotion)
-            HealPlayer(((HealingPotion) potion).AmountToHeal);
+                HealPlayer(((HealingPotion) potion).AmountToHeal);
             else AddExperiencePoints(((ExperiencePotion) potion).AmountToAdd);
 
             RemoveItemFromInventory(potion);
@@ -339,7 +339,7 @@ namespace Engine
         {
             CurrentMonster = location.NewInstanceOfMonsterLivingHere();
             if (CurrentMonster != null)
-                RaiseMessage("You see a " + CurrentMonster.Name);
+                RaiseMessage("Вы видите " + CurrentMonster.Name);
         }
 
         private bool PlayerDoesNotHaveTheRequiredItemToEnter(Location location)
@@ -363,16 +363,17 @@ namespace Engine
                 return true;
             if (Quests.Count != 0 && Quests.Any(pq => pq.Details == quest.PreviousQuest && pq.IsCompleted)) return true;
             
-            RaiseMessage("Before you take the quest in this location you need to do the quest named :\"" +
-                         quest.PreviousQuest.Name + "\"");
+//            RaiseMessage("Перед тем как взять этот квест завершите квест:\"" +
+//                         quest.PreviousQuest.Name + "\"");
+//            RaiseMessage("");
             return false;
         }
         
         private void GiveQuestToPlayer(Quest quest)
         {
-            RaiseMessage("You receive the " + quest.Name + " quest.");
+            RaiseMessage("Вы получили квест " + quest.Name);
             RaiseMessage(quest.Description);
-            RaiseMessage("To complete it, return with:");
+            RaiseMessage("Чтобы завершить этот квест вернитесь с:");
 
             foreach (var qci in quest.QuestCompletionItems)
                 RaiseMessage(string.Format("{0} {1}", qci.Quantity,
@@ -409,24 +410,21 @@ namespace Engine
         private void GivePlayerQuestRewards(Quest quest)
         {
             RaiseMessage("");
-            RaiseMessage("You complete the '" + quest.Name + "' quest.");
-            RaiseMessage("You receive: ");
-            RaiseMessage(quest.RewardExperiencePoints + " experience points");
-            RaiseMessage(quest.RewardGold + " gold");
+            RaiseMessage("Вы завершили квест '" + quest.Name + "'.");
+            RaiseMessage("Вы получили: ");
+            RaiseMessage(quest.RewardExperiencePoints + " опыта");
+            RaiseMessage(quest.RewardGold + " золота");
             foreach (var e in quest.RewardItems)
-            {
                 RaiseMessage(e.Details.Name, true);
-            }
+            RaiseMessage("");
 
             AddExperiencePoints(quest.RewardExperiencePoints);
             Gold += quest.RewardGold;
 
             RemoveQuestCompletionItems(quest);
             foreach (var e in quest.RewardItems)
-            {
                 for (var i = 0; i < e.Quantity; i++)
                     AddItemToInventory(e.Details);
-            }
 
             MarkPlayerQuestCompleted(quest);
         }
@@ -441,12 +439,13 @@ namespace Engine
         private void LetTheMonsterAttack()
         {
             var damageToPlayer = RandomNumberGenerator.NumberBetween(0, CurrentMonster.MaximumDamage);
-            RaiseMessage("The " + CurrentMonster.Name + " did " + damageToPlayer + " points of damage.");
+            RaiseMessage(CurrentMonster.Name + " нанёс " + damageToPlayer + " урона.");
             CurrentHitPoints -= damageToPlayer;
 
             if (IsDead)
             {
-                RaiseMessage("The " + CurrentMonster.Name + " killed you.");
+                RaiseMessage(CurrentMonster.Name + " убил тебя.");
+                RaiseMessage("");
                 MoveHome();
             }
         }

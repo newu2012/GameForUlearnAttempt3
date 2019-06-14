@@ -13,6 +13,8 @@ namespace Engine
         public static readonly List<Quest> _quests = new List<Quest>();
         public static readonly List<Location> _locations = new List<Location>();
         
+        
+        
         public const int UNSELLABLE_ITEM_PRICE = -1;
         
         public const int ITEM_ID_RUSTY_SWORD = 1;
@@ -25,8 +27,10 @@ namespace Engine
         public const int ITEM_ID_HEALING_POTION = 8;
         public const int ITEM_ID_BIG_HEALING_POTION = 9;
         public const int ITEM_ID_GREAT_HEALING_POTION = 10;
-        public const int ITEM_ID_SPIDER_FANG = 11;
-        public const int ITEM_ID_SPIDER_SILK = 12;
+        
+        public const int ITEM_ID_TROLL_CUDGEL = 11;
+        public const int ITEM_ID_TROLL_MEAT = 12;
+        
         public const int ITEM_ID_HEADMAN_PERMISSION_PASS = 13;
         public const int ITEM_ID_BATTERED_PERMIT = 13;
         public const int ITEM_ID_BARK_OF_TRENT = 14;
@@ -50,6 +54,7 @@ namespace Engine
         public const int MONSTER_ID_CROCODILE = 7;
         public const int MONSTER_ID_ROUGE = 8;
         public const int MONSTER_ID_ROUGE_LEADER = 9;
+        public const int MONSTER_ID_TROLL = 10;
         
         
         
@@ -60,6 +65,8 @@ namespace Engine
         public const int QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST = 5;
         public const int QUEST_ID_SEARCH_FOR_A_BEST_FRIEND = 6;
         public const int QUEST_ID_HELP_SHEPHERD_WITH_SNAKES = 6;
+        
+        
         
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_SHEPHERDS_HOUSE = 2;
@@ -76,7 +83,7 @@ namespace Engine
         public const int LOCATION_ID_OUTSKIRTS = 13;
         public const int LOCATION_ID_PRISON = 14;
         public const int LOCATION_ID_SEWAGE = 15;
-        public const int LOCATION_ID_OGRE_CAVE = 16;
+        public const int LOCATION_ID_TROLL_CAVE = 16;
         public const int LOCATION_ID_TOWN_SQUARE = 17;   
         public const int LOCATION_ID_GATE = 18;
         public const int LOCATION_ID_HORDE_OF_ZOMBIES = 19;
@@ -85,6 +92,9 @@ namespace Engine
         public const int LOCATION_ID_FAMILY_CRYPT = 22;
         public const int LOCATION_ID_MOUND_OF_DEATH = 23;
         public const int LOCATION_ID_SCARY_NECROMANCER_CASTLE = 24;
+        
+        
+        
         
         static World()
         {
@@ -96,24 +106,29 @@ namespace Engine
 
         private static void PopulateItems()
         {
-            _items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Ржавый меч", "Ржавые мечи", 0, 5, 0));
-            _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
             _items.Add(new Item(ITEM_ID_SNAKE_FANG, "Змеиный клык", "Змеиные клыки", 3));
             _items.Add(new Item(ITEM_ID_GIANT_SNAKE_FANG, "Большой змеиный клык", "Большие змеиные клыки", 15));
             _items.Add(new Item(ITEM_ID_HYDRA_FANG, "Клык гидры", "Клыки гидры", 250));
             _items.Add(new Item(ITEM_ID_WOLF_SKIN, "Волчья шкура", "Волчьи шкуры" , 5));
             _items.Add(new Item(ITEM_ID_BEAR_SKIN, "Медвежья шкура", "Медвежьи шкуры", 10));
             _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 50));
-            _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
+            _items.Add(new Item(ITEM_ID_CROCODILE_TAIL, "Хвост крокодила", "Хвост крокодила", 125));
+            _items.Add(new Item(ITEM_ID_TROLL_MEAT, "Мясо тролля", "Мясо тролля", 1000));
+            
+            _items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Ржавый меч", "Ржавые мечи", 0, 5, 0));
+            _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
             _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Дубина", "Дубины", 10, 15, 250));
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
             _items.Add(new Weapon(ITEM_ID_HYDRA_RAPIER, "Рапира из гидры", "Рапиры из гидры", 25, 35, 1000));
-            _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 10, 5));
-            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 25, 10));
-            _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 75, 20));
-            _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 200, 40));
+            _items.Add(new Weapon(ITEM_ID_TROLL_CUDGEL, "Дубина тролля", "Дубины троллей", 40, 60, 2500));
+            
+            _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 10, 10));
+            _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 50, 25));
+            _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 200, 100));
+            _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 500, 200));
             _items.Add(new ExperiencePotion(ITEM_ID_POTION_OF_ETERNAL_LIFE, "Зелье вечной жизни", "Зелья вечной жизни", 5000, 500));
-            _items.Add(new Item(ITEM_ID_CROCODILE_TAIL, "Хвост крокодила", "Хвост крокодила", 125));
+            
+            _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_BATTERED_PERMIT, "Потрёпанное разрешение", "Потрёпанные разрешения", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_SEWAGE_KEY, "Грязный ключ", "Грязные ключи", 50));
@@ -157,7 +172,10 @@ namespace Engine
             var rougeLeader = new Monster(MONSTER_ID_ROUGE_LEADER, "Главарь разбойников", 30, 20, 50, 75, 75);
             rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SEWAGE_KEY), 75, true));
             rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HEALING_POTION), 75, false));
-            
+
+            var troll = new Monster(MONSTER_ID_TROLL, "Тролль", 200, 250, 250, 1000, 1000);
+            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_MEAT), 75, true));
+            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_CUDGEL), 25, false));
             
             _monsters.Add(snake);
             _monsters.Add(wolf);
@@ -236,12 +254,12 @@ namespace Engine
             shepherdsHouse.QuestsAvailableHere.Add(QuestByID(QUEST_ID_HELP_WITH_SNAKES));
 
             var skiff = new Location(LOCATION_ID_SKIFF, "Предлесок",
-                "Страшный вой пронизывает вас насквозь. Кровь застывает в жилах. Вы чувствуете, что вы попали в окружение волков.");
+                "Пугающий вой пронизывает вас насквозь. Кровь застывает в жилах. Вы чувствуете, что вы попали в окружение волков.");
             skiff.AddMonster(MONSTER_ID_WOLF, 85);
             skiff.AddMonster(MONSTER_ID_BEAR, 15);
 
             var forestersHut = new Location(LOCATION_ID_FORESTERS_HUT, "Хата лесника",
-                "Вы видите необычного лесника. У вас складывается ощущение, что он сыграет важную роль в вашем приключегнии.");
+                "Вы видите необычного лесника. У вас складывается ощущение, что он сыграет важную роль в вашем приключении.");
             forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_WOLVES));
             forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_BEARS));
             forestersHut.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST));
@@ -254,13 +272,13 @@ namespace Engine
                 "Вы пришли на заросшее поле, похоже этот год тоже будет голодным...");
 
             var forest = new Location(LOCATION_ID_FOREST, "Лес",
-                "Пока вы шли сюда, количество ягод и пчелиных ульев увеличивалось. Вы уже поняли кого вы здесь встретите.");
+                "По мере вашего приближения количество окружающих Вас ягод и пчелиных ульев увеличивалось. Вы уже поняли кого вы здесь встретите.");
             forest.AddMonster(MONSTER_ID_WOLF, 10);
             forest.AddMonster(MONSTER_ID_BEAR, 85);
             forest.AddMonster(MONSTER_ID_TRENT, 5);
             
             var ancientForest = new Location(LOCATION_ID_ANCIENT_FOREST, "Древний лес",
-                "Вы входите в глубокий лес, деревья здесь совершенно необычайной формы. Похоже, что именно здесь и случилось заражение леса. Пора остановить порчу.");
+                "Вы входите в глубокий лес, деревья здесь совершенно необычайной формы. Похоже, что именно здесь и началось заражение леса. Пора остановить порчу.");
             ancientForest.AddMonster(MONSTER_ID_WOLF, 5);
             ancientForest.AddMonster(MONSTER_ID_BEAR, 10);
             ancientForest.AddMonster(MONSTER_ID_TRENT, 85);
@@ -296,9 +314,9 @@ namespace Engine
             var sewage = new Location(LOCATION_ID_SEWAGE, "Канализационные стоки", "Миф Голливуда стоит перед вами.", ItemByID(ITEM_ID_SEWAGE_KEY));
             sewage.AddMonster(MONSTER_ID_CROCODILE, 100);
 
-            var ogreCave = new Location(LOCATION_ID_OGRE_CAVE, "Пещера огров",
-                "Куча разбросанных ботинок привела вас в пещеру трёх огров. Их зовут ОГГ, ПОГГ И РОГГ.");
-
+            var trollCave = new Location(LOCATION_ID_TROLL_CAVE, "Пещера троллей",
+                "Куча разбросанных ботинок привела вас в пещеру трёх троллей. Их зовут ОГГ, ПОГГ И РОГГ.");
+            trollCave.AddMonster(MONSTER_ID_TROLL, 100);
 
             var townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Городская площадь",
                 "На площади достаточно людно. Сложно представить почему центр настолько разительно отличается от закоулок, в которых Вы недавно были.");
@@ -319,7 +337,7 @@ namespace Engine
                 "Семейный склеп Давида Сказачного. Пора успокоить взбунтовавшихся призраков.");
 
             var moundOfDeath = new Location(LOCATION_ID_MOUND_OF_DEATH, "Курган смерти",
-                "Пора остановить производство зомби. Проблему с существующими это хоть и не решит, но новым лучше всё-таки не появляться.");
+                "Пора остановить производство зомби. Проблему с существующими это хоть и не решит, но новым лучше всё-таки не появляться.", ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
 
             var scaryNecromancerCastle = new Location(LOCATION_ID_SCARY_NECROMANCER_CASTLE, "Замок страшного некроманта",
                 "Все Ваши десткие и студенческие страхи воплотились перед Вами. \n ПОБЕДА ИЛИ СМЕРТЬ! \n ЛОК'ТАР ОГАР, ДРУГ!");
@@ -384,7 +402,7 @@ namespace Engine
 
             sewage.LocationToNorth = prison;
 
-            ogreCave.LocationToEast = graveyardOfBones;
+            trollCave.LocationToEast = graveyardOfBones;
             
             townSquare.LocationToEast = kingsPalace;
             townSquare.LocationToSouth = gate;
@@ -399,7 +417,7 @@ namespace Engine
 
             graveyardOfBones.LocationToNorth = hordeOfZombies;
             graveyardOfBones.LocationToEast = scaryNecromancerCastle;
-            graveyardOfBones.LocationToWest = ogreCave;
+            graveyardOfBones.LocationToWest = trollCave;
 
             kingsPalace.LocationToSouth = familyCrypt;
             kingsPalace.LocationToWest = townSquare;
@@ -426,7 +444,7 @@ namespace Engine
             _locations.Add(outskirts);
             _locations.Add(prison);
             _locations.Add(sewage);
-            _locations.Add(ogreCave);
+            _locations.Add(trollCave);
             _locations.Add(townSquare);
             _locations.Add(gate);
             _locations.Add(hordeOfZombies);
