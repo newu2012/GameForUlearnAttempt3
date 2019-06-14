@@ -163,7 +163,7 @@ namespace Engine
             var giantSnake = new Monster(MONSTER_ID_GIANT_SNAKE, "Гигантская змея", 15, 10, 0, 25, 25);
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GIANT_SNAKE_FANG), 75, true));
             giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_POISON_DAGGER), 15, false));
-            giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BATTERED_PERMIT), 5, false));
+            giantSnake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BATTERED_PERMIT), 1, false));
             
             var hydra = new Monster(MONSTER_ID_HYDRA, "Гидра", 50, 50, 0, 250, 250);
             hydra.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HYDRA_FANG), 75, true));
@@ -251,8 +251,8 @@ namespace Engine
             var removeTheCurseFromTheKing = new Quest(QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING, "Снять проклятие с короля.",
                 " Ну здравствуй, благородный рыцарь. Я сейчас очень занят важным делом. *кашляет* Тебе надо пройти в наш семейный склеп, я сказал, чтобы тебя пустили туда, и принести мне печать нашего королевского рода. *закашливается*. А я уж отблагодарю тебя, чем смогу.", null,
                 100, 2500);
-            searchForABestFriend.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ROYAL_SEAL), 1));
-            searchForABestFriend.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_ROYAL_PERMIT), 1));
+            removeTheCurseFromTheKing.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ROYAL_SEAL), 1));
+            removeTheCurseFromTheKing.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_ROYAL_PERMIT), 1));
             
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
@@ -418,7 +418,7 @@ namespace Engine
 
             outskirts.LocationToEast = townSquare;
             outskirts.LocationToSouth = prison;
-            outskirts.LocationToEast = roadToTheCity;
+            outskirts.LocationToWest = roadToTheCity;
 
             prison.LocationToNorth = outskirts;
             prison.LocationToSouth = sewage;
