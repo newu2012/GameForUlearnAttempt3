@@ -38,14 +38,14 @@ namespace GameForUlearnAttempt3
 
             dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Name",
+                HeaderText = "Название предмета",
                 Width = 197,
                 DataPropertyName = "Description"
             });
 
             dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Quantity",
+                HeaderText = "Количество",
                 DataPropertyName = "Quantity"
             });
 
@@ -58,14 +58,14 @@ namespace GameForUlearnAttempt3
 
             dgvQuests.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Name",
+                HeaderText = "Название квеста",
                 Width = 197,
                 DataPropertyName = "Name"
             });
 
             dgvQuests.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Done?",
+                HeaderText = "Готовность",
                 DataPropertyName = "IsCompleted"
             });
 
@@ -159,15 +159,12 @@ namespace GameForUlearnAttempt3
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
 
-                if (!_player.CurrentLocation.HasAMonster)
-                {
-                    btnUseWeapon.Enabled = false;
-                }
-                else
-                {
-                    btnUseWeapon.Enabled = _player.Weapons.Any();
-                    btnUsePotion.Enabled = _player.Potions.Any();
-                }
+                
+                btnUseWeapon.Enabled = _player.Weapons.Any();
+                btnUsePotion.Enabled = _player.Potions.Any();
+                cboPotions.Enabled = _player.Potions.Any();
+
+                btnUseWeapon.Enabled = _player.CurrentLocation.HasAMonster && _player.Weapons.Any();
             }
         }
 

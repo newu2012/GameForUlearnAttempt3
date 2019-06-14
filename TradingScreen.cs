@@ -27,14 +27,14 @@ namespace GameForUlearnAttempt3
 
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Name",
-                Width = 100,
+                HeaderText = "Название",
+                Width = 145,
                 DataPropertyName = "Description"
             });
 
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Qty",
+                HeaderText = "К-во",
                 Width = 30,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Quantity"
@@ -42,7 +42,7 @@ namespace GameForUlearnAttempt3
 
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Price",
+                HeaderText = "Цена",
                 Width = 35,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Price"
@@ -50,9 +50,9 @@ namespace GameForUlearnAttempt3
 
             dgvMyItems.Columns.Add(new DataGridViewButtonColumn
             {
-                Text = "Sell 1",
+                Text = "Продать 1",
                 UseColumnTextForButtonValue = true,
-                Width = 50,
+                Width = 65,
                 DataPropertyName = "ItemID"
             });
 
@@ -71,14 +71,14 @@ namespace GameForUlearnAttempt3
 
             dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Name",
-                Width = 100,
+                HeaderText = "Название",
+                Width = 135,
                 DataPropertyName = "Description"
             });
 
             dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Price",
+                HeaderText = "Цена",
                 Width = 35,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Price"
@@ -86,9 +86,9 @@ namespace GameForUlearnAttempt3
 
             dgvVendorItems.Columns.Add(new DataGridViewButtonColumn
             {
-                Text = "Buy 1",
+                Text = "Купить 1",
                 UseColumnTextForButtonValue = true,
-                Width = 50,
+                Width = 65,
                 DataPropertyName = "ItemID"
             });
 
@@ -104,7 +104,7 @@ namespace GameForUlearnAttempt3
                 var itemBeingSold = World.ItemByID(Convert.ToInt32(itemID));
 
                 if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
-                    MessageBox.Show("You cannot sell the " + itemBeingSold.Name);
+                    MessageBox.Show("Вы не можете продать " + itemBeingSold.Name);
                 else
                 {
                     _currentPlayer.RemoveItemFromInventory(itemBeingSold);
@@ -126,7 +126,7 @@ namespace GameForUlearnAttempt3
                     _currentPlayer.Gold -= itemBeingBought.Price;
                 }
                 else
-                    MessageBox.Show("You do not have enough gold to buy the " + itemBeingBought.Name);
+                    MessageBox.Show("У вас недостаточно золота чтобы купить " + itemBeingBought.Name);
             }
         }
 

@@ -55,38 +55,39 @@ namespace GameForUlearnAttempt3
             this.pic_1_5 = new System.Windows.Forms.PictureBox();
             this.pic_2_5 = new System.Windows.Forms.PictureBox();
             this.pic_3_5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_5)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_0_0
             // 
             this.pic_0_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_0_0.Location = new System.Drawing.Point(0, 1);
+            this.pic_0_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_0.Name = "pic_0_0";
-            this.pic_0_0.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_0.Size = new System.Drawing.Size(87, 86);
             this.pic_0_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_0.TabIndex = 0;
             this.pic_0_0.TabStop = false;
@@ -94,9 +95,10 @@ namespace GameForUlearnAttempt3
             // pic_0_1
             // 
             this.pic_0_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_1.Location = new System.Drawing.Point(81, 1);
+            this.pic_0_1.Location = new System.Drawing.Point(94, 1);
+            this.pic_0_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_1.Name = "pic_0_1";
-            this.pic_0_1.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_1.Size = new System.Drawing.Size(87, 86);
             this.pic_0_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_1.TabIndex = 1;
             this.pic_0_1.TabStop = false;
@@ -104,9 +106,10 @@ namespace GameForUlearnAttempt3
             // pic_0_2
             // 
             this.pic_0_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_2.Location = new System.Drawing.Point(162, 1);
+            this.pic_0_2.Location = new System.Drawing.Point(189, 1);
+            this.pic_0_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_2.Name = "pic_0_2";
-            this.pic_0_2.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_2.Size = new System.Drawing.Size(87, 86);
             this.pic_0_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_2.TabIndex = 2;
             this.pic_0_2.TabStop = false;
@@ -114,9 +117,10 @@ namespace GameForUlearnAttempt3
             // pic_0_3
             // 
             this.pic_0_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_3.Location = new System.Drawing.Point(243, 1);
+            this.pic_0_3.Location = new System.Drawing.Point(284, 1);
+            this.pic_0_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_3.Name = "pic_0_3";
-            this.pic_0_3.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_3.Size = new System.Drawing.Size(87, 86);
             this.pic_0_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_3.TabIndex = 3;
             this.pic_0_3.TabStop = false;
@@ -124,9 +128,10 @@ namespace GameForUlearnAttempt3
             // pic_0_4
             // 
             this.pic_0_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_4.Location = new System.Drawing.Point(324, 1);
+            this.pic_0_4.Location = new System.Drawing.Point(378, 1);
+            this.pic_0_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_4.Name = "pic_0_4";
-            this.pic_0_4.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_4.Size = new System.Drawing.Size(87, 86);
             this.pic_0_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_4.TabIndex = 4;
             this.pic_0_4.TabStop = false;
@@ -134,9 +139,10 @@ namespace GameForUlearnAttempt3
             // pic_1_0
             // 
             this.pic_1_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_0.Location = new System.Drawing.Point(0, 82);
+            this.pic_1_0.Location = new System.Drawing.Point(0, 95);
+            this.pic_1_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_0.Name = "pic_1_0";
-            this.pic_1_0.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_0.Size = new System.Drawing.Size(87, 86);
             this.pic_1_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_0.TabIndex = 5;
             this.pic_1_0.TabStop = false;
@@ -144,9 +150,10 @@ namespace GameForUlearnAttempt3
             // pic_1_1
             // 
             this.pic_1_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_1.Location = new System.Drawing.Point(81, 82);
+            this.pic_1_1.Location = new System.Drawing.Point(94, 95);
+            this.pic_1_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_1.Name = "pic_1_1";
-            this.pic_1_1.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_1.Size = new System.Drawing.Size(87, 86);
             this.pic_1_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_1.TabIndex = 6;
             this.pic_1_1.TabStop = false;
@@ -154,9 +161,10 @@ namespace GameForUlearnAttempt3
             // pic_1_2
             // 
             this.pic_1_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_2.Location = new System.Drawing.Point(162, 82);
+            this.pic_1_2.Location = new System.Drawing.Point(189, 95);
+            this.pic_1_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_2.Name = "pic_1_2";
-            this.pic_1_2.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_2.Size = new System.Drawing.Size(87, 86);
             this.pic_1_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_2.TabIndex = 7;
             this.pic_1_2.TabStop = false;
@@ -164,9 +172,10 @@ namespace GameForUlearnAttempt3
             // pic_1_3
             // 
             this.pic_1_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_3.Location = new System.Drawing.Point(243, 82);
+            this.pic_1_3.Location = new System.Drawing.Point(284, 95);
+            this.pic_1_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_3.Name = "pic_1_3";
-            this.pic_1_3.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_3.Size = new System.Drawing.Size(87, 86);
             this.pic_1_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_3.TabIndex = 8;
             this.pic_1_3.TabStop = false;
@@ -174,9 +183,10 @@ namespace GameForUlearnAttempt3
             // pic_1_4
             // 
             this.pic_1_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_4.Location = new System.Drawing.Point(324, 82);
+            this.pic_1_4.Location = new System.Drawing.Point(378, 95);
+            this.pic_1_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_4.Name = "pic_1_4";
-            this.pic_1_4.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_4.Size = new System.Drawing.Size(87, 86);
             this.pic_1_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_4.TabIndex = 9;
             this.pic_1_4.TabStop = false;
@@ -184,9 +194,10 @@ namespace GameForUlearnAttempt3
             // pic_2_0
             // 
             this.pic_2_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_0.Location = new System.Drawing.Point(0, 163);
+            this.pic_2_0.Location = new System.Drawing.Point(0, 188);
+            this.pic_2_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_0.Name = "pic_2_0";
-            this.pic_2_0.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_0.Size = new System.Drawing.Size(87, 86);
             this.pic_2_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_0.TabIndex = 10;
             this.pic_2_0.TabStop = false;
@@ -194,9 +205,10 @@ namespace GameForUlearnAttempt3
             // pic_2_1
             // 
             this.pic_2_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_1.Location = new System.Drawing.Point(81, 163);
+            this.pic_2_1.Location = new System.Drawing.Point(94, 188);
+            this.pic_2_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_1.Name = "pic_2_1";
-            this.pic_2_1.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_1.Size = new System.Drawing.Size(87, 86);
             this.pic_2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_1.TabIndex = 11;
             this.pic_2_1.TabStop = false;
@@ -204,9 +216,10 @@ namespace GameForUlearnAttempt3
             // pic_2_2
             // 
             this.pic_2_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_2.Location = new System.Drawing.Point(162, 163);
+            this.pic_2_2.Location = new System.Drawing.Point(189, 188);
+            this.pic_2_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_2.Name = "pic_2_2";
-            this.pic_2_2.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_2.Size = new System.Drawing.Size(87, 86);
             this.pic_2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_2.TabIndex = 12;
             this.pic_2_2.TabStop = false;
@@ -214,9 +227,10 @@ namespace GameForUlearnAttempt3
             // pic_2_3
             // 
             this.pic_2_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_3.Location = new System.Drawing.Point(243, 163);
+            this.pic_2_3.Location = new System.Drawing.Point(284, 188);
+            this.pic_2_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_3.Name = "pic_2_3";
-            this.pic_2_3.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_3.Size = new System.Drawing.Size(87, 86);
             this.pic_2_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_3.TabIndex = 13;
             this.pic_2_3.TabStop = false;
@@ -224,9 +238,10 @@ namespace GameForUlearnAttempt3
             // pic_2_4
             // 
             this.pic_2_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_4.Location = new System.Drawing.Point(324, 163);
+            this.pic_2_4.Location = new System.Drawing.Point(378, 188);
+            this.pic_2_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_4.Name = "pic_2_4";
-            this.pic_2_4.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_4.Size = new System.Drawing.Size(87, 86);
             this.pic_2_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_4.TabIndex = 14;
             this.pic_2_4.TabStop = false;
@@ -234,9 +249,10 @@ namespace GameForUlearnAttempt3
             // pic_3_0
             // 
             this.pic_3_0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_0.Location = new System.Drawing.Point(0, 244);
+            this.pic_3_0.Location = new System.Drawing.Point(0, 282);
+            this.pic_3_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_0.Name = "pic_3_0";
-            this.pic_3_0.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_0.Size = new System.Drawing.Size(87, 86);
             this.pic_3_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_0.TabIndex = 15;
             this.pic_3_0.TabStop = false;
@@ -244,9 +260,10 @@ namespace GameForUlearnAttempt3
             // pic_3_1
             // 
             this.pic_3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_1.Location = new System.Drawing.Point(81, 244);
+            this.pic_3_1.Location = new System.Drawing.Point(94, 282);
+            this.pic_3_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_1.Name = "pic_3_1";
-            this.pic_3_1.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_1.Size = new System.Drawing.Size(87, 86);
             this.pic_3_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_1.TabIndex = 16;
             this.pic_3_1.TabStop = false;
@@ -254,9 +271,10 @@ namespace GameForUlearnAttempt3
             // pic_3_2
             // 
             this.pic_3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_2.Location = new System.Drawing.Point(162, 244);
+            this.pic_3_2.Location = new System.Drawing.Point(189, 282);
+            this.pic_3_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_2.Name = "pic_3_2";
-            this.pic_3_2.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_2.Size = new System.Drawing.Size(87, 86);
             this.pic_3_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_2.TabIndex = 17;
             this.pic_3_2.TabStop = false;
@@ -264,9 +282,10 @@ namespace GameForUlearnAttempt3
             // pic_3_3
             // 
             this.pic_3_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_3.Location = new System.Drawing.Point(243, 244);
+            this.pic_3_3.Location = new System.Drawing.Point(284, 282);
+            this.pic_3_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_3.Name = "pic_3_3";
-            this.pic_3_3.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_3.Size = new System.Drawing.Size(87, 86);
             this.pic_3_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_3.TabIndex = 18;
             this.pic_3_3.TabStop = false;
@@ -274,9 +293,10 @@ namespace GameForUlearnAttempt3
             // pic_3_4
             // 
             this.pic_3_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_4.Location = new System.Drawing.Point(324, 244);
+            this.pic_3_4.Location = new System.Drawing.Point(378, 282);
+            this.pic_3_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_4.Name = "pic_3_4";
-            this.pic_3_4.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_4.Size = new System.Drawing.Size(87, 86);
             this.pic_3_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_4.TabIndex = 19;
             this.pic_3_4.TabStop = false;
@@ -284,9 +304,10 @@ namespace GameForUlearnAttempt3
             // pic_0_5
             // 
             this.pic_0_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_0_5.Location = new System.Drawing.Point(405, 1);
+            this.pic_0_5.Location = new System.Drawing.Point(472, 1);
+            this.pic_0_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_0_5.Name = "pic_0_5";
-            this.pic_0_5.Size = new System.Drawing.Size(75, 75);
+            this.pic_0_5.Size = new System.Drawing.Size(87, 86);
             this.pic_0_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_0_5.TabIndex = 20;
             this.pic_0_5.TabStop = false;
@@ -294,9 +315,10 @@ namespace GameForUlearnAttempt3
             // pic_1_5
             // 
             this.pic_1_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_1_5.Location = new System.Drawing.Point(405, 82);
+            this.pic_1_5.Location = new System.Drawing.Point(472, 95);
+            this.pic_1_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_1_5.Name = "pic_1_5";
-            this.pic_1_5.Size = new System.Drawing.Size(75, 75);
+            this.pic_1_5.Size = new System.Drawing.Size(87, 86);
             this.pic_1_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_1_5.TabIndex = 21;
             this.pic_1_5.TabStop = false;
@@ -304,9 +326,10 @@ namespace GameForUlearnAttempt3
             // pic_2_5
             // 
             this.pic_2_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_2_5.Location = new System.Drawing.Point(405, 163);
+            this.pic_2_5.Location = new System.Drawing.Point(472, 188);
+            this.pic_2_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_2_5.Name = "pic_2_5";
-            this.pic_2_5.Size = new System.Drawing.Size(75, 75);
+            this.pic_2_5.Size = new System.Drawing.Size(87, 86);
             this.pic_2_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_2_5.TabIndex = 22;
             this.pic_2_5.TabStop = false;
@@ -314,18 +337,19 @@ namespace GameForUlearnAttempt3
             // pic_3_5
             // 
             this.pic_3_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_3_5.Location = new System.Drawing.Point(405, 244);
+            this.pic_3_5.Location = new System.Drawing.Point(472, 282);
+            this.pic_3_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pic_3_5.Name = "pic_3_5";
-            this.pic_3_5.Size = new System.Drawing.Size(75, 75);
+            this.pic_3_5.Size = new System.Drawing.Size(87, 86);
             this.pic_3_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_3_5.TabIndex = 23;
             this.pic_3_5.TabStop = false;
             // 
             // WorldMap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 322);
+            this.ClientSize = new System.Drawing.Size(566, 372);
             this.Controls.Add(this.pic_3_5);
             this.Controls.Add(this.pic_2_5);
             this.Controls.Add(this.pic_1_5);
@@ -350,37 +374,37 @@ namespace GameForUlearnAttempt3
             this.Controls.Add(this.pic_0_2);
             this.Controls.Add(this.pic_0_1);
             this.Controls.Add(this.pic_0_0);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "WorldMap";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "World Map";
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_0_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_1_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_2_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_3_5)).EndInit();
+            this.Text = "Карта мира";
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_0_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_1_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_2_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_3_5)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

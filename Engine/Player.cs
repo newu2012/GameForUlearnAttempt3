@@ -242,7 +242,7 @@ namespace Engine
 
         public void UsePotion(Potion potion)
         {
-            RaiseMessage("Вы выпили " + potion);
+            RaiseMessage("Вы выпили " + potion.Name);
             if (potion is HealingPotion)
                 HealPlayer(((HealingPotion) potion).AmountToHeal);
             else AddExperiencePoints(((ExperiencePotion) potion).AmountToAdd);

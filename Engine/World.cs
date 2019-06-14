@@ -17,6 +17,7 @@ namespace Engine
         
         public const int UNSELLABLE_ITEM_PRICE = -1;
         
+        
         public const int ITEM_ID_RUSTY_SWORD = 1;
         public const int ITEM_ID_SHOVEL = 2;
         public const int ITEM_ID_WOLF_SKIN = 3;
@@ -27,10 +28,8 @@ namespace Engine
         public const int ITEM_ID_HEALING_POTION = 8;
         public const int ITEM_ID_BIG_HEALING_POTION = 9;
         public const int ITEM_ID_GREAT_HEALING_POTION = 10;
-        
         public const int ITEM_ID_TROLL_CUDGEL = 11;
         public const int ITEM_ID_TROLL_MEAT = 12;
-        
         public const int ITEM_ID_HEADMAN_PERMISSION_PASS = 13;
         public const int ITEM_ID_BATTERED_PERMIT = 13;
         public const int ITEM_ID_BARK_OF_TRENT = 14;
@@ -42,6 +41,9 @@ namespace Engine
         public const int ITEM_ID_POTION_OF_ETERNAL_LIFE = 20;
         public const int ITEM_ID_CROCODILE_TAIL = 21;
         public const int ITEM_ID_SEWAGE_KEY = 22;
+        public const int ITEM_ID_ROYAL_SEAL = 23;
+        public const int ITEM_ID_ECTOPLASM = 24;
+        public const int ITEM_ID_ROYAL_PERMIT = 25;
         
         
         
@@ -55,6 +57,7 @@ namespace Engine
         public const int MONSTER_ID_ROUGE = 8;
         public const int MONSTER_ID_ROUGE_LEADER = 9;
         public const int MONSTER_ID_TROLL = 10;
+        public const int MONSTER_ID_GHOST = 11;
         
         
         
@@ -64,7 +67,8 @@ namespace Engine
         public const int QUEST_ID_PURGE_THE_BEARS = 4;
         public const int QUEST_ID_PURGE_THE_DANGER_OF_THE_ANCIENT_FOREST = 5;
         public const int QUEST_ID_SEARCH_FOR_A_BEST_FRIEND = 6;
-        public const int QUEST_ID_HELP_SHEPHERD_WITH_SNAKES = 6;
+        public const int QUEST_ID_HELP_SHEPHERD_WITH_SNAKES = 7;
+        public const int QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING = 8;
         
         
         
@@ -95,7 +99,6 @@ namespace Engine
         
         
         
-        
         static World()
         {
             PopulateItems();
@@ -114,6 +117,9 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_BARK_OF_TRENT, "Кора трента", "Кора трента", 50));
             _items.Add(new Item(ITEM_ID_CROCODILE_TAIL, "Хвост крокодила", "Хвост крокодила", 125));
             _items.Add(new Item(ITEM_ID_TROLL_MEAT, "Мясо тролля", "Мясо тролля", 1000));
+            _items.Add(new Item(ITEM_ID_TROLL_MEAT, "Мясо тролля", "Мясо тролля", 1000));
+            _items.Add(new Item(ITEM_ID_ROYAL_SEAL, "Печать королевского рода", "Печати королевского рода", 250));
+            _items.Add(new Item(ITEM_ID_ECTOPLASM, "Эктоплазма", "Эктоплазма", 25));
             
             _items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Ржавый меч", "Ржавые мечи", 0, 5, 0));
             _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
@@ -132,6 +138,7 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_BATTERED_PERMIT, "Потрёпанное разрешение", "Потрёпанные разрешения", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_SEWAGE_KEY, "Грязный ключ", "Грязные ключи", 50));
+            _items.Add(new Item(ITEM_ID_ROYAL_PERMIT, "Разрешение короля", "Разрешения корооля", UNSELLABLE_ITEM_PRICE));
         }
 
         private static void PopulateMonsters()
@@ -174,8 +181,13 @@ namespace Engine
             rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HEALING_POTION), 75, false));
 
             var troll = new Monster(MONSTER_ID_TROLL, "Тролль", 200, 250, 250, 1000, 1000);
-            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_MEAT), 75, true));
-            rougeLeader.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_CUDGEL), 25, false));
+            troll.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_MEAT), 75, true));
+            troll.LootTable.Add(new LootItem(ItemByID(ITEM_ID_TROLL_CUDGEL), 25, false));
+            
+            var ghost = new Monster(MONSTER_ID_GHOST, "Призрак", 30, 30, 0, 100, 100);
+            ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ECTOPLASM), 75, true));
+            ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ROYAL_SEAL), 10, false));
+            ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY), 1, false));
             
             _monsters.Add(snake);
             _monsters.Add(wolf);
@@ -186,6 +198,8 @@ namespace Engine
             _monsters.Add(crocodile);
             _monsters.Add(rouge);
             _monsters.Add(rougeLeader);
+            _monsters.Add(troll);
+            _monsters.Add(ghost);
         }
 
         private static void PopulateQuests()
@@ -234,6 +248,12 @@ namespace Engine
             searchForABestFriend.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_CROCODILE_TAIL), 1));
             searchForABestFriend.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_POTION_OF_ETERNAL_LIFE), 1));
             
+            var removeTheCurseFromTheKing = new Quest(QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING, "Снять проклятие с короля.",
+                " Ну здравствуй, благородный рыцарь. Я сейчас очень занят важным делом. *кашляет* Тебе надо пройти в наш семейный склеп, я сказал, чтобы тебя пустили туда, и принести мне печать нашего королевского рода. *закашливается*. А я уж отблагодарю тебя, чем смогу.", null,
+                100, 2500);
+            searchForABestFriend.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ROYAL_SEAL), 1));
+            searchForABestFriend.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_ROYAL_PERMIT), 1));
+            
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
             _quests.Add(purgeTheWolves);
@@ -241,6 +261,7 @@ namespace Engine
             _quests.Add(purgeTheDangerOfTheAncientForest);
             _quests.Add(helpShepherdWithSnakes);
             _quests.Add(searchForABestFriend);
+            _quests.Add(removeTheCurseFromTheKing);
         }
 
         private static void PopulateLocations()
@@ -320,7 +341,7 @@ namespace Engine
 
             var townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Городская площадь",
                 "На площади достаточно людно. Сложно представить почему центр настолько разительно отличается от закоулок, в которых Вы недавно были.");
-
+            
             var gate = new Location(LOCATION_ID_GATE, "Ворота",
                 "Похоже здесь стоит почти вся стража города. Стражники отчётливо дают вам понять, что для того чтобы пройти дальше, вам нужно личное разрешение Короля Давида Сказачного.");
 
@@ -332,9 +353,11 @@ namespace Engine
 
             var kingsPalace = new Location(LOCATION_ID_KINGS_PALACE, "Дворец короля",
                 "Двроец Давида Сказачного. Он с гордостью смотрит на Вас, рыцаря света, пришедшего спасать его Королевство. Хорошо что он не знает, что ещё вчера вам приходилось копать ямы для постройки нового туалета в деревне.");
-
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING));
+            
             var familyCrypt = new Location(LOCATION_ID_FAMILY_CRYPT, "Семейный склеп",
                 "Семейный склеп Давида Сказачного. Пора успокоить взбунтовавшихся призраков.");
+            familyCrypt.AddMonster(MONSTER_ID_GHOST, 100);
 
             var moundOfDeath = new Location(LOCATION_ID_MOUND_OF_DEATH, "Курган смерти",
                 "Пора остановить производство зомби. Проблему с существующими это хоть и не решит, но новым лучше всё-таки не появляться.", ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));

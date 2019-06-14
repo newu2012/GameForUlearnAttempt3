@@ -57,95 +57,62 @@
             ((System.ComponentModel.ISupportInitialize) (this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvQuests)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
             this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hit Points:";
-            // 
-            // label2
-            // 
+            this.label1.Text = "Здоровье:";
             this.label2.Location = new System.Drawing.Point(18, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Gold:";
-            // 
-            // label3
-            // 
+            this.label2.Text = "Золото:";
             this.label3.Location = new System.Drawing.Point(18, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Experience:";
-            // 
-            // label4
-            // 
+            this.label3.Text = "Очки опыта:";
             this.label4.Location = new System.Drawing.Point(18, 100);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Level:";
-            // 
-            // lblHitPoints
-            // 
+            this.label4.Text = "Уровень:";
             this.lblHitPoints.Location = new System.Drawing.Point(110, 18);
             this.lblHitPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHitPoints.Name = "lblHitPoints";
             this.lblHitPoints.Size = new System.Drawing.Size(100, 23);
             this.lblHitPoints.TabIndex = 4;
-            // 
-            // lblGold
-            // 
             this.lblGold.Location = new System.Drawing.Point(110, 45);
             this.lblGold.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(100, 23);
             this.lblGold.TabIndex = 5;
-            // 
-            // lblExperience
-            // 
             this.lblExperience.Location = new System.Drawing.Point(110, 73);
             this.lblExperience.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(100, 23);
             this.lblExperience.TabIndex = 6;
-            // 
-            // lblLevel
-            // 
             this.lblLevel.Location = new System.Drawing.Point(110, 99);
             this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(100, 23);
             this.lblLevel.TabIndex = 7;
-            // 
-            // label5
-            // 
             this.label5.Location = new System.Drawing.Point(617, 531);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.Size = new System.Drawing.Size(125, 23);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Select Action";
-            // 
-            // cboWeapons
-            // 
+            this.label5.Text = "Выбор действия";
             this.cboWeapons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWeapons.Location = new System.Drawing.Point(463, 558);
             this.cboWeapons.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(150, 23);
             this.cboWeapons.TabIndex = 9;
-            // 
-            // cboPotions
-            // 
             this.cboPotions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPotions.FormattingEnabled = true;
             this.cboPotions.Location = new System.Drawing.Point(463, 593);
@@ -153,75 +120,54 @@
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(150, 23);
             this.cboPotions.TabIndex = 10;
-            // 
-            // btnUseWeapon
-            // 
             this.btnUseWeapon.Location = new System.Drawing.Point(620, 558);
             this.btnUseWeapon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(85, 23);
             this.btnUseWeapon.TabIndex = 11;
-            this.btnUseWeapon.Text = "Attack";
+            this.btnUseWeapon.Text = "Атаковать";
             this.btnUseWeapon.UseVisualStyleBackColor = true;
             this.btnUseWeapon.Click += new System.EventHandler(this.btnUseWeapon_Click);
-            // 
-            // btnUsePotion
-            // 
             this.btnUsePotion.Location = new System.Drawing.Point(620, 593);
             this.btnUsePotion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(85, 23);
             this.btnUsePotion.TabIndex = 12;
-            this.btnUsePotion.Text = "Use Potion";
+            this.btnUsePotion.Text = "Зелье";
             this.btnUsePotion.UseVisualStyleBackColor = true;
             this.btnUsePotion.Click += new System.EventHandler(this.btnUsePotion_Click);
-            // 
-            // btnNorth
-            // 
             this.btnNorth.Location = new System.Drawing.Point(415, 420);
             this.btnNorth.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 40);
             this.btnNorth.TabIndex = 13;
-            this.btnNorth.Text = "North";
+            this.btnNorth.Text = "Север";
             this.btnNorth.UseVisualStyleBackColor = true;
             this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
-            // 
-            // btnSouth
-            // 
             this.btnSouth.Location = new System.Drawing.Point(415, 500);
             this.btnSouth.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 40);
             this.btnSouth.TabIndex = 14;
-            this.btnSouth.Text = "South";
+            this.btnSouth.Text = "Юг";
             this.btnSouth.UseVisualStyleBackColor = true;
             this.btnSouth.Click += new System.EventHandler(this.btnSouth_Click);
-            // 
-            // btnEast
-            // 
             this.btnEast.Location = new System.Drawing.Point(490, 460);
             this.btnEast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 40);
             this.btnEast.TabIndex = 15;
-            this.btnEast.Text = "East";
+            this.btnEast.Text = "Восток";
             this.btnEast.UseVisualStyleBackColor = true;
             this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
-            // 
-            // btnWest
-            // 
             this.btnWest.Location = new System.Drawing.Point(340, 460);
             this.btnWest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 40);
             this.btnWest.TabIndex = 16;
-            this.btnWest.Text = "West";
+            this.btnWest.Text = "Запад";
             this.btnWest.UseVisualStyleBackColor = true;
             this.btnWest.Click += new System.EventHandler(this.btnWest_Click);
-            // 
-            // rtbLocation
-            // 
             this.rtbLocation.Location = new System.Drawing.Point(346, 18);
             this.rtbLocation.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.rtbLocation.Name = "rtbLocation";
@@ -229,9 +175,6 @@
             this.rtbLocation.Size = new System.Drawing.Size(360, 106);
             this.rtbLocation.TabIndex = 17;
             this.rtbLocation.Text = "";
-            // 
-            // rtbMessages
-            // 
             this.rtbMessages.Location = new System.Drawing.Point(346, 130);
             this.rtbMessages.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.rtbMessages.Name = "rtbMessages";
@@ -239,9 +182,6 @@
             this.rtbMessages.Size = new System.Drawing.Size(360, 286);
             this.rtbMessages.TabIndex = 18;
             this.rtbMessages.Text = "";
-            // 
-            // dgvInventory
-            // 
             this.dgvInventory.AllowUserToAddRows = false;
             this.dgvInventory.AllowUserToDeleteRows = false;
             this.dgvInventory.AllowUserToResizeRows = false;
@@ -257,9 +197,6 @@
             this.dgvInventory.RowHeadersVisible = false;
             this.dgvInventory.Size = new System.Drawing.Size(312, 309);
             this.dgvInventory.TabIndex = 19;
-            // 
-            // dgvQuests
-            // 
             this.dgvQuests.AllowUserToAddRows = false;
             this.dgvQuests.AllowUserToDeleteRows = false;
             this.dgvQuests.AllowUserToResizeRows = false;
@@ -275,49 +212,34 @@
             this.dgvQuests.RowHeadersVisible = false;
             this.dgvQuests.Size = new System.Drawing.Size(312, 189);
             this.dgvQuests.TabIndex = 20;
-            // 
-            // lblSelectedWeapon
-            // 
-            this.lblSelectedWeapon.Location = new System.Drawing.Point(340, 558);
+            this.lblSelectedWeapon.Location = new System.Drawing.Point(335, 558);
             this.lblSelectedWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedWeapon.Name = "lblSelectedWeapon";
-            this.lblSelectedWeapon.Size = new System.Drawing.Size(115, 23);
+            this.lblSelectedWeapon.Size = new System.Drawing.Size(125, 23);
             this.lblSelectedWeapon.TabIndex = 21;
-            this.lblSelectedWeapon.Text = "Selected Weapon";
-            // 
-            // lblSelectedPotion
-            // 
-            this.lblSelectedPotion.Location = new System.Drawing.Point(346, 593);
+            this.lblSelectedWeapon.Text = "Выбранное оружие";
+            this.lblSelectedPotion.Location = new System.Drawing.Point(335, 593);
             this.lblSelectedPotion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedPotion.Name = "lblSelectedPotion";
-            this.lblSelectedPotion.Size = new System.Drawing.Size(115, 23);
+            this.lblSelectedPotion.Size = new System.Drawing.Size(125, 23);
             this.lblSelectedPotion.TabIndex = 22;
-            this.lblSelectedPotion.Text = "Selected Potion";
-            // 
-            // btnTrade
-            // 
+            this.lblSelectedPotion.Text = "Выбранное зелье";
             this.btnTrade.Location = new System.Drawing.Point(620, 620);
             this.btnTrade.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTrade.Name = "btnTrade";
             this.btnTrade.Size = new System.Drawing.Size(85, 23);
             this.btnTrade.TabIndex = 21;
-            this.btnTrade.Text = "Trade";
+            this.btnTrade.Text = "Торговля";
             this.btnTrade.UseVisualStyleBackColor = true;
             this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
-            // 
-            // btnMap
-            // 
             this.btnMap.Location = new System.Drawing.Point(415, 460);
             this.btnMap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMap.Name = "btnMap";
             this.btnMap.Size = new System.Drawing.Size(75, 40);
             this.btnMap.TabIndex = 23;
-            this.btnMap.Text = "Map";
+            this.btnMap.Text = "Карта";
             this.btnMap.UseVisualStyleBackColor = true;
             this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
-            // 
-            // GameForm
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -350,6 +272,7 @@
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GameForm";
+            this.Text = "Типо игра";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize) (this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvQuests)).EndInit();
