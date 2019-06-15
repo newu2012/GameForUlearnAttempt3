@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dee4364-67c6-47d8-a05b-2852ac224c28" name="Default Changelist" comment="">
+    <list default="true" id="2dee4364-67c6-47d8-a05b-2852ac224c28" name="Default Changelist" comment="Added .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameForUlearnAttempt3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradingScreen.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TradingScreen.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TradingScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/Engine.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/bin/Debug/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/Engine.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Engine.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.GameForm.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.Properties.Resources.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csproj.GenerateResource.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameForUlearnAttempt3.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/NOTICES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/NUnit.3.12.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/_signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/build/NUnit.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net35/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net35/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net35/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net40/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net40/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net40/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net45/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net45/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/net45/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard1.4/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard1.4/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard1.4/nunit.framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard2.0/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard2.0/nunit.framework.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.12.0/lib/netstandard2.0/nunit.framework.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameForm.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3876">
-              <caret line="231" column="44" selection-start-line="231" selection-start-column="43" selection-end-line="231" selection-end-column="44" />
+            <state relative-caret-position="398">
+              <caret line="234" column="70" lean-forward="true" selection-start-line="234" selection-start-column="70" selection-end-line="234" selection-end-column="70" />
               <folding>
                 <marker date="1560550652207" expanded="true" signature="31:17521" ph="{...}" />
                 <marker date="1560550652207" expanded="true" signature="60:17519" ph="{...}" />
@@ -199,28 +240,37 @@
           <provider editor-type-id="WinFormsEditor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TradingScreen.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+            <state relative-caret-position="177">
+              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
               <folding>
-                <marker date="1560600192205" expanded="true" signature="61:5318" ph="{...}" />
-                <marker date="1560600192205" expanded="true" signature="95:5316" ph="{...}" />
-                <marker date="1560600192205" expanded="true" signature="110:186" ph="/// Required designer variable. ... " />
-                <marker date="1560600192205" expanded="true" signature="242:433" ph="/// Clean up any resources being used. ... " />
-                <marker date="1560600192205" expanded="true" signature="489:664" ph="{...}" />
-                <marker date="1560600192205" expanded="true" signature="550:616" ph="{...}" />
-                <marker date="1560600192205" expanded="true" signature="674:5005" ph="Windows Form Designer generated code" />
-                <marker date="1560600192205" expanded="true" signature="728:891" ph="/// Required method for Designer support - do not modify ... " />
-                <marker date="1560600192205" expanded="true" signature="934:4985" ph="{...}" />
-                <marker date="1560600192205" expanded="true" signature="1520:1569" ph="/* lblMyInventory ... */" />
-                <marker date="1560600192205" expanded="true" signature="1974:2027" ph="/* lblVendorInventory ... */" />
-                <marker date="1560600192205" expanded="true" signature="2460:2505" ph="/* dgvMyItems ... */" />
-                <marker date="1560600192205" expanded="true" signature="2980:3029" ph="/* dgvVendorItems ... */" />
-                <marker date="1560600192205" expanded="true" signature="3533:3576" ph="/* btnClose ... */" />
-                <marker date="1560600192205" expanded="true" signature="4092:4140" ph="/* TradingScreen ... */" />
+                <marker date="1560600315259" expanded="true" signature="61:5318" ph="{...}" />
+                <marker date="1560600315259" expanded="true" signature="95:5316" ph="{...}" />
+                <marker date="1560600315259" expanded="true" signature="110:186" ph="/// Required designer variable. ... " />
+                <marker date="1560600315259" expanded="true" signature="242:433" ph="/// Clean up any resources being used. ... " />
+                <marker date="1560600315259" expanded="true" signature="489:664" ph="{...}" />
+                <marker date="1560600315259" expanded="true" signature="550:616" ph="{...}" />
+                <marker date="1560600315259" expanded="true" signature="674:5005" ph="Windows Form Designer generated code" />
+                <marker date="1560600315259" expanded="true" signature="728:891" ph="/// Required method for Designer support - do not modify ... " />
+                <marker date="1560600315259" expanded="true" signature="934:4985" ph="{...}" />
+                <marker date="1560600315259" expanded="true" signature="1520:1569" ph="/* lblMyInventory ... */" />
+                <marker date="1560600315259" expanded="true" signature="1974:2027" ph="/* lblVendorInventory ... */" />
+                <marker date="1560600315259" expanded="true" signature="2460:2505" ph="/* dgvMyItems ... */" />
+                <marker date="1560600315259" expanded="true" signature="2980:3029" ph="/* dgvVendorItems ... */" />
+                <marker date="1560600315259" expanded="true" signature="3533:3576" ph="/* btnClose ... */" />
+                <marker date="1560600315259" expanded="true" signature="4092:4140" ph="/* TradingScreen ... */" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -545,7 +595,7 @@
       <workItem from="1560282026851" duration="805000" />
       <workItem from="1560335383574" duration="1950000" />
       <workItem from="1560531342977" duration="14197000" />
-      <workItem from="1560591420961" duration="3702000" />
+      <workItem from="1560591420961" duration="6085000" />
     </task>
     <task id="LOCAL-00001" summary="Basic LINQ refactoring">
       <created>1558184672318</created>
@@ -729,11 +779,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560551873838</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added &quot;Buy Max&quot; and &quot;Sell All&quot; options in trading menu">
+      <created>1560600370521</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1560600370521</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added .gitignore">
+      <created>1560602343873</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1560602343873</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179882000" />
+    <option name="totallyTimeSpent" value="182265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,14 +810,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920508" visible="true" weight="0.20990942" />
       <window_info id="Structure" order="1" sideWeight="0.5007949" side_tool="true" weight="0.13965885" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49866807" visible="true" weight="0.16115262" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49866807" weight="0.16115262" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.39978677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -761,7 +824,7 @@
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32942432" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32942432" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49920085" weight="0.32870865" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49920085" visible="true" weight="0.32870865" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32942432" />
       <window_info anchor="bottom" id="Unit Tests" order="13" weight="0.32870865" />
@@ -862,8 +925,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added XML saves for game" />
-    <MESSAGE value="Changed button visible state" />
     <MESSAGE value="Refactoring based on &quot;INotifyPropertyChanged&quot;" />
     <MESSAGE value="Started moving game logic to Engine, some problems but OK&#10;WE NEED TO BUILD A WALL!&#10;//TODO&#10;1)Code keyboard input;&#10;2)Fix GUI bugs (IDK how it works, rly)&#10;3)Complete refactoring." />
     <MESSAGE value="Changed near everything&#10;Big refactoring. &#10;Now the program is more suitable under the terms of project.&#10;Much more like MVC, but some troubles still exist.&#10;I could not figure out how to implement past ideas." />
@@ -887,7 +948,9 @@
     <MESSAGE value="Исправлено несколько орфографических ошибок.&#10;Переведён (вроде бы) весь текст в &quot;консоли&quot;-rtb для основного текста.&#10;Реализованы тролли." />
     <MESSAGE value="Закончил перевод (вроде) всего текса и интерфейса в игре.&#10;Немного изменил расположение элементов интерфейса на окнах.&#10;Чуть изменил условие для включения кнопки использования зелья." />
     <MESSAGE value="Починил переход между двумя локациями.&#10;Обнаружил баг с бесконечным использованием зелья на опыт.&#10;Небольшие корректировки баланса." />
-    <option name="LAST_COMMIT_MESSAGE" value="Починил переход между двумя локациями.&#10;Обнаружил баг с бесконечным использованием зелья на опыт.&#10;Небольшие корректировки баланса." />
+    <MESSAGE value="Added &quot;Buy Max&quot; and &quot;Sell All&quot; options in trading menu" />
+    <MESSAGE value="Added .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1263,24 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameForm.Designer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3876">
-          <caret line="231" column="44" selection-start-line="231" selection-start-column="43" selection-end-line="231" selection-end-column="44" />
-          <folding>
-            <marker date="1560550652207" expanded="true" signature="31:17521" ph="{...}" />
-            <marker date="1560550652207" expanded="true" signature="60:17519" ph="{...}" />
-            <marker date="1560550652207" expanded="true" signature="75:151" ph="/// Required designer variable. ... " />
-            <marker date="1560550652207" expanded="true" signature="229:420" ph="/// Clean up any resources being used. ... " />
-            <marker date="1560550652207" expanded="true" signature="476:651" ph="{...}" />
-            <marker date="1560550652207" expanded="true" signature="537:603" ph="{...}" />
-            <marker date="1560550652207" expanded="true" signature="661:16112" ph="Windows Form Designer generated code" />
-            <marker date="1560550652207" expanded="true" signature="715:878" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1560550652207" expanded="true" signature="921:16092" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WorldMap.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1372,6 +1417,42 @@
       </provider>
       <provider editor-type-id="WinFormsEditor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/TradingScreen.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding>
+            <marker date="1560599960132" expanded="false" signature="6:74" ph="..." />
+            <marker date="1560599960132" expanded="true" signature="107:6523" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="155:6521" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="245:3629" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="667:759" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="840:974" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="1055:1239" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="1320:1501" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="1581:1756" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="1848:2025" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="2343:2435" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="2520:2654" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="2739:2920" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="3004:3178" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="3274:3450" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="3716:5014" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="3762:4292" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="4103:4278" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="4341:5004" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="4682:4990" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="5105:6409" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="5151:5700" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="5388:5562" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="5749:6399" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="5986:6261" ph="{...}" />
+            <marker date="1560599960132" expanded="true" signature="6474:6515" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="WinFormsEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Engine/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-95">
@@ -1446,63 +1527,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TradingScreen.cs">
+    <entry file="file://$PROJECT_DIR$/GameForm.Designer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="398">
+          <caret line="234" column="70" lean-forward="true" selection-start-line="234" selection-start-column="70" selection-end-line="234" selection-end-column="70" />
           <folding>
-            <marker date="1560599960132" expanded="false" signature="6:74" ph="..." />
-            <marker date="1560599960132" expanded="true" signature="107:6523" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="155:6521" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="245:3629" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="667:759" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="840:974" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="1055:1239" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="1320:1501" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="1581:1756" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="1848:2025" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="2343:2435" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="2520:2654" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="2739:2920" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="3004:3178" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="3274:3450" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="3716:5014" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="3762:4292" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="4103:4278" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="4341:5004" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="4682:4990" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="5105:6409" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="5151:5700" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="5388:5562" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="5749:6399" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="5986:6261" ph="{...}" />
-            <marker date="1560599960132" expanded="true" signature="6474:6515" ph="{...}" />
+            <marker date="1560550652207" expanded="true" signature="31:17521" ph="{...}" />
+            <marker date="1560550652207" expanded="true" signature="60:17519" ph="{...}" />
+            <marker date="1560550652207" expanded="true" signature="75:151" ph="/// Required designer variable. ... " />
+            <marker date="1560550652207" expanded="true" signature="229:420" ph="/// Clean up any resources being used. ... " />
+            <marker date="1560550652207" expanded="true" signature="476:651" ph="{...}" />
+            <marker date="1560550652207" expanded="true" signature="537:603" ph="{...}" />
+            <marker date="1560550652207" expanded="true" signature="661:16112" ph="Windows Form Designer generated code" />
+            <marker date="1560550652207" expanded="true" signature="715:878" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1560550652207" expanded="true" signature="921:16092" ph="{...}" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="WinFormsEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/TradingScreen.Designer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+        <state relative-caret-position="177">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
           <folding>
-            <marker date="1560600192205" expanded="true" signature="61:5318" ph="{...}" />
-            <marker date="1560600192205" expanded="true" signature="95:5316" ph="{...}" />
-            <marker date="1560600192205" expanded="true" signature="110:186" ph="/// Required designer variable. ... " />
-            <marker date="1560600192205" expanded="true" signature="242:433" ph="/// Clean up any resources being used. ... " />
-            <marker date="1560600192205" expanded="true" signature="489:664" ph="{...}" />
-            <marker date="1560600192205" expanded="true" signature="550:616" ph="{...}" />
-            <marker date="1560600192205" expanded="true" signature="674:5005" ph="Windows Form Designer generated code" />
-            <marker date="1560600192205" expanded="true" signature="728:891" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1560600192205" expanded="true" signature="934:4985" ph="{...}" />
-            <marker date="1560600192205" expanded="true" signature="1520:1569" ph="/* lblMyInventory ... */" />
-            <marker date="1560600192205" expanded="true" signature="1974:2027" ph="/* lblVendorInventory ... */" />
-            <marker date="1560600192205" expanded="true" signature="2460:2505" ph="/* dgvMyItems ... */" />
-            <marker date="1560600192205" expanded="true" signature="2980:3029" ph="/* dgvVendorItems ... */" />
-            <marker date="1560600192205" expanded="true" signature="3533:3576" ph="/* btnClose ... */" />
-            <marker date="1560600192205" expanded="true" signature="4092:4140" ph="/* TradingScreen ... */" />
+            <marker date="1560600315259" expanded="true" signature="61:5318" ph="{...}" />
+            <marker date="1560600315259" expanded="true" signature="95:5316" ph="{...}" />
+            <marker date="1560600315259" expanded="true" signature="110:186" ph="/// Required designer variable. ... " />
+            <marker date="1560600315259" expanded="true" signature="242:433" ph="/// Clean up any resources being used. ... " />
+            <marker date="1560600315259" expanded="true" signature="489:664" ph="{...}" />
+            <marker date="1560600315259" expanded="true" signature="550:616" ph="{...}" />
+            <marker date="1560600315259" expanded="true" signature="674:5005" ph="Windows Form Designer generated code" />
+            <marker date="1560600315259" expanded="true" signature="728:891" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1560600315259" expanded="true" signature="934:4985" ph="{...}" />
+            <marker date="1560600315259" expanded="true" signature="1520:1569" ph="/* lblMyInventory ... */" />
+            <marker date="1560600315259" expanded="true" signature="1974:2027" ph="/* lblVendorInventory ... */" />
+            <marker date="1560600315259" expanded="true" signature="2460:2505" ph="/* dgvMyItems ... */" />
+            <marker date="1560600315259" expanded="true" signature="2980:3029" ph="/* dgvVendorItems ... */" />
+            <marker date="1560600315259" expanded="true" signature="3533:3576" ph="/* btnClose ... */" />
+            <marker date="1560600315259" expanded="true" signature="4092:4140" ph="/* TradingScreen ... */" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
         </state>
       </provider>
     </entry>
