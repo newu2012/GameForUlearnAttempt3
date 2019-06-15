@@ -208,7 +208,7 @@ namespace Engine
             else
             {
                 CurrentMonster.CurrentHitPoints -= damage;
-                RaiseMessage("Вы попали " + CurrentMonster.Name + " нанеся " + damage + " урона.");
+                RaiseMessage("Вы попали по " + CurrentMonster.Name + " нанеся " + damage + " урона.");
             }
 
             if (CurrentMonster.IsDead)
@@ -242,11 +242,11 @@ namespace Engine
 
         public void UsePotion(Potion potion)
         {
-            RaiseMessage("Вы выпили " + potion.Name);
             if (potion is HealingPotion)
                 HealPlayer(((HealingPotion) potion).AmountToHeal);
             else AddExperiencePoints(((ExperiencePotion) potion).AmountToAdd);
-
+            RaiseMessage("Вы выпили " + potion.Name);
+            
             RemoveItemFromInventory(potion);
         }
 

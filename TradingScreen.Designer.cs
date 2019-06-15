@@ -42,7 +42,7 @@ namespace GameForUlearnAttempt3
             // 
             // lblMyInventory
             // 
-            this.lblMyInventory.Location = new System.Drawing.Point(125, 15);
+            this.lblMyInventory.Location = new System.Drawing.Point(15, 15);
             this.lblMyInventory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMyInventory.Name = "lblMyInventory";
             this.lblMyInventory.Size = new System.Drawing.Size(100, 23);
@@ -51,7 +51,7 @@ namespace GameForUlearnAttempt3
             // 
             // lblVendorInventory
             // 
-            this.lblVendorInventory.Location = new System.Drawing.Point(411, 15);
+            this.lblVendorInventory.Location = new System.Drawing.Point(440, 15);
             this.lblVendorInventory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVendorInventory.Name = "lblVendorInventory";
             this.lblVendorInventory.Size = new System.Drawing.Size(125, 15);
@@ -62,20 +62,20 @@ namespace GameForUlearnAttempt3
             // 
             this.dgvMyItems.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMyItems.Location = new System.Drawing.Point(13, 42);
+            this.dgvMyItems.Location = new System.Drawing.Point(15, 42);
             this.dgvMyItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvMyItems.Name = "dgvMyItems";
-            this.dgvMyItems.Size = new System.Drawing.Size(326, 220);
+            this.dgvMyItems.Size = new System.Drawing.Size(418, 220);
             this.dgvMyItems.TabIndex = 2;
             // 
             // dgvVendorItems
             // 
             this.dgvVendorItems.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendorItems.Location = new System.Drawing.Point(341, 42);
+            this.dgvVendorItems.Location = new System.Drawing.Point(440, 42);
             this.dgvVendorItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvVendorItems.Name = "dgvVendorItems";
-            this.dgvVendorItems.Size = new System.Drawing.Size(280, 220);
+            this.dgvVendorItems.Size = new System.Drawing.Size(365, 220);
             this.dgvVendorItems.TabIndex = 3;
             // 
             // btnClose
@@ -93,7 +93,7 @@ namespace GameForUlearnAttempt3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 316);
+            this.ClientSize = new System.Drawing.Size(820, 320);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvVendorItems);
             this.Controls.Add(this.dgvMyItems);
