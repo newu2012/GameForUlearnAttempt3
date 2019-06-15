@@ -484,7 +484,7 @@ namespace Engine
             if (item is Weapon)
                 OnPropertyChanged("Weapons");
 
-            if (item is HealingPotion)
+            if (item is Potion)
                 OnPropertyChanged("Potions");
         }
 

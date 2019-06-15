@@ -140,11 +140,8 @@ namespace GameForUlearnAttempt3
             if (propertyChangedEventArgs.PropertyName == "Potions")
             {
                 cboPotions.DataSource = _player.Potions;
-                if (!_player.Potions.Any())
-                {
-                    cboPotions.Enabled = false;
-                    btnUsePotion.Enabled = false;
-                }
+                btnUsePotion.Enabled = _player.Potions.Any();
+                cboPotions.Enabled = _player.Potions.Any();
             }
 
             if (propertyChangedEventArgs.PropertyName == "CurrentLocation")
@@ -159,7 +156,7 @@ namespace GameForUlearnAttempt3
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
 
-                
+                cboPotions.DataSource = _player.Potions;
                 btnUseWeapon.Enabled = _player.Weapons.Any();
                 btnUsePotion.Enabled = _player.Potions.Any();
                 cboPotions.Enabled = _player.Potions.Any();
