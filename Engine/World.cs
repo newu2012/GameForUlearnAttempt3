@@ -126,7 +126,7 @@ namespace Engine
             _items.Add(new Weapon(ITEM_ID_TRENTS_CLUB, "Дубина", "Дубины", 10, 15, 250));
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
             _items.Add(new Weapon(ITEM_ID_HYDRA_RAPIER, "Рапира из гидры", "Рапиры из гидры", 25, 35, 1000));
-            _items.Add(new Weapon(ITEM_ID_TROLL_CUDGEL, "Дубина тролля", "Дубины троллей", 40, 60, 2500));
+            _items.Add(new Weapon(ITEM_ID_TROLL_CUDGEL, "Дубина тролля", "Дубины троллей", 50, 75, 2500));
             
             _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 10, 10));
             _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 50, 25));
@@ -373,7 +373,13 @@ namespace Engine
             bigBob.AddItemToInventory(ItemByID(ITEM_ID_HEALING_POTION), 10);
             village.VendorWorkingHere = bigBob;
             
-            
+            var traderJim = new Vendor("Торговец Джим");
+            traderJim.AddItemToInventory(ItemByID(ITEM_ID_HEALING_POTION), 5);
+            traderJim.AddItemToInventory(ItemByID(ITEM_ID_BIG_HEALING_POTION), 50);
+            traderJim.AddItemToInventory(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 10);
+            traderJim.AddItemToInventory(ItemByID(ITEM_ID_POISON_DAGGER), 10);
+            traderJim.AddItemToInventory(ItemByID(ITEM_ID_POTION_OF_ETERNAL_LIFE), 10);
+            townSquare.VendorWorkingHere = traderJim;
             
             
             // Link the locations together
