@@ -349,7 +349,7 @@ namespace GameForUlearnAttempt3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 372);
+            this.ClientSize = new System.Drawing.Size(559, 367);
             this.Controls.Add(this.pic_3_5);
             this.Controls.Add(this.pic_2_5);
             this.Controls.Add(this.pic_1_5);

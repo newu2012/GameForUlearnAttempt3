@@ -42,17 +42,31 @@
       <e p="GameForUlearnAttempt3.csproj" t="IncludeRecursive" />
       <e p="GameForUlearnAttempt3.sln" t="IncludeFlat" />
       <e p="MapImages" t="Include">
-        <e p="Bridge.png" t="Include" />
-        <e p="FarmFields.png" t="Include" />
-        <e p="Farmhouse.png" t="Include" />
+        <e p="AncientForest.png" t="Include" />
+        <e p="FamilyCrypt.png" t="Include" />
+        <e p="Field.png" t="Include" />
         <e p="FogLocation.png" t="Include" />
-        <e p="HerbalistsGarden.png" t="Include" />
-        <e p="HerbalistsHut.png" t="Include" />
+        <e p="Forest.png" t="Include" />
+        <e p="ForestersHut.png" t="Include" />
+        <e p="Gate.png" t="Include" />
+        <e p="GiantSnake.png" t="Include" />
+        <e p="GraveyardOfBones.png" t="Include" />
         <e p="Home.png" t="Include" />
-        <e p="SpiderForest.png" t="Include" />
-        <e p="TownGate.png" t="Include" />
+        <e p="Hydra.png" t="Include" />
+        <e p="KingsPalace.png" t="Include" />
+        <e p="MoundOfDeath.png" t="Include" />
+        <e p="NecromancerTower.png" t="Include" />
+        <e p="Outskirts.png" t="Include" />
+        <e p="Prison.png" t="Include" />
+        <e p="Road.png" t="Include" />
+        <e p="Sewage.png" t="Include" />
+        <e p="ShepherdsHouse.png" t="Include" />
+        <e p="Skiff.png" t="Include" />
+        <e p="Snakes.png" t="Include" />
         <e p="TownSquare.png" t="Include" />
-        <e p="Trader.png" t="Include" />
+        <e p="TrollCave.png" t="Include" />
+        <e p="Village.png" t="Include" />
+        <e p="Zombie.png" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

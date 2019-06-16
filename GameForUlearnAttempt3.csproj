@@ -111,19 +111,47 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="MapImages\Bridge.png" />
-      <EmbeddedResource Include="MapImages\FarmFields.png" />
-      <EmbeddedResource Include="MapImages\Farmhouse.png" />
-      <EmbeddedResource Include="MapImages\HerbalistsGarden.png" />
-      <EmbeddedResource Include="MapImages\HerbalistsHut.png" />
       <EmbeddedResource Include="MapImages\Home.png" />
-      <EmbeddedResource Include="MapImages\SpiderForest.png" />
-      <EmbeddedResource Include="MapImages\TownGate.png" />
-      <EmbeddedResource Include="MapImages\TownSquare.png" />
-      <EmbeddedResource Include="MapImages\Trader.png" />
     </ItemGroup>
     <ItemGroup>
+      <EmbeddedResource Include="MapImages\AncientForest.png" />
+      <EmbeddedResource Include="MapImages\FamilyCrypt.png" />
+      <EmbeddedResource Include="MapImages\Field.png" />
       <EmbeddedResource Include="MapImages\FogLocation.png" />
+      <EmbeddedResource Include="MapImages\Forest.png" />
+      <EmbeddedResource Include="MapImages\ForestersHut.png" />
+      <EmbeddedResource Include="MapImages\Gate.png" />
+      <EmbeddedResource Include="MapImages\GiantSnake.png" />
+      <EmbeddedResource Include="MapImages\GraveyardOfBones.png" />
+      <EmbeddedResource Include="MapImages\Hydra.png" />
+      <EmbeddedResource Include="MapImages\KingsPalace.png" />
+      <EmbeddedResource Include="MapImages\Prison.png" />
+      <EmbeddedResource Include="MapImages\Sewage.png" />
+      <EmbeddedResource Include="MapImages\ShepherdsHouse.png" />
+      <EmbeddedResource Include="MapImages\Skiff.png" />
+      <EmbeddedResource Include="MapImages\Snakes.png" />
+      <EmbeddedResource Include="MapImages\Village.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\TrollCave.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\Road.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\Zombie.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\MoundOfDeath.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\TownSquare.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\NecromancerTower.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\Outskirts.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
