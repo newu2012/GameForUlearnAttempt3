@@ -153,6 +153,9 @@
     <ItemGroup>
       <EmbeddedResource Include="MapImages\Outskirts.png" />
     </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="MapImages\Player.png" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
       <PropertyGroup>

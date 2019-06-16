@@ -157,21 +157,16 @@ namespace Engine
             CompletelyHeal();
 
             if (location.HasAQuest)
-            {
                 foreach (var e in location.QuestsAvailableHere)
                 {
                     if (PlayerDoesNotHaveThisQuest(e))
-                    {
                         if (PlayerCompletedPreviousQuest(e))
                             GiveQuestToPlayer(e);
-                    }
 
                     if (PlayerHasNotCompletedQuest(e) &&
                         PlayerHasAllQuestCompletionItemsFor(e))
                         GivePlayerQuestRewards(e);
                 }
-            }
-
             SetTheCurrentMonsterForTheCurrentLocation(location);
         }
 
@@ -214,7 +209,6 @@ namespace Engine
             if (CurrentMonster.IsDead)
             {
                 LootTheCurrentMonster();
-
                 MoveTo(CurrentLocation);
             }
             else

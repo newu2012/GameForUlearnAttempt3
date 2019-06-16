@@ -183,6 +183,7 @@ namespace GameForUlearnAttempt3
         private void btnWest_Click(object sender, EventArgs e)
         {
             _player.MoveWest();
+            
         }
 
         private void btnUseWeapon_Click(object sender, EventArgs e)
@@ -218,7 +219,7 @@ namespace GameForUlearnAttempt3
         {
             var mapScreen = new WorldMap(_player);
             mapScreen.StartPosition = FormStartPosition.CenterParent;
-            mapScreen.ShowDialog(this);
+            mapScreen.Show(this);
         }
     }
 }
