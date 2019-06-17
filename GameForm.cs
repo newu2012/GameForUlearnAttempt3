@@ -110,6 +110,7 @@ namespace GameForUlearnAttempt3
                     _player.MoveWest();
                     break;
             }
+            RefreshMap(_player);
         }
 
         private void DisplayMessage(object sender, MessageEventArgs messageEventArgs)
@@ -169,27 +170,32 @@ namespace GameForUlearnAttempt3
         private void btnNorth_Click(object sender, EventArgs e)
         {
             _player.MoveNorth();
-            mapScreen.SetAllImages(_player);
+            RefreshMap(_player);
         }
 
         private void btnEast_Click(object sender, EventArgs e)
         {
             _player.MoveEast();
-            mapScreen.SetAllImages(_player);
+            RefreshMap(_player);
         }
 
         private void btnSouth_Click(object sender, EventArgs e)
         {
             _player.MoveSouth();
-            mapScreen.SetAllImages(_player);
+            RefreshMap(_player);
         }
 
         private void btnWest_Click(object sender, EventArgs e)
         {
             _player.MoveWest();
-            mapScreen.SetAllImages(_player);
+            RefreshMap(_player);
         }
 
+        private void RefreshMap(Player player)
+        {
+            mapScreen.SetAllImages(player);
+        }
+        
         private void btnUseWeapon_Click(object sender, EventArgs e)
         {
             var currentWeapon = (Weapon)cboWeapons.SelectedItem;
