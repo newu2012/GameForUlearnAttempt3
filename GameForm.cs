@@ -14,6 +14,7 @@ namespace GameForUlearnAttempt3
         private Player _player;
         private const string PlayerDataFileName = "PlayerData.xml";
 
+        public WorldMap mapScreen = new WorldMap(Player.CreateDefaultPlayer());
         public GameForm()
         {
             KeyPreview = true;
@@ -168,22 +169,25 @@ namespace GameForUlearnAttempt3
         private void btnNorth_Click(object sender, EventArgs e)
         {
             _player.MoveNorth();
+            mapScreen.SetAllImages(_player);
         }
 
         private void btnEast_Click(object sender, EventArgs e)
         {
             _player.MoveEast();
+            mapScreen.SetAllImages(_player);
         }
 
         private void btnSouth_Click(object sender, EventArgs e)
         {
             _player.MoveSouth();
+            mapScreen.SetAllImages(_player);
         }
 
         private void btnWest_Click(object sender, EventArgs e)
         {
             _player.MoveWest();
-            
+            mapScreen.SetAllImages(_player);
         }
 
         private void btnUseWeapon_Click(object sender, EventArgs e)
@@ -217,8 +221,7 @@ namespace GameForUlearnAttempt3
 
         private void btnMap_Click(object sender, EventArgs e)
         {
-            var mapScreen = new WorldMap(_player);
-            mapScreen.StartPosition = FormStartPosition.CenterParent;
+            mapScreen = new WorldMap(_player) {StartPosition = FormStartPosition.CenterParent};
             mapScreen.Show(this);
         }
     }
