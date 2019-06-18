@@ -80,7 +80,7 @@ namespace GameForUlearnAttempt3
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(430, 265);
+            this.btnClose.Location = new System.Drawing.Point(440, 265);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(125, 50);

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using Engine;
@@ -30,7 +31,7 @@ namespace GameForUlearnAttempt3
             {
                 HeaderText = "Название",
                 Width = 145,
-                DataPropertyName = "Description"
+                DataPropertyName = "Description",
             });
 
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
@@ -64,8 +65,7 @@ namespace GameForUlearnAttempt3
                 Width = 80,
                 DataPropertyName = "ItemID"
             });
-
-            dgvMyItems.DataSource = _currentPlayer.Inventory;
+            InventoryItemsRefresh();
 
             dgvMyItems.CellClick += dgvMyItems_CellClick;
 
@@ -120,29 +120,29 @@ namespace GameForUlearnAttempt3
                 var itemID = dgvMyItems.Rows[e.RowIndex].Cells[0].Value;
                 var itemBeingSold = World.ItemByID(Convert.ToInt32(itemID));
 
-                if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
-                    MessageBox.Show("Вы не можете продать " + itemBeingSold.Name);
-                else
-                {
-                    _currentPlayer.RemoveItemFromInventory(itemBeingSold);
-                    _currentPlayer.Gold += itemBeingSold.Price;
-                }
+                _currentPlayer.RemoveItemFromInventory(itemBeingSold);
+                _currentPlayer.Gold += itemBeingSold.Price;
             }
-            
+
             if (e.ColumnIndex == 5)
             {
                 var itemID = dgvMyItems.Rows[e.RowIndex].Cells[0].Value;
                 var itemBeingSold = World.ItemByID(Convert.ToInt32(itemID));
 
-                if (itemBeingSold.Price == World.UNSELLABLE_ITEM_PRICE)
-                    MessageBox.Show("Вы не можете продать " + itemBeingSold.Name);
-                else
-                {
-                    int quantity = _currentPlayer.Inventory.Single(ii => ii.Details == itemBeingSold).Quantity;
-                    _currentPlayer.RemoveItemFromInventory(itemBeingSold, quantity);
-                    _currentPlayer.Gold += itemBeingSold.Price * quantity;
-                }
+                int quantity = _currentPlayer.Inventory.Single(ii => ii.Details == itemBeingSold).Quantity;
+                _currentPlayer.RemoveItemFromInventory(itemBeingSold, quantity);
+                _currentPlayer.Gold += itemBeingSold.Price * quantity;
             }
+
+            InventoryItemsRefresh();
+        }
+
+        private void InventoryItemsRefresh()
+        {
+            dgvMyItems.DataSource =
+                new BindingList<InventoryItem>(_currentPlayer.Inventory.Where(ii => ii.Price != -1)
+                    .Select(ii => ii)
+                    .ToList());
         }
 
         private void dgvVendorItems_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -175,6 +175,7 @@ namespace GameForUlearnAttempt3
                 else
                     MessageBox.Show("У вас недостаточно золота чтобы купить " + itemBeingBought.Name);
             }
+            InventoryItemsRefresh();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
