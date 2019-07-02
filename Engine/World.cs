@@ -44,6 +44,13 @@ namespace Engine
         public const int ITEM_ID_ROYAL_SEAL = 23;
         public const int ITEM_ID_ECTOPLASM = 24;
         public const int ITEM_ID_ROYAL_PERMIT = 25;
+        public const int ITEM_ID_ZOMBIE_HAND = 26;
+        public const int ITEM_ID_CORE_OF_FLESH = 27;
+        public const int ITEM_ID_BIG_BONE = 28;
+        public const int ITEM_ID_NECROMANCER_HEAD = 29;
+        public const int ITEM_ID_NECROMANCER_STAFF = 30;
+        public const int ITEM_ID_STRANGE_POTION = 31;
+        public const int ITEM_ID_EMPTY_BOTTLE = 32;
         
         
         
@@ -58,6 +65,10 @@ namespace Engine
         public const int MONSTER_ID_ROUGE_LEADER = 9;
         public const int MONSTER_ID_TROLL = 10;
         public const int MONSTER_ID_GHOST = 11;
+        public const int MONSTER_ID_ZOMBIE = 12;
+        public const int MONSTER_ID_FLESH_GATHERER = 13;
+        public const int MONSTER_ID_BONE_DRAGON = 14;
+        public const int MONSTER_ID_NECROMANCER = 15;
         
         
         
@@ -69,6 +80,11 @@ namespace Engine
         public const int QUEST_ID_SEARCH_FOR_A_BEST_FRIEND = 6;
         public const int QUEST_ID_HELP_SHEPHERD_WITH_SNAKES = 7;
         public const int QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING = 8;
+        public const int QUEST_ID_BRING_BACK_THE_HOLY_CORE = 9;
+        public const int QUEST_ID_PUNISH_THE_TROLLS = 10;
+        public const int QUEST_ID_DISASSEMBLE_THE_DRAGON_ON_THE_BONES = 11;
+        public const int QUEST_ID_FINISH_THIS_STORY = 12;
+        public const int QUEST_ID_TAKE_YOUR_DESTINY = 13;
         
         
         
@@ -120,6 +136,10 @@ namespace Engine
             _items.Add(new Item(ITEM_ID_TROLL_MEAT, "Мясо тролля", "Мясо тролля", 1000));
             _items.Add(new Item(ITEM_ID_ROYAL_SEAL, "Печать королевского рода", "Печати королевского рода", 250));
             _items.Add(new Item(ITEM_ID_ECTOPLASM, "Эктоплазма", "Эктоплазма", 25));
+            _items.Add(new Item(ITEM_ID_ZOMBIE_HAND, "Рука зомби", "Руки зомби", 50));
+            _items.Add(new Item(ITEM_ID_CORE_OF_FLESH, "Ядро из плоти", "Ядра из плоти", 1000));
+            _items.Add(new Item(ITEM_ID_BIG_BONE, "Большая кость", "Большие кости", 1000));
+            _items.Add(new Item(ITEM_ID_NECROMANCER_HEAD, "Голова некроманта", "Головы некромантов", 2500));
             
             _items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Ржавый меч", "Ржавые мечи", 0, 5, 0));
             _items.Add(new Weapon(ITEM_ID_SHOVEL, "Лопата", "Лопаты", 3, 5, 10));
@@ -127,12 +147,14 @@ namespace Engine
             _items.Add(new Weapon(ITEM_ID_POISON_DAGGER, "Ядовитый кинжал", "Ядовитые кинжалы", 5, 10, 100));
             _items.Add(new Weapon(ITEM_ID_HYDRA_RAPIER, "Рапира из гидры", "Рапиры из гидры", 25, 35, 1000));
             _items.Add(new Weapon(ITEM_ID_TROLL_CUDGEL, "Дубина тролля", "Дубины троллей", 50, 75, 2500));
+            _items.Add(new Weapon(ITEM_ID_NECROMANCER_STAFF, "Посох некроманта", "Посохи некроманта", 1000, 1000, 25000));
             
             _items.Add(new HealingPotion(ITEM_ID_SIMPLE_HEALING_POTION, "Малое лечебное зелье", "Малые лечебные зелья", 10, 10));
             _items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Лечебное зелье", "Лечебные зелья", 50, 25));
             _items.Add(new HealingPotion(ITEM_ID_BIG_HEALING_POTION, "Большое лечебное зелье", "Большие лечебные зелья", 200, 100));
             _items.Add(new HealingPotion(ITEM_ID_GREAT_HEALING_POTION, "Великое лечебное зелье", "Великие лечебные зелья", 500, 200));
             _items.Add(new ExperiencePotion(ITEM_ID_POTION_OF_ETERNAL_LIFE, "Зелье вечной жизни", "Зелья вечной жизни", 5000, 500));
+            _items.Add(new StrangePotion(ITEM_ID_STRANGE_POTION, "Странное зелье", "Странные зелья", 1));
             
             _items.Add(new Item(ITEM_ID_QUINTESSENCE_OF_PURITY, "Квинтэссенция чистоты", "Квинтэссенции чистоты", UNSELLABLE_ITEM_PRICE));
             _items.Add(new Item(ITEM_ID_HEADMAN_PERMISSION_PASS, "Разрешение старосты на проход", "Разрешения старосты на проход", UNSELLABLE_ITEM_PRICE));
@@ -189,6 +211,27 @@ namespace Engine
             ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ROYAL_SEAL), 10, false));
             ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY), 1, false));
             
+            var zombie = new Monster(MONSTER_ID_ZOMBIE, "Зомби", 50, 50, 0, 250, 250);
+            zombie.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ZOMBIE_HAND), 75, true));
+            zombie.LootTable.Add(new LootItem(ItemByID(ITEM_ID_HEALING_POTION), 100, false));
+            zombie.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BIG_HEALING_POTION), 20, false));
+            
+            var fleshGatherer = new Monster(MONSTER_ID_FLESH_GATHERER, "Собиратель плоти", 150, 100, 0, 2500, 2500);
+            fleshGatherer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ZOMBIE_HAND), 75, true));
+            fleshGatherer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_CORE_OF_FLESH), 25, false));
+            fleshGatherer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BIG_HEALING_POTION), 100, false));
+            fleshGatherer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 20, false));
+            
+            var boneDragon = new Monster(MONSTER_ID_BONE_DRAGON, "Костяной дракон", 250, 500, 0, 2500, 2500);
+            boneDragon.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BIG_BONE), 100, true));
+            boneDragon.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BIG_HEALING_POTION), 100, false));
+            boneDragon.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 50, false));
+            
+            var necromancer = new Monster(MONSTER_ID_NECROMANCER, "Верховный некромант Байкенов", 500, 1000, 0, 500, 10000);
+            necromancer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_NECROMANCER_HEAD), 100, true));
+            necromancer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_NECROMANCER_STAFF), 100, false));
+            necromancer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_STRANGE_POTION), 100, false));
+            
             _monsters.Add(snake);
             _monsters.Add(wolf);
             _monsters.Add(bear);
@@ -200,6 +243,10 @@ namespace Engine
             _monsters.Add(rougeLeader);
             _monsters.Add(troll);
             _monsters.Add(ghost);
+            _monsters.Add(zombie);
+            _monsters.Add(fleshGatherer);
+            _monsters.Add(boneDragon);
+            _monsters.Add(necromancer);
         }
 
         private static void PopulateQuests()
@@ -254,6 +301,42 @@ namespace Engine
             removeTheCurseFromTheKing.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ROYAL_SEAL), 1));
             removeTheCurseFromTheKing.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_ROYAL_PERMIT), 1));
             
+            // Вообще, здесь происходит "типа" сюжетный поворот. Его никто не поймёт, потому что он совершенно никак ни к чему не привязан, хотя в моей глупой голове он и выглядел нормально
+            // Кароч, в чём мем. *МУЗЫКА ПРОСТО РАСПИРАЕТ МЕНЯ. Nickbee - Arkaim - один из лучших треков, открытых мной за этот год. Обязателен к прослушиванию. Невероятная атмосфера.*
+            // Так, продолжаю. Получается так, что разум короля уже подвластен некроманту Байкенову, и единственное, что хоть как-то сдерживало всё усиливающееся влияние некроманта на этот город это защита разума короля духами из склепа. Но было приказано убить их, отчего и стало хуже.
+            
+            var bringBackTheHolyCore = new Quest(QUEST_ID_BRING_BACK_THE_HOLY_CORE, "Вернуть святое ядро.",
+                " Спасибо, что снял проклятие. Но похоже этого недостаточно. Ещё когда только проник в наш мир весь этот ужас, у нас были похищены святые ядра, поддерживающие здоровье живущих в городе людей, в том числе и моей династии. Ты должен вернуть эти ядра. Если ты принесёшь хоть одно, то нам будет куда проще сражаться против всей этой нечисти. ", removeTheCurseFromTheKing,
+                500, 5000);
+            bringBackTheHolyCore.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_CORE_OF_FLESH), 1));
+            bringBackTheHolyCore.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 15));
+            
+            // Здесь тоже не всё так просто. Получается так, что по приказу короля священные ядра были вынесены за пределы города, сильно ослабляя защиту столицы от различных проказ.
+            // Эти самые ядра, после того, как их отнесли поближе к некроманту, стали очень напитаны испорченной энергией. Принеся их в город, главный герой, сам того мало подозревая, поставил жирную точку на существовании этого мирного города. 
+            // Также примечательно то, что сам герой также становится подвержен влиянию скверны.
+            
+            var punishTheTrolls = new Quest(QUEST_ID_PUNISH_THE_TROLLS, "Накажи троллей.",
+                " Тролли, что живут в пещере южнее, разграбили весь склад обуви. Обуви в городе осталось настолько мало, что за пару новых башмаков можно купить дом в цетре города. Приди и накажи троллей за содеянное. ", removeTheCurseFromTheKing,
+                500, 5000);
+            punishTheTrolls.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_TROLL_MEAT), 5));
+            punishTheTrolls.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 25));
+            
+            var disassembleTheDragonOnTheBones = new Quest(QUEST_ID_DISASSEMBLE_THE_DRAGON_ON_THE_BONES, "Разбери дракона на косточки.",
+                " Пока ты шёл, ты наверняка заметил большого костяного дракона. Так вот, я не хочу чтобы он прилетел в мой дворец. Так что твоя задача разобрать этого дракона на мелкие косточки и принести их во дворец. Мои псы обрадуются. Надеюсь ты не думаешь обо мне ничего плохого, из-за того что я тебя так нагружаю. Ты потрудись немного, а потом отдохнёшь. ", punishTheTrolls,
+                500, 5000);
+            disassembleTheDragonOnTheBones.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_TROLL_MEAT), 5));
+            disassembleTheDragonOnTheBones.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_GREAT_HEALING_POTION), 50));
+            
+            var finishThisStory = new Quest(QUEST_ID_FINISH_THIS_STORY, "Закончить эту историю.",
+                " Мне кажется, ты готов пойти на встречу с главным злом. Разберись с ним. Ты знаешь, что это необходимо. ", removeTheCurseFromTheKing, 1500, 15000);
+            finishThisStory.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_NECROMANCER_HEAD), 1));
+            finishThisStory.RewardItems.Add(new QuestRewardItem(ItemByID(ITEM_ID_STRANGE_POTION), 1));
+            
+            var takeYourDestiny = new Quest(QUEST_ID_TAKE_YOUR_DESTINY, "Принять свою судьбу.",
+                " Ну что. Ты достиг всего что нам нужно было. Так почему бы не отпраздновать? Кузнецов, принеси нашему гостю его заслуженную награду. А ты выпей с нами. Теперь мы будем править вместе. ", finishThisStory, 0, 0);
+            takeYourDestiny.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_EMPTY_BOTTLE), 1));
+            
+            
             _quests.Add(bringAShovel);
             _quests.Add(helpWithSnakes);
             _quests.Add(purgeTheWolves);
@@ -262,6 +345,11 @@ namespace Engine
             _quests.Add(helpShepherdWithSnakes);
             _quests.Add(searchForABestFriend);
             _quests.Add(removeTheCurseFromTheKing);
+            _quests.Add(bringBackTheHolyCore);
+            _quests.Add(punishTheTrolls);
+            _quests.Add(disassembleTheDragonOnTheBones);
+            _quests.Add(finishThisStory);
+            _quests.Add(takeYourDestiny);
         }
 
         private static void PopulateLocations()
@@ -307,7 +395,6 @@ namespace Engine
             var roadToTheCity = new Location(LOCATION_ID_ROAD_TO_THE_CITY, "Дорога в город",
                 "Сельские стражники согласны пускать селян в город только по письменному заверению старосты.");
 
-
             var swarmOfPoisonousSnakes = new Location(LOCATION_ID_SWARM_OF_POISONOUS_SNAKES,
                 "Рой ядовитых змей", "Шипение множествав змей застилает ужасом ваш разум.");
             swarmOfPoisonousSnakes.AddMonster(MONSTER_ID_SNAKE, 95);
@@ -347,13 +434,20 @@ namespace Engine
 
             var hordeOfZombies = new Location(LOCATION_ID_HORDE_OF_ZOMBIES, "Орда зомби",
                 "Похоже, что всё былое население мира предстало здесь перед вами в виде оживших мертвецов, пройти куда-то дальше получится только смекалкой.");
-
+            hordeOfZombies.AddMonster(MONSTER_ID_ZOMBIE, 100);
+            
             var graveyardOfBones = new Location(LOCATION_ID_GRAVEYARD_OF_BONES, "Кладбище костей",
-                "Вам в детстве говорили, что живых драконов не бывает. Это оказалось правдой лишь отчасти. Находящийся здесь дракон жив, хотя и состоит лишь из костей.");
-
+                "Вам в детстве говорили, что живых драконов не бывает. Это оказалось правдой лишь отчасти. Находящийся здесь дракон жив, хотя и состоит лишь из костей. Вам очень повезло, что мимо него можно тихо пройти.");
+            graveyardOfBones.AddMonster(MONSTER_ID_BONE_DRAGON, 100);
+            
             var kingsPalace = new Location(LOCATION_ID_KINGS_PALACE, "Дворец короля",
-                "Двроец Давида Сказачного. Он с гордостью смотрит на Вас, рыцаря света, пришедшего спасать его Королевство. Хорошо что он не знает, что ещё вчера вам приходилось копать ямы для постройки нового туалета в деревне.");
+                "Двроец Давида Сказачного. Смотря на него Вам становится не по себе.");
             kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_REMOVE_THE_CURSE_FROM_THE_KING));
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_BRING_BACK_THE_HOLY_CORE));
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_PUNISH_THE_TROLLS));
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_DISASSEMBLE_THE_DRAGON_ON_THE_BONES));
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_FINISH_THIS_STORY));
+            kingsPalace.QuestsAvailableHere.Add(QuestByID(QUEST_ID_TAKE_YOUR_DESTINY));
             
             var familyCrypt = new Location(LOCATION_ID_FAMILY_CRYPT, "Семейный склеп",
                 "Семейный склеп Давида Сказачного. Пора успокоить взбунтовавшихся призраков.");
@@ -361,10 +455,12 @@ namespace Engine
 
             var moundOfDeath = new Location(LOCATION_ID_MOUND_OF_DEATH, "Курган смерти",
                 "Пора остановить производство зомби. Проблему с существующими это хоть и не решит, но новым лучше всё-таки не появляться.", ItemByID(ITEM_ID_QUINTESSENCE_OF_PURITY));
-
+            moundOfDeath.AddMonster(MONSTER_ID_ZOMBIE, 75);
+            moundOfDeath.AddMonster(MONSTER_ID_FLESH_GATHERER, 25);
+            
             var scaryNecromancerCastle = new Location(LOCATION_ID_SCARY_NECROMANCER_CASTLE, "Замок страшного некроманта",
                 "Все Ваши десткие и студенческие страхи воплотились перед Вами. \n ПОБЕДА ИЛИ СМЕРТЬ! \n ЛОК'ТАР ОГАР, ДРУГ!");
-            
+            scaryNecromancerCastle.AddMonster(MONSTER_ID_NECROMANCER, 100);
 
             // Vendors, working in locations
             var bigBob = new Vendor("Большой Боб");

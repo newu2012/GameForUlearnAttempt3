@@ -7,6 +7,9 @@
     <e p="C:\Users\newu2012\RiderProjects\GameForUlearnAttempt3" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="End.cs" t="Include" />
+      <e p="End.Designer.cs" t="Include" />
+      <e p="End.resx" t="Include" />
       <e p="Engine" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
@@ -32,6 +35,7 @@
         <e p="QuestCompletionItem.cs" t="Include" />
         <e p="QuestRewardItem.cs" t="Include" />
         <e p="RandomNumberGenerator.cs" t="Include" />
+        <e p="StrangePotion.cs" t="Include" />
         <e p="Vendor.cs" t="Include" />
         <e p="Weapon.cs" t="Include" />
         <e p="World.cs" t="Include" />

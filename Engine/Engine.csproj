@@ -61,6 +61,7 @@
         <Compile Include="QuestCompletionItem.cs" />
         <Compile Include="QuestRewardItem.cs" />
         <Compile Include="RandomNumberGenerator.cs" />
+        <Compile Include="StrangePotion.cs" />
         <Compile Include="Vendor.cs" />
         <Compile Include="Weapon.cs" />
         <Compile Include="World.cs" />

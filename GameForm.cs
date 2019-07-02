@@ -206,6 +206,13 @@ namespace GameForUlearnAttempt3
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
             var potion = (Potion)cboPotions.SelectedItem;
+            if (potion is StrangePotion)
+            {
+                var end = new End();
+                end.StartPosition = FormStartPosition.CenterParent;
+                _player = Player.CreateDefaultPlayer();
+                end.ShowDialog(this);
+            }
             _player.UsePotion(potion);
         }
 
